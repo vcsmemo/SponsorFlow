@@ -320,6 +320,7 @@ export default function App() {
 
   // Helper formatting
   const formatFollowersCount = (count) => {
+    if (!count || count === 0) return 'N/A';
     if (count >= 1000000) return (count / 1000000).toFixed(1) + 'M';
     if (count >= 1000) return (count / 1000).toFixed(0) + 'K';
     return count;
@@ -854,7 +855,7 @@ export default function App() {
                             {getPlatformIcon(ch.platform)}
                             {ch.platform}
                           </span>
-                          <span className="text-[10px] text-slate-400 font-bold block pt-1">{formatFollowersCount(ch.followers || 50000)} followers</span>
+                          <span className="text-[10px] text-slate-400 font-bold block pt-1">{formatFollowersCount(ch.followers)} followers</span>
                         </div>
                       </div>
                     </div>
@@ -1290,7 +1291,7 @@ export default function App() {
                           <span className="text-sm font-black text-slate-700 hover:text-[#e27b58] transition-colors">{ch.name}</span>
                         </div>
                         <span className="text-xs font-bold text-slate-500">
-                          {formatFollowersCount(ch.followers || 50000)} followers
+                          {formatFollowersCount(ch.followers)} followers
                         </span>
                       </div>
                     ))}
