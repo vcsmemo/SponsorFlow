@@ -72,6 +72,28 @@ def get_yt_subs(channel_id):
         return 0
 
 
+
+import os
+from openai import OpenAI
+import config
+
+def get_followers_via_llm(name, platform):
+    try:
+        client = OpenAI(api_key=config.KIMI_API_KEY, base_url=config.KIMI_BASE_URL)
+        prompt = f"What is the approximate current subscriber/follower count for the {platform} '{name}'? Please return ONLY a JSON object with a single key 'followers' containing the integer number. Do not return any other text. If you don't know exactly, provide your best reasonable estimate based on your knowledge."
+        response = client.chat.completions.create(
+            model=config.KIMI_MODEL,
+            messages=[{'role': 'system', 'content': 'You are an analytics tool. Only output JSON.'}, {'role': 'user', 'content': prompt}],
+            response_format={'type': 'json_object'},
+            temperature=0.1
+        )
+        import json
+        data = json.loads(response.choices[0].message.content)
+        return int(data.get('followers', 0))
+    except Exception as e:
+        print(f'   [LLM Fallback Failed] {e}')
+        return 0
+
 def load_json_feed(path: Path) -> list:
     """Load and return a JSON array from *path*, or an empty list on error."""
     try:
@@ -131,8 +153,9 @@ def process_podcasts(feeds: list, *, dry_run: bool = False, delay: float = 1.5):
             continue
 
         try:
+            followers = get_followers_via_llm(name, "podcast")
             signals = podcast_collector.process_feed(url)
-            count = save_signals(signals, source_name=name, source_platform="podcast")
+            count = save_signals(signals, source_name=name, source_platform="podcast", followers=followers)
             total_signals += count
             print(f"   ✓ Saved {count} sponsor signal(s)")
         except Exception as exc:
@@ -163,6 +186,8 @@ def process_youtube(feeds: list, *, dry_run: bool = False, delay: float = 2.0):
 
         try:
             followers = get_yt_subs(channel_id)
+            if followers == 0:
+                followers = get_followers_via_llm(name, "youtube")
             signals = youtube_collector.process_youtube_channel(channel_id)
             count = save_signals(signals, source_name=name, source_platform="youtube", followers=followers)
             total_signals += count
