@@ -1,0 +1,327 @@
+[
+  {
+    "name": "Fireship",
+    "channel_id": "UCsBjURrPoezykLs9EqgamOA",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Linus Tech Tips",
+    "channel_id": "UCXuqSBlHAE6Xw-yeJA0Tunw",
+    "category": "Tech News"
+  },
+  {
+    "name": "MKBHD",
+    "channel_id": "UCBJycsmduvYEL83R_U4JriQ",
+    "category": "Tech News"
+  },
+  {
+    "name": "Two Minute Papers",
+    "channel_id": "UCbfYPyITQ-7l4upoX8nvctg",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Sentdex",
+    "channel_id": "UCfzlCWGWYyIQ0aLC5w48gBQ",
+    "category": "AI/ML"
+  },
+  {
+    "name": "3Blue1Brown",
+    "channel_id": "UCYO_jab_esuFRV4b17AJtAw",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Computerphile",
+    "channel_id": "UC9-y-6csu5WGm29I7JiwpnA",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "NetworkChuck",
+    "channel_id": "UC9x0AN7BWHpCDHSm9NiJFJQ",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Theo - t3.gg",
+    "channel_id": "UCbRP3c757lWg9M-U7TyEkXA",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Traversy Media",
+    "channel_id": "UC29ju8bIPH5as8OGnQzwJyA",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "The Coding Train",
+    "channel_id": "UCvjgXvBlISQQINevE468Ong",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Tech With Tim",
+    "channel_id": "UC4JX40jDee_tINbkjycV4Sg",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Ben Awad",
+    "channel_id": "UCnFwUSL_0Nk3PEc21g1FETTQ",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "ThePrimeagen",
+    "channel_id": "UCUyeluBRhGPCW4rPe_UvBZQ",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Web Dev Simplified",
+    "channel_id": "UCFbNIlppjAuEX4znoulh0Cw",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Corey Schafer",
+    "channel_id": "UCCezIgC97PvUuR4_gbFUs5g",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Veritasium",
+    "channel_id": "UCHnyfMqiRRG1u-2MsSQLbXA",
+    "category": "Tech News"
+  },
+  {
+    "name": "Jeff Geerling",
+    "channel_id": "UCR-DXc1voovS8nhAvccRZhg",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Yannic Kilcher",
+    "channel_id": "UCZHmQk67mSJgfCCTn7xBfew",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Andrej Karpathy",
+    "channel_id": "UCXUPKJO5MZQN11PqgIvyuvQ",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Matt Wolfe",
+    "channel_id": "UCJMYg8gVaeJhEbV5xyb-Q_g",
+    "category": "AI/ML"
+  },
+  {
+    "name": "AI Explained",
+    "channel_id": "UCNJ1Ymd5yFuUPtn21xtRbbw",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Matthew Berman",
+    "channel_id": "UCRI32EkGPMnI-7bgBylIo7A",
+    "category": "AI/ML"
+  },
+  {
+    "name": "DeepLearningAI",
+    "channel_id": "UCcIXc5mJsHVYTZR1maL5l9w",
+    "category": "AI/ML"
+  },
+  {
+    "name": "StatQuest with Josh Starmer",
+    "channel_id": "UCtYLUTtgS3k1Fg4y5tAhLbw",
+    "category": "Data/Analytics"
+  },
+  {
+    "name": "Lex Clips",
+    "channel_id": "UCJIfeSCssxSC_Dhc5s7woww",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Level1Techs",
+    "channel_id": "UC4w1YQAJMWOz4qtxinq55LQ",
+    "category": "Tech News"
+  },
+  {
+    "name": "TechLinked",
+    "channel_id": "UCeeFfhMcJa1kjtfZAGskOCA",
+    "category": "Tech News"
+  },
+  {
+    "name": "Dave's Garage",
+    "channel_id": "UCNzszbnvQeFzObW0ghk0Ckw",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "ArjanCodes",
+    "channel_id": "UCVhQ2NnY5Rskt6UjCUkJ_DA",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "NeetCode",
+    "channel_id": "UC_mYaQAE6-71rjSN6CeCA-g",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Kevin Powell",
+    "channel_id": "UCJZv4d5_2QGr5YhAIoT1a_A",
+    "category": "Design"
+  },
+  {
+    "name": "Hyperplexed",
+    "channel_id": "UCmEzz-dPBVgL8o5D2MBX4kQ",
+    "category": "Design"
+  },
+  {
+    "name": "Gary Explains",
+    "channel_id": "UCRjSO-juFtngAeJGJRMdIZw",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Hussein Nasser",
+    "channel_id": "UC_ML5xP23TOWKUcc-oAE_Eg",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "ByteByteGo",
+    "channel_id": "UCZgt6AzoyjslHTC9dz0UoTw",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "John Hammond",
+    "channel_id": "UCVeW9qkBjo3zosnqUbG7CFw",
+    "category": "Security"
+  },
+  {
+    "name": "LiveOverflow",
+    "channel_id": "UClcE-kVhqyiHCcjYwcpfj9w",
+    "category": "Security"
+  },
+  {
+    "name": "David Bombal",
+    "channel_id": "UCP7WmQ_U4688IderHkbQLOQ",
+    "category": "Security"
+  },
+  {
+    "name": "The Cyber Mentor",
+    "channel_id": "UC0ArlFuFYMpEewyRBzdLHiw",
+    "category": "Security"
+  },
+  {
+    "name": "Y Combinator",
+    "channel_id": "UCcefcZRL2oaA_uBNeo5UOWg",
+    "category": "Startups"
+  },
+  {
+    "name": "TechCrunch",
+    "channel_id": "UCCjyq_K1Xwfg8Lndy7lKMpA",
+    "category": "Tech News"
+  },
+  {
+    "name": "Bloomberg Technology",
+    "channel_id": "UCrM7B7SL_g1edFOnmj-SDKg",
+    "category": "Tech News"
+  },
+  {
+    "name": "Valuetainment",
+    "channel_id": "UCIHdDJ0tjn_3j-FS7s_X1kQ",
+    "category": "Startups"
+  },
+  {
+    "name": "Patrick Boyle",
+    "channel_id": "UCOA7-7scMGIGJel8OE_LrZA",
+    "category": "Startups"
+  },
+  {
+    "name": "ThinMatrix",
+    "channel_id": "UCUkRj4qoT1bsWpE_C8lZYoQ",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Code Bullet",
+    "channel_id": "UC0e3QhIYukixDNjnYfu1J0w",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Sebastian Lague",
+    "channel_id": "UCmtyQOKKmrMVaKuRXz02jbQ",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Joma Tech",
+    "channel_id": "UCV0qA-eDDICsRR9rPcnG7tw",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "TechWorld with Nana",
+    "channel_id": "UCdngmbVKX1Tgre699-XLlUA",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "CodeAesthetic",
+    "channel_id": "UCpREODoQXYOLkbiacGkzqPg",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Google DeepMind",
+    "channel_id": "UCP7jMXSY2xbc3KCAE0MHQ-A",
+    "category": "AI/ML"
+  },
+  {
+    "name": "AssemblyAI",
+    "channel_id": "UCtatfZMf-8EkIwASXM4ts0A",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Short Circuit",
+    "channel_id": "UCddiUEpeqJcYeBxX1IVBKvQ",
+    "category": "Tech News"
+  },
+  {
+    "name": "Gamers Nexus",
+    "channel_id": "UChIs72whgZI9w6d6FhwGGHA",
+    "category": "Tech News"
+  },
+  {
+    "name": "Hardware Unboxed",
+    "channel_id": "UCI8iQa1hv7oV_Z8D35vVuSg",
+    "category": "Tech News"
+  },
+  {
+    "name": "Linux Experiment",
+    "channel_id": "UC5UAwBUum7CPN5buc-_N1Fw",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "LearnLinuxTV",
+    "channel_id": "UCxQKHvKbmSzGMvUrVtJYnUA",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Dreams of Code",
+    "channel_id": "UCWQaM7L7a7-JSnUiBGU0S4w",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Flux",
+    "channel_id": "UCN7dywl5wDxTu1RM3eJ_h9Q",
+    "category": "Design"
+  },
+  {
+    "name": "DesignCourse",
+    "channel_id": "UCVyRiMvfUNMA1UPlDPzG5Ow",
+    "category": "Design"
+  },
+  {
+    "name": "Juxtopposed",
+    "channel_id": "UCo-4U0wkINbx5n41OkX2z4w",
+    "category": "Design"
+  },
+  {
+    "name": "Coding Garden",
+    "channel_id": "UCLNgu_OupwoeESgtab33CCw",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Jack Herrington",
+    "channel_id": "UC6vRUjYqDuoUsYsku86Hlbw",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Mosh Hamedani",
+    "channel_id": "UCWv7vMbMWH4-V0ZXdmDpPBA",
+    "category": "Dev Tools"
+  }
+]

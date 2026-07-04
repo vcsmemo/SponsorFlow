@@ -1,0 +1,227 @@
+[
+  {
+    "name": "TLDR",
+    "archive_url": "https://tldr.tech",
+    "category": "Tech News"
+  },
+  {
+    "name": "TLDR AI",
+    "archive_url": "https://tldr.tech/ai",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Superhuman AI",
+    "archive_url": "https://www.superhuman.ai",
+    "category": "AI/ML"
+  },
+  {
+    "name": "ByteByteGo Newsletter",
+    "archive_url": "https://blog.bytebytego.com",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "The Pragmatic Engineer",
+    "archive_url": "https://blog.pragmaticengineer.com",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Ben's Bites",
+    "archive_url": "https://bensbites.beehiiv.com",
+    "category": "AI/ML"
+  },
+  {
+    "name": "The Neuron",
+    "archive_url": "https://www.theneurondaily.com",
+    "category": "AI/ML"
+  },
+  {
+    "name": "AI Breakfast",
+    "archive_url": "https://aibreakfast.beehiiv.com",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Morning Brew",
+    "archive_url": "https://www.morningbrew.com/daily",
+    "category": "Tech News"
+  },
+  {
+    "name": "Lenny's Newsletter",
+    "archive_url": "https://www.lennysnewsletter.com",
+    "category": "SaaS"
+  },
+  {
+    "name": "Dense Discovery",
+    "archive_url": "https://www.densediscovery.com",
+    "category": "Design"
+  },
+  {
+    "name": "Hacker Newsletter",
+    "archive_url": "https://hackernewsletter.com",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Console.dev",
+    "archive_url": "https://console.dev",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Changelog News",
+    "archive_url": "https://changelog.com/news",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "JavaScript Weekly",
+    "archive_url": "https://javascriptweekly.com/issues",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "React Status",
+    "archive_url": "https://react.statuscode.com/issues",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Node Weekly",
+    "archive_url": "https://nodeweekly.com/issues",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Python Weekly",
+    "archive_url": "https://www.pythonweekly.com",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Golang Weekly",
+    "archive_url": "https://golangweekly.com/issues",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Ruby Weekly",
+    "archive_url": "https://rubyweekly.com/issues",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Postgres Weekly",
+    "archive_url": "https://postgresweekly.com/issues",
+    "category": "Data/Analytics"
+  },
+  {
+    "name": "StatusCode Weekly",
+    "archive_url": "https://weekly.statuscode.com/issues",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "The Rundown AI",
+    "archive_url": "https://www.therundown.ai",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Import AI",
+    "archive_url": "https://importai.substack.com",
+    "category": "AI/ML"
+  },
+  {
+    "name": "The Batch (DeepLearning.AI)",
+    "archive_url": "https://www.deeplearning.ai/the-batch",
+    "category": "AI/ML"
+  },
+  {
+    "name": "AlphaSignal",
+    "archive_url": "https://alphasignal.ai",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Davis AI Weekly",
+    "archive_url": "https://davidsmooke.substack.com",
+    "category": "AI/ML"
+  },
+  {
+    "name": "SaaS Weekly",
+    "archive_url": "https://saasweekly.com",
+    "category": "SaaS"
+  },
+  {
+    "name": "Product Hunt Daily",
+    "archive_url": "https://www.producthunt.com/newsletter",
+    "category": "Startups"
+  },
+  {
+    "name": "Stratechery",
+    "archive_url": "https://stratechery.com",
+    "category": "Tech News"
+  },
+  {
+    "name": "Benedict Evans Newsletter",
+    "archive_url": "https://www.ben-evans.com/newsletter",
+    "category": "Tech News"
+  },
+  {
+    "name": "The Information",
+    "archive_url": "https://www.theinformation.com",
+    "category": "Tech News"
+  },
+  {
+    "name": "Sidebar",
+    "archive_url": "https://sidebar.io",
+    "category": "Design"
+  },
+  {
+    "name": "UX Collective",
+    "archive_url": "https://uxdesign.cc",
+    "category": "Design"
+  },
+  {
+    "name": "HeyDesigner",
+    "archive_url": "https://heydesigner.com",
+    "category": "Design"
+  },
+  {
+    "name": "tl;dr sec",
+    "archive_url": "https://tldrsec.com",
+    "category": "Security"
+  },
+  {
+    "name": "This Week in Security",
+    "archive_url": "https://this.weekinsecurity.com",
+    "category": "Security"
+  },
+  {
+    "name": "Risky Biz News",
+    "archive_url": "https://news.risky.biz",
+    "category": "Security"
+  },
+  {
+    "name": "Data Elixir",
+    "archive_url": "https://dataelixir.com",
+    "category": "Data/Analytics"
+  },
+  {
+    "name": "O'Reilly Data & AI Newsletter",
+    "archive_url": "https://www.oreilly.com/data/newsletter.html",
+    "category": "Data/Analytics"
+  },
+  {
+    "name": "Technically",
+    "archive_url": "https://technically.substack.com",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "SWYX's Latent Space",
+    "archive_url": "https://www.latent.space",
+    "category": "AI/ML"
+  },
+  {
+    "name": "The Download (MIT Tech Review)",
+    "archive_url": "https://www.technologyreview.com/collection/the-download",
+    "category": "Tech News"
+  },
+  {
+    "name": "Exponential View",
+    "archive_url": "https://www.exponentialview.co",
+    "category": "AI/ML"
+  },
+  {
+    "name": "a]6z Newsletter",
+    "archive_url": "https://a16z.com/newsletter",
+    "category": "Startups"
+  }
+]

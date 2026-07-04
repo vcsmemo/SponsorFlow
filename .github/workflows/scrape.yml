@@ -1,0 +1,41 @@
+name: SponsorFlow Auto Scraper
+
+on:
+  schedule:
+    # Runs at 00:00 UTC daily (8:00 AM Beijing time)
+    - cron: '0 0 * * *'
+  # Enables manual start of the workflow from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    name: Run Aggregator Scrapers
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Python Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Execute Scraper Pipelines
+        env:
+          MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          IMAP_EMAIL: ${{ secrets.IMAP_EMAIL }}
+          IMAP_PASSWORD: ${{ secrets.IMAP_PASSWORD }}
+          IMAP_SERVER: ${{ secrets.IMAP_SERVER }}
+          SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+        run: |
+          # Run all collectors via batch_runner, limited to 20 items per source
+          # to stay within GitHub Actions free tier limits.
+          python batch_runner.py --source all --limit 20

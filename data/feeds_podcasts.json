@@ -1,0 +1,327 @@
+[
+  {
+    "name": "Lex Fridman Podcast",
+    "rss_url": "https://lexfridman.com/feed/podcast/",
+    "category": "AI/ML"
+  },
+  {
+    "name": "All-In Podcast",
+    "rss_url": "https://feeds.megaphone.fm/all-in-with-chamath-jason-sacks-and-friedberg",
+    "category": "Startups"
+  },
+  {
+    "name": "Hard Fork",
+    "rss_url": "https://feeds.simplecast.com/l2i9YnTd",
+    "category": "Tech News"
+  },
+  {
+    "name": "The Vergecast",
+    "rss_url": "https://feeds.megaphone.fm/vergecast",
+    "category": "Tech News"
+  },
+  {
+    "name": "Acquired",
+    "rss_url": "https://feeds.acquired.fm/acquired",
+    "category": "Startups"
+  },
+  {
+    "name": "My First Million",
+    "rss_url": "https://feeds.megaphone.fm/HSW2938673878",
+    "category": "Startups"
+  },
+  {
+    "name": "Huberman Lab",
+    "rss_url": "https://feeds.megaphone.fm/hubermanlab",
+    "category": "Tech News"
+  },
+  {
+    "name": "Lenny's Podcast",
+    "rss_url": "https://feeds.transistor.fm/lennys-podcast-product-growth-career",
+    "category": "SaaS"
+  },
+  {
+    "name": "The Changelog",
+    "rss_url": "https://changelog.com/podcast/feed",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Syntax.fm",
+    "rss_url": "https://feed.syntax.fm/rss",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Shop Talk Show",
+    "rss_url": "https://shoptalkshow.com/feed/podcast/",
+    "category": "Design"
+  },
+  {
+    "name": "JS Party",
+    "rss_url": "https://changelog.com/jsparty/feed",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Software Engineering Daily",
+    "rss_url": "https://softwareengineeringdaily.com/feed/podcast/",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "CoRecursive",
+    "rss_url": "https://corecursive.com/feed",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "The TWIML AI Podcast",
+    "rss_url": "https://feeds.megaphone.fm/MLN2155636147",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Gradient Dissent",
+    "rss_url": "https://feeds.soundcloud.com/users/soundcloud:users:680291252/sounds.rss",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Practical AI",
+    "rss_url": "https://changelog.com/practicalai/feed",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Data Skeptic",
+    "rss_url": "https://dataskeptic.libsyn.com/rss",
+    "category": "Data/Analytics"
+  },
+  {
+    "name": "This Week in Startups",
+    "rss_url": "https://feeds.megaphone.fm/thisweekinstartups",
+    "category": "Startups"
+  },
+  {
+    "name": "The Tim Ferriss Show",
+    "rss_url": "https://rss.art19.com/tim-ferriss-show",
+    "category": "Startups"
+  },
+  {
+    "name": "How I Built This",
+    "rss_url": "https://feeds.npr.org/510313/podcast.xml",
+    "category": "Startups"
+  },
+  {
+    "name": "Masters of Scale",
+    "rss_url": "https://rss.art19.com/masters-of-scale",
+    "category": "Startups"
+  },
+  {
+    "name": "a16z Podcast",
+    "rss_url": "https://feeds.simplecast.com/JGE3yC0V",
+    "category": "Startups"
+  },
+  {
+    "name": "Y Combinator Startup Podcast",
+    "rss_url": "https://feeds.simplecast.com/yBbtnu1n",
+    "category": "Startups"
+  },
+  {
+    "name": "Indie Hackers",
+    "rss_url": "https://feeds.backtracks.fm/feeds/indiehackers/indiehackers/feed.xml",
+    "category": "Startups"
+  },
+  {
+    "name": "Darknet Diaries",
+    "rss_url": "https://feeds.megaphone.fm/darknetdiaries",
+    "category": "Security"
+  },
+  {
+    "name": "Security Now",
+    "rss_url": "https://feeds.twit.tv/sn.xml",
+    "category": "Security"
+  },
+  {
+    "name": "The AI Podcast (NVIDIA)",
+    "rss_url": "https://feeds.soundcloud.com/users/soundcloud:users:264034133/sounds.rss",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Wired Business",
+    "rss_url": "https://www.omnycontent.com/d/playlist/aaea4e69-af51-495e-afc9-a9760146922b/43816ad4-5809-4ab0-86a6-ab4c00354830/5f25a7a3-73c7-4272-a39d-ab4c00354842/podcast.rss",
+    "category": "Tech News"
+  },
+  {
+    "name": "Accidental Tech Podcast",
+    "rss_url": "https://atp.fm/episodes?format=rss",
+    "category": "Tech News"
+  },
+  {
+    "name": "The Talk Show with John Gruber",
+    "rss_url": "https://daringfireball.net/thetalkshow/rss",
+    "category": "Tech News"
+  },
+  {
+    "name": "Decoder with Nilay Patel",
+    "rss_url": "https://feeds.megaphone.fm/decoder-with-nilay-patel",
+    "category": "Tech News"
+  },
+  {
+    "name": "Pivot",
+    "rss_url": "https://feeds.megaphone.fm/pivot-podcast",
+    "category": "Tech News"
+  },
+  {
+    "name": "Recode Media",
+    "rss_url": "https://feeds.megaphone.fm/recodemedia",
+    "category": "Tech News"
+  },
+  {
+    "name": "TechMeme Ride Home",
+    "rss_url": "https://feeds.megaphone.fm/techmeme-ridehome",
+    "category": "Tech News"
+  },
+  {
+    "name": "The Prof G Pod with Scott Galloway",
+    "rss_url": "https://feeds.megaphone.fm/profgshow",
+    "category": "Startups"
+  },
+  {
+    "name": "Reply All",
+    "rss_url": "https://feeds.megaphone.fm/replyall",
+    "category": "Tech News"
+  },
+  {
+    "name": "The Bike Shed",
+    "rss_url": "https://feeds.fireside.fm/bikeshed/rss",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Go Time",
+    "rss_url": "https://changelog.com/gotime/feed",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "PodRocket",
+    "rss_url": "https://podrocket.logrocket.com/rss",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "DevOps Paradox",
+    "rss_url": "https://www.devopsparadox.com/feed/podcast/mp3/",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Kubernetes Podcast from Google",
+    "rss_url": "https://kubernetespodcast.com/feeds/audio.xml",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "AWS Podcast",
+    "rss_url": "https://d3gih7jbfe3jlq.cloudfront.net/aws-podcast.rss",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "The Azure Podcast",
+    "rss_url": "https://feeds.soundcloud.com/users/soundcloud:users:147408775/sounds.rss",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Google Cloud Podcast",
+    "rss_url": "https://feeds.feedburner.com/GcpPodcast",
+    "category": "Dev Tools"
+  },
+  {
+    "name": "Data Engineering Podcast",
+    "rss_url": "https://www.dataengineeringpodcast.com/feed/mp3/",
+    "category": "Data/Analytics"
+  },
+  {
+    "name": "The Data Chief",
+    "rss_url": "https://feeds.simplecast.com/TlI4bXkF",
+    "category": "Data/Analytics"
+  },
+  {
+    "name": "Analytics Power Hour",
+    "rss_url": "https://analyticshour.libsyn.com/rss",
+    "category": "Data/Analytics"
+  },
+  {
+    "name": "Not So Standard Deviations",
+    "rss_url": "https://nssdeviations.com/feed",
+    "category": "Data/Analytics"
+  },
+  {
+    "name": "Machine Learning Street Talk",
+    "rss_url": "https://anchor.fm/s/1e4a0eac/podcast/rss",
+    "category": "AI/ML"
+  },
+  {
+    "name": "The Robot Brains Podcast",
+    "rss_url": "https://feeds.simplecast.com/9j7BPGSY",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Eye on AI",
+    "rss_url": "https://feeds.fireside.fm/eyeonai/rss",
+    "category": "AI/ML"
+  },
+  {
+    "name": "AI with AI",
+    "rss_url": "https://feeds.soundcloud.com/users/soundcloud:users:365850607/sounds.rss",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Latent Space",
+    "rss_url": "https://api.substack.com/feed/podcast/1084089.rss",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Last Week in AI",
+    "rss_url": "https://anchor.fm/s/cb961c8/podcast/rss",
+    "category": "AI/ML"
+  },
+  {
+    "name": "SaaStr Podcast",
+    "rss_url": "https://saastr.libsyn.com/rss",
+    "category": "SaaS"
+  },
+  {
+    "name": "Build with Leah",
+    "rss_url": "https://feeds.transistor.fm/build-with-leah",
+    "category": "SaaS"
+  },
+  {
+    "name": "Smashing Security",
+    "rss_url": "https://feeds.acast.com/public/shows/smashing-security",
+    "category": "Security"
+  },
+  {
+    "name": "Risky Business",
+    "rss_url": "https://risky.biz/feeds/risky-business/",
+    "category": "Security"
+  },
+  {
+    "name": "Malicious Life",
+    "rss_url": "https://malicious.life/feed/podcast/",
+    "category": "Security"
+  },
+  {
+    "name": "The CyberWire Daily",
+    "rss_url": "https://thecyberwire.libsyn.com/rss",
+    "category": "Security"
+  },
+  {
+    "name": "Design Matters with Debbie Millman",
+    "rss_url": "https://feeds.simplecast.com/_6HftZjb",
+    "category": "Design"
+  },
+  {
+    "name": "The Futur Podcast",
+    "rss_url": "https://thefutur.libsyn.com/rss",
+    "category": "Design"
+  },
+  {
+    "name": "UI Breakfast Podcast",
+    "rss_url": "https://feeds.simplecast.com/4MvgQ73R",
+    "category": "Design"
+  },
+  {
+    "name": "Founder's Journal",
+    "rss_url": "https://feeds.megaphone.fm/founderjournal",
+    "category": "Startups"
+  }
+]

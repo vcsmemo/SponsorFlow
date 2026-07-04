@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #fbf9f6;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(135, 110, 95, 0.03) 0px, transparent 50%),
+      radial-gradient(at 98% 98%, rgba(99, 102, 241, 0.02) 0px, transparent 50%);
+    background-attachment: fixed;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: #191919;
+  }
+  
+  h1, h2, h3, h4, .font-serif-title {
+    font-family: 'Lora', Georgia, Cambria, "Times New Roman", Times, serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #fbf9f6;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(135, 110, 95, 0.15);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(135, 110, 95, 0.3);
+}
+
+/* Premium Warm Flat Panels (Anthropic Style) */
+.glass-panel {
+  background: #ffffff;
+  border: 1px solid #e8e2d9;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  transition: all 0.25s ease;
+}
+
+.glass-panel-hover:hover {
+  border-color: #d1c8b8;
+  box-shadow: 0 4px 12px rgba(135, 110, 95, 0.05);
+}
+
+/* Staggered fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Glow effect for active elements */
+.glow-purple {
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.03);
+}
+
+/* Grid pattern overlay */
+.grid-pattern {
+  background-image: 
+    linear-gradient(rgba(135, 110, 95, 0.01) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(135, 110, 95, 0.01) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
