@@ -584,7 +584,7 @@ export default function App() {
                           <td className="py-3.5">
                             <div className="flex items-center gap-2">
                               {deal.sponsor_logo ? (
-                                <SafeImage src={deal.sponsor_logo} className="w-5 h-5 rounded object-contain border border-slate-100 bg-white" alt="" fallbackText={(deal.sponsor_brand_name || deal.channel_name || "?")} />
+                                <SafeImage src={deal.sponsor_logo} className="w-5 h-5 rounded object-contain border border-slate-100 bg-white" alt="" fallbackText={(deal.sponsor_name || deal.channel_name || "?")} />
                               ) : (
                                 <div className="w-5 h-5 rounded bg-[#f5f2eb] text-[8px] font-bold text-[#876e5f] flex items-center justify-center border border-[#e8e2d9]">{deal.sponsor_name[0]}</div>
                               )}
@@ -594,7 +594,7 @@ export default function App() {
                           <td className="py-3.5">
                             <div className="flex items-center gap-2">
                               {deal.channel_avatar ? (
-                                <SafeImage src={deal.channel_avatar} className="w-5 h-5 rounded-full object-cover" alt="" fallbackText={(deal.sponsor_brand_name || deal.channel_name || "?")} />
+                                <SafeImage src={deal.channel_avatar} className="w-5 h-5 rounded-full object-cover" alt="" fallbackText={(deal.sponsor_name || deal.channel_name || "?")} />
                               ) : (
                                 <div className="w-5 h-5 rounded-full bg-slate-100 text-[8px] font-bold text-slate-500 flex items-center justify-center">{deal.channel_name[0]}</div>
                               )}
@@ -684,7 +684,7 @@ export default function App() {
                   <div className="glass-panel border border-[#e8e2d9] rounded p-6 relative overflow-hidden flex flex-col md:flex-row justify-between items-start md:items-center gap-4 shadow-sm">
                     <div className="flex items-center gap-4">
                       {brandDetail.sponsor.logo_url ? (
-                        <SafeImage src={brandDetail.sponsor.logo_url} className="w-14 h-14 rounded object-contain border border-[#e8e2d9] bg-white p-1" alt="" fallbackText={brandDetail.sponsor.brand_name || "?"} />
+                        <SafeImage src={brandDetail.sponsor.logo_url} className="w-14 h-14 rounded object-contain border border-[#e8e2d9] bg-white p-1" alt="" fallbackText={brandDetail.sponsor.brand_name || brandDetail.sponsor.name || "?"} />
                       ) : (
                         <div className="w-14 h-14 rounded bg-[#f5f2eb] text-2xl font-bold text-[#876e5f] flex items-center justify-center border border-[#e8e2d9]">{brandDetail.sponsor.brand_name[0]}</div>
                       )}
@@ -941,9 +941,11 @@ export default function App() {
                             <span className="text-xs font-bold text-[#e27b58] font-serif-title">$30.00</span>
                           </div>
                           <div>
-                            <span className="text-[10px] text-slate-400 uppercase block font-semibold">Profile URL</span>
+                            <span className="text-[10px] text-slate-400 uppercase block font-semibold">
+                              {creatorDetail.channel.platform === 'youtube' ? 'YouTube URL' : creatorDetail.channel.platform === 'podcast' ? 'RSS Feed' : 'Website'}
+                            </span>
                             <a href={creatorDetail.channel.raw_url} target="_blank" rel="noreferrer" className="text-xs font-bold text-[#e27b58] hover:underline flex items-center gap-1">
-                              Source Feed <ExternalLink className="w-2.5 h-2.5" />
+                              Visit Link <ExternalLink className="w-2.5 h-2.5" />
                             </a>
                           </div>
                         </div>
@@ -1009,7 +1011,7 @@ export default function App() {
                             <div className="space-y-1.5 flex-1">
                               <div className="flex items-center gap-2.5">
                                 {h.sponsor_logo ? (
-                                  <SafeImage src={h.sponsor_logo} className="w-5 h-5 rounded object-contain border border-slate-100 bg-white" alt="" fallbackText={h.sponsor_brand_name || "?"} />
+                                  <SafeImage src={h.sponsor_logo} className="w-5 h-5 rounded object-contain border border-slate-100 bg-white" alt="" fallbackText={h.sponsor_name || "?"} />
                                 ) : (
                                   <div className="w-5 h-5 rounded bg-slate-100 text-[8px] font-bold text-slate-500 flex items-center justify-center">{h.sponsor_name[0]}</div>
                                 )}
@@ -1063,7 +1065,7 @@ export default function App() {
                           <td className="py-3.5">
                             <div className="flex items-center gap-2">
                               {deal.sponsor_logo ? (
-                                <SafeImage src={deal.sponsor_logo} className="w-5 h-5 rounded object-contain border border-slate-100 bg-white" alt="" fallbackText={(deal.sponsor_brand_name || deal.channel_name || "?")} />
+                                <SafeImage src={deal.sponsor_logo} className="w-5 h-5 rounded object-contain border border-slate-100 bg-white" alt="" fallbackText={(deal.sponsor_name || deal.channel_name || "?")} />
                               ) : (
                                 <div className="w-5 h-5 rounded bg-slate-100 text-[8px] font-bold text-slate-450 flex items-center justify-center border border-slate-150">{deal.sponsor_name[0]}</div>
                               )}
@@ -1073,7 +1075,7 @@ export default function App() {
                           <td className="py-3.5">
                             <div className="flex items-center gap-2">
                               {deal.channel_avatar ? (
-                                <SafeImage src={deal.channel_avatar} className="w-6 h-6 rounded-full object-cover border border-slate-100 bg-white" alt="" fallbackText={(deal.sponsor_brand_name || deal.channel_name || "?")} />
+                                <SafeImage src={deal.channel_avatar} className="w-6 h-6 rounded-full object-cover border border-slate-100 bg-white" alt="" fallbackText={(deal.sponsor_name || deal.channel_name || "?")} />
                               ) : (
                                 <div className="w-6 h-6 rounded-full bg-slate-100 text-[8px] font-bold text-slate-500 flex items-center justify-center">{deal.channel_name[0]}</div>
                               )}
@@ -1117,7 +1119,7 @@ export default function App() {
                       className="border border-[#e8e2d9] bg-slate-50 p-4 rounded flex flex-col items-center justify-center gap-2.5 cursor-pointer hover:border-[#e27b58]/40 w-36 transition-all"
                     >
                       {dealDetail.deal.sponsor_logo ? (
-                        <SafeImage src={dealDetail.deal.sponsor_logo} className="w-9 h-9 rounded object-contain border border-[#e8e2d9] bg-white" alt="" fallbackText={(dealDetail.deal.sponsor_brand_name || dealDetail.deal.channel_name || "?")} />
+                        <SafeImage src={dealDetail.deal.sponsor_logo} className="w-9 h-9 rounded object-contain border border-[#e8e2d9] bg-white" alt="" fallbackText={(dealDetail.deal.sponsor_name || dealDetail.deal.channel_name || "?")} />
                       ) : (
                         <div className="w-9 h-9 rounded bg-[#f5f2eb] text-lg font-bold text-[#876e5f] flex items-center justify-center">{dealDetail.deal.sponsor_name[0]}</div>
                       )}
@@ -1141,7 +1143,7 @@ export default function App() {
                       className="border border-[#e8e2d9] bg-slate-50 p-4 rounded flex flex-col items-center justify-center gap-2.5 cursor-pointer hover:border-[#e27b58]/40 w-36 transition-all"
                     >
                       {dealDetail.deal.channel_avatar ? (
-                        <SafeImage src={dealDetail.deal.channel_avatar} className="w-9 h-9 rounded-full object-cover border border-[#e8e2d9] bg-white" alt="" fallbackText={(dealDetail.deal.sponsor_brand_name || dealDetail.deal.channel_name || "?")} />
+                        <SafeImage src={dealDetail.deal.channel_avatar} className="w-9 h-9 rounded-full object-cover border border-[#e8e2d9] bg-white" alt="" fallbackText={(dealDetail.deal.sponsor_name || dealDetail.deal.channel_name || "?")} />
                       ) : (
                         <div className="w-9 h-9 rounded-full bg-[#f5f2eb] text-lg font-bold text-[#876e5f] flex items-center justify-center">{dealDetail.deal.channel_name[0]}</div>
                       )}
