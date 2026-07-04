@@ -384,7 +384,7 @@ export default function App() {
                       : 'text-slate-500 hover:text-slate-900 hover:bg-slate-50 border-l-2 border-transparent'
                   }`}
                 >
-                  <IconComp className="w-4.5 h-4.5" />
+                  <IconComp className="w-5 h-5" />
                   {tab.label}
                 </button>
               );
@@ -638,9 +638,9 @@ export default function App() {
                     <div className="space-y-3">
                       <div className="flex items-center gap-3">
                         {sp.logo_url ? (
-                          <SafeImage src={sp.logo_url} className="w-6.5 h-6.5 rounded object-contain border border-slate-100 bg-white p-0.5" alt="" fallbackText={sp.brand_name || sp.name || "?"} />
+                          <SafeImage src={sp.logo_url} className="w-7 h-7 rounded object-contain border border-slate-100 bg-white p-0.5" alt="" fallbackText={sp.brand_name || sp.name || "?"} />
                         ) : (
-                          <div className="w-6.5 h-6.5 rounded bg-[#f5f2eb] text-xs font-bold text-[#876e5f] flex items-center justify-center border border-[#e8e2d9]">{sp.name[0]}</div>
+                          <div className="w-7 h-7 rounded bg-[#f5f2eb] text-xs font-bold text-[#876e5f] flex items-center justify-center border border-[#e8e2d9]">{sp.name[0]}</div>
                         )}
                         <h3 className="text-sm font-black text-slate-800 group-hover:text-[#e27b58] transition-colors">{sp.name}</h3>
                       </div>
@@ -774,9 +774,9 @@ export default function App() {
                             >
                               <div className="flex items-center gap-2">
                                 {c.avatar ? (
-                                  <SafeImage src={c.avatar} className="w-4.5 h-4.5 rounded-full object-cover border border-[#e8e2d9]/40" alt="" fallbackText={c.name || "?"} />
+                                  <SafeImage src={c.avatar} className="w-5 h-5 rounded-full object-cover border border-[#e8e2d9]/40" alt="" fallbackText={c.name || "?"} />
                                 ) : (
-                                  <div className="w-4.5 h-4.5 rounded-full bg-slate-100 text-[8px] font-bold text-slate-450 flex items-center justify-center">{c.name[0]}</div>
+                                  <div className="w-5 h-5 rounded-full bg-slate-100 text-[8px] font-bold text-slate-450 flex items-center justify-center">{c.name[0]}</div>
                                 )}
                                 <span className="text-xs font-bold text-slate-700 hover:text-[#e27b58] transition-colors">{c.name}</span>
                               </div>
@@ -960,9 +960,9 @@ export default function App() {
                             >
                               <div className="flex items-center gap-2.5">
                                 {b.logo ? (
-                                  <SafeImage src={b.logo} className="w-4.5 h-4.5 rounded object-contain border border-slate-100 bg-white" alt="" fallbackText={b.brand_name || b.name || "?"} />
+                                  <SafeImage src={b.logo} className="w-5 h-5 rounded object-contain border border-slate-100 bg-white" alt="" fallbackText={b.brand_name || b.name || "?"} />
                                 ) : (
-                                  <div className="w-4.5 h-4.5 rounded bg-slate-100 text-[8px] font-bold text-slate-400 flex items-center justify-center">{b.name[0]}</div>
+                                  <div className="w-5 h-5 rounded bg-slate-100 text-[8px] font-bold text-slate-400 flex items-center justify-center">{b.name[0]}</div>
                                 )}
                                 <span className="text-xs font-bold text-slate-700 hover:text-[#e27b58] transition-colors">{b.name}</span>
                               </div>
@@ -1072,9 +1072,9 @@ export default function App() {
                           <td className="py-3.5">
                             <div className="flex items-center gap-2">
                               {deal.channel_avatar ? (
-                                <SafeImage src={deal.channel_avatar} className="w-5.5 h-5.5 rounded-full object-cover border border-slate-100 bg-white" alt="" fallbackText={(deal.sponsor_brand_name || deal.channel_name || "?")} />
+                                <SafeImage src={deal.channel_avatar} className="w-6 h-6 rounded-full object-cover border border-slate-100 bg-white" alt="" fallbackText={(deal.sponsor_brand_name || deal.channel_name || "?")} />
                               ) : (
-                                <div className="w-5.5 h-5.5 rounded-full bg-slate-100 text-[8px] font-bold text-slate-500 flex items-center justify-center">{deal.channel_name[0]}</div>
+                                <div className="w-6 h-6 rounded-full bg-slate-100 text-[8px] font-bold text-slate-500 flex items-center justify-center">{deal.channel_name[0]}</div>
                               )}
                               <span className="font-medium text-slate-700">{deal.channel_name}</span>
                             </div>
@@ -1484,9 +1484,9 @@ export default function App() {
                               <td className="py-3.5">
                                 <div className="flex items-center gap-2.5">
                                   {sp.logo_url ? (
-                                    <SafeImage src={sp.logo_url} className="w-4.5 h-4.5 rounded object-contain border border-slate-100 bg-white" alt="" fallbackText={sp.brand_name || sp.name || "?"} />
+                                    <SafeImage src={sp.logo_url} className="w-5 h-5 rounded object-contain border border-slate-100 bg-white" alt="" fallbackText={sp.brand_name || sp.name || "?"} />
                                   ) : (
-                                    <div className="w-4.5 h-4.5 rounded bg-slate-100 text-[8px] font-bold text-slate-500 flex items-center justify-center border border-slate-150">{sp.name[0]}</div>
+                                    <div className="w-5 h-5 rounded bg-slate-100 text-[8px] font-bold text-slate-500 flex items-center justify-center border border-slate-150">{sp.name[0]}</div>
                                   )}
                                   <span className="font-bold text-slate-705 group-hover:text-[#e27b58] transition-colors">{sp.name}</span>
                                 </div>
