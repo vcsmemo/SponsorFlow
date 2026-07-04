@@ -1116,7 +1116,7 @@ export default function App() {
                       className="border border-[#e8e2d9] bg-slate-50 p-4 rounded flex flex-col items-center justify-center gap-2.5 cursor-pointer hover:border-[#e27b58]/40 w-36 transition-all"
                     >
                       {dealDetail.deal.sponsor_logo ? (
-                        <SafeImage src={dealDetail.deal.sponsor_logo} className="w-9 h-9 rounded object-contain border border-[#e8e2d9] bg-white" alt="" fallbackText={(deal.sponsor_brand_name || deal.channel_name || "?")} />
+                        <SafeImage src={dealDetail.deal.sponsor_logo} className="w-9 h-9 rounded object-contain border border-[#e8e2d9] bg-white" alt="" fallbackText={(dealDetail.deal.sponsor_brand_name || dealDetail.deal.channel_name || "?")} />
                       ) : (
                         <div className="w-9 h-9 rounded bg-[#f5f2eb] text-lg font-bold text-[#876e5f] flex items-center justify-center">{dealDetail.deal.sponsor_name[0]}</div>
                       )}
@@ -1140,7 +1140,7 @@ export default function App() {
                       className="border border-[#e8e2d9] bg-slate-50 p-4 rounded flex flex-col items-center justify-center gap-2.5 cursor-pointer hover:border-[#e27b58]/40 w-36 transition-all"
                     >
                       {dealDetail.deal.channel_avatar ? (
-                        <SafeImage src={dealDetail.deal.channel_avatar} className="w-9 h-9 rounded-full object-cover border border-[#e8e2d9] bg-white" alt="" fallbackText={(deal.sponsor_brand_name || deal.channel_name || "?")} />
+                        <SafeImage src={dealDetail.deal.channel_avatar} className="w-9 h-9 rounded-full object-cover border border-[#e8e2d9] bg-white" alt="" fallbackText={(dealDetail.deal.sponsor_brand_name || dealDetail.deal.channel_name || "?")} />
                       ) : (
                         <div className="w-9 h-9 rounded-full bg-[#f5f2eb] text-lg font-bold text-[#876e5f] flex items-center justify-center">{dealDetail.deal.channel_name[0]}</div>
                       )}
