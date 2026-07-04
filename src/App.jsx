@@ -31,7 +31,29 @@ import {
   Network
 } from 'lucide-react';
 
+
+const SafeImage = ({ src, alt, className, fallbackText }) => {
+  const [error, setError] = React.useState(false);
+  React.useEffect(() => { setError(false); }, [src]);
+  
+  if (error || !src) {
+    let initial = '?';
+    if (fallbackText && typeof fallbackText === 'string') {
+        initial = fallbackText.charAt(0).toUpperCase();
+    } else if (alt && typeof alt === 'string') {
+        initial = alt.charAt(0).toUpperCase();
+    }
+    return (
+      <div className={`${className} flex items-center justify-center font-bold text-slate-400 bg-slate-50`} style={{ padding: 0 }}>
+        {initial}
+      </div>
+    );
+  }
+  return <img src={src} alt={alt} className={className} onError={() => setError(true)} />;
+};
+
 export default function App() {
+
   // Navigation Router
   const [currentView, setCurrentView] = useState({ page: 'home', params: {} });
   
@@ -487,7 +509,7 @@ export default function App() {
                         <div className="flex items-center gap-3">
                           <span className="text-xs font-bold text-slate-400 w-4">#{idx+1}</span>
                           {sp.logo_url ? (
-                            <img src={sp.logo_url} className="w-5 h-5 rounded object-contain border border-slate-100 bg-white" alt={sp.name} />
+                            <SafeImage src={sp.logo_url} className="w-5 h-5 rounded object-contain border border-slate-100 bg-white" alt={sp.name} fallbackText={sp.name} />
                           ) : (
                             <div className="w-5 h-5 rounded bg-[#f5f2eb] text-[9px] font-bold text-[#876e5f] flex items-center justify-center border border-[#e8e2d9]">{sp.name[0]}</div>
                           )}
@@ -518,7 +540,7 @@ export default function App() {
                         <div className="flex items-center gap-3">
                           <span className="text-xs font-bold text-slate-400 w-4">#{idx+1}</span>
                           {ch.avatar_url ? (
-                            <img src={ch.avatar_url} className="w-5 h-5 rounded-full object-cover border border-slate-100 bg-white" alt={ch.name} />
+                            <SafeImage src={ch.avatar_url} className="w-5 h-5 rounded-full object-cover border border-slate-100 bg-white" alt={ch.name} fallbackText={ch.name} />
                           ) : (
                             <div className="w-5 h-5 rounded-full bg-slate-100 text-[9px] font-bold text-slate-500 flex items-center justify-center">{ch.name[0]}</div>
                           )}
@@ -561,7 +583,7 @@ export default function App() {
                           <td className="py-3.5">
                             <div className="flex items-center gap-2">
                               {deal.sponsor_logo ? (
-                                <img src={deal.sponsor_logo} className="w-5 h-5 rounded object-contain border border-slate-100 bg-white" alt="" />
+                                <SafeImage src={deal.sponsor_logo} className="w-5 h-5 rounded object-contain border border-slate-100 bg-white" alt="" fallbackText={(deal.sponsor_brand_name || deal.channel_name || "?")} />
                               ) : (
                                 <div className="w-5 h-5 rounded bg-[#f5f2eb] text-[8px] font-bold text-[#876e5f] flex items-center justify-center border border-[#e8e2d9]">{deal.sponsor_name[0]}</div>
                               )}
@@ -571,7 +593,7 @@ export default function App() {
                           <td className="py-3.5">
                             <div className="flex items-center gap-2">
                               {deal.channel_avatar ? (
-                                <img src={deal.channel_avatar} className="w-5 h-5 rounded-full object-cover" alt="" />
+                                <SafeImage src={deal.channel_avatar} className="w-5 h-5 rounded-full object-cover" alt="" fallbackText={(deal.sponsor_brand_name || deal.channel_name || "?")} />
                               ) : (
                                 <div className="w-5 h-5 rounded-full bg-slate-100 text-[8px] font-bold text-slate-500 flex items-center justify-center">{deal.channel_name[0]}</div>
                               )}
@@ -616,7 +638,7 @@ export default function App() {
                     <div className="space-y-3">
                       <div className="flex items-center gap-3">
                         {sp.logo_url ? (
-                          <img src={sp.logo_url} className="w-6.5 h-6.5 rounded object-contain border border-slate-100 bg-white p-0.5" alt="" />
+                          <SafeImage src={sp.logo_url} className="w-6.5 h-6.5 rounded object-contain border border-slate-100 bg-white p-0.5" alt="" fallbackText={sp.brand_name || sp.name || "?"} />
                         ) : (
                           <div className="w-6.5 h-6.5 rounded bg-[#f5f2eb] text-xs font-bold text-[#876e5f] flex items-center justify-center border border-[#e8e2d9]">{sp.name[0]}</div>
                         )}
@@ -661,7 +683,7 @@ export default function App() {
                   <div className="glass-panel border border-[#e8e2d9] rounded p-6 relative overflow-hidden flex flex-col md:flex-row justify-between items-start md:items-center gap-4 shadow-sm">
                     <div className="flex items-center gap-4">
                       {brandDetail.sponsor.logo_url ? (
-                        <img src={brandDetail.sponsor.logo_url} className="w-14 h-14 rounded object-contain border border-[#e8e2d9] bg-white p-1" alt="" />
+                        <SafeImage src={brandDetail.sponsor.logo_url} className="w-14 h-14 rounded object-contain border border-[#e8e2d9] bg-white p-1" alt="" fallbackText={brandDetail.sponsor.brand_name || "?"} />
                       ) : (
                         <div className="w-14 h-14 rounded bg-[#f5f2eb] text-2xl font-bold text-[#876e5f] flex items-center justify-center border border-[#e8e2d9]">{brandDetail.sponsor.brand_name[0]}</div>
                       )}
@@ -752,7 +774,7 @@ export default function App() {
                             >
                               <div className="flex items-center gap-2">
                                 {c.avatar ? (
-                                  <img src={c.avatar} className="w-4.5 h-4.5 rounded-full object-cover border border-[#e8e2d9]/40" alt="" />
+                                  <SafeImage src={c.avatar} className="w-4.5 h-4.5 rounded-full object-cover border border-[#e8e2d9]/40" alt="" fallbackText={c.name || "?"} />
                                 ) : (
                                   <div className="w-4.5 h-4.5 rounded-full bg-slate-100 text-[8px] font-bold text-slate-450 flex items-center justify-center">{c.name[0]}</div>
                                 )}
@@ -778,7 +800,7 @@ export default function App() {
                             <div className="flex items-center justify-between text-sm">
                               <div className="flex items-center gap-2.5">
                                 {p.channel_avatar ? (
-                                  <img src={p.channel_avatar} className="w-5 h-5 rounded-full object-cover border border-slate-100" alt="" />
+                                  <SafeImage src={p.channel_avatar} className="w-5 h-5 rounded-full object-cover border border-slate-100" alt="" fallbackText={p.channel_name || "?"} />
                                 ) : (
                                   <div className="w-5 h-5 rounded-full bg-slate-100 text-[8px] font-bold text-slate-500 flex items-center justify-center">{p.channel_name[0]}</div>
                                 )}
@@ -821,7 +843,7 @@ export default function App() {
                   >
                     <div className="flex gap-3.5">
                       {ch.avatar_url ? (
-                        <img src={ch.avatar_url} className="w-11 h-11 rounded-full object-cover border border-[#e8e2d9] bg-white shadow-sm" alt="" />
+                        <SafeImage src={ch.avatar_url} className="w-11 h-11 rounded-full object-cover border border-[#e8e2d9] bg-white shadow-sm" alt="" fallbackText={ch.name || "?"} />
                       ) : (
                         <div className="w-11 h-11 rounded-full bg-[#f5f2eb] text-sm font-bold text-[#876e5f] flex items-center justify-center border border-[#e8e2d9]">{ch.name[0]}</div>
                       )}
@@ -864,7 +886,7 @@ export default function App() {
                   <div className="glass-panel border border-[#e8e2d9] rounded p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 shadow-sm">
                     <div className="flex items-center gap-4">
                       {creatorDetail.channel.avatar_url ? (
-                        <img src={creatorDetail.channel.avatar_url} className="w-14 h-14 rounded-full object-cover border border-[#e8e2d9] bg-white shadow-sm" alt="" />
+                        <SafeImage src={creatorDetail.channel.avatar_url} className="w-14 h-14 rounded-full object-cover border border-[#e8e2d9] bg-white shadow-sm" alt="" fallbackText={creatorDetail.channel.name || "?"} />
                       ) : (
                         <div className="w-14 h-14 rounded-full bg-[#f5f2eb] text-xl font-bold text-[#876e5f] flex items-center justify-center border border-[#e8e2d9]">{creatorDetail.channel.name[0]}</div>
                       )}
@@ -938,7 +960,7 @@ export default function App() {
                             >
                               <div className="flex items-center gap-2.5">
                                 {b.logo ? (
-                                  <img src={b.logo} className="w-4.5 h-4.5 rounded object-contain border border-slate-100 bg-white" alt="" />
+                                  <SafeImage src={b.logo} className="w-4.5 h-4.5 rounded object-contain border border-slate-100 bg-white" alt="" fallbackText={b.brand_name || b.name || "?"} />
                                 ) : (
                                   <div className="w-4.5 h-4.5 rounded bg-slate-100 text-[8px] font-bold text-slate-400 flex items-center justify-center">{b.name[0]}</div>
                                 )}
@@ -986,7 +1008,7 @@ export default function App() {
                             <div className="space-y-1.5 flex-1">
                               <div className="flex items-center gap-2.5">
                                 {h.sponsor_logo ? (
-                                  <img src={h.sponsor_logo} className="w-5 h-5 rounded object-contain border border-slate-100 bg-white" alt="" />
+                                  <SafeImage src={h.sponsor_logo} className="w-5 h-5 rounded object-contain border border-slate-100 bg-white" alt="" fallbackText={h.sponsor_brand_name || "?"} />
                                 ) : (
                                   <div className="w-5 h-5 rounded bg-slate-100 text-[8px] font-bold text-slate-500 flex items-center justify-center">{h.sponsor_name[0]}</div>
                                 )}
@@ -1040,7 +1062,7 @@ export default function App() {
                           <td className="py-3.5">
                             <div className="flex items-center gap-2">
                               {deal.sponsor_logo ? (
-                                <img src={deal.sponsor_logo} className="w-5 h-5 rounded object-contain border border-slate-100 bg-white" alt="" />
+                                <SafeImage src={deal.sponsor_logo} className="w-5 h-5 rounded object-contain border border-slate-100 bg-white" alt="" fallbackText={(deal.sponsor_brand_name || deal.channel_name || "?")} />
                               ) : (
                                 <div className="w-5 h-5 rounded bg-slate-100 text-[8px] font-bold text-slate-450 flex items-center justify-center border border-slate-150">{deal.sponsor_name[0]}</div>
                               )}
@@ -1050,7 +1072,7 @@ export default function App() {
                           <td className="py-3.5">
                             <div className="flex items-center gap-2">
                               {deal.channel_avatar ? (
-                                <img src={deal.channel_avatar} className="w-5.5 h-5.5 rounded-full object-cover border border-slate-100 bg-white" alt="" />
+                                <SafeImage src={deal.channel_avatar} className="w-5.5 h-5.5 rounded-full object-cover border border-slate-100 bg-white" alt="" fallbackText={(deal.sponsor_brand_name || deal.channel_name || "?")} />
                               ) : (
                                 <div className="w-5.5 h-5.5 rounded-full bg-slate-100 text-[8px] font-bold text-slate-500 flex items-center justify-center">{deal.channel_name[0]}</div>
                               )}
@@ -1094,7 +1116,7 @@ export default function App() {
                       className="border border-[#e8e2d9] bg-slate-50 p-4 rounded flex flex-col items-center justify-center gap-2.5 cursor-pointer hover:border-[#e27b58]/40 w-36 transition-all"
                     >
                       {dealDetail.deal.sponsor_logo ? (
-                        <img src={dealDetail.deal.sponsor_logo} className="w-9 h-9 rounded object-contain border border-[#e8e2d9] bg-white" alt="" />
+                        <SafeImage src={dealDetail.deal.sponsor_logo} className="w-9 h-9 rounded object-contain border border-[#e8e2d9] bg-white" alt="" fallbackText={(deal.sponsor_brand_name || deal.channel_name || "?")} />
                       ) : (
                         <div className="w-9 h-9 rounded bg-[#f5f2eb] text-lg font-bold text-[#876e5f] flex items-center justify-center">{dealDetail.deal.sponsor_name[0]}</div>
                       )}
@@ -1118,7 +1140,7 @@ export default function App() {
                       className="border border-[#e8e2d9] bg-slate-50 p-4 rounded flex flex-col items-center justify-center gap-2.5 cursor-pointer hover:border-[#e27b58]/40 w-36 transition-all"
                     >
                       {dealDetail.deal.channel_avatar ? (
-                        <img src={dealDetail.deal.channel_avatar} className="w-9 h-9 rounded-full object-cover border border-[#e8e2d9] bg-white" alt="" />
+                        <SafeImage src={dealDetail.deal.channel_avatar} className="w-9 h-9 rounded-full object-cover border border-[#e8e2d9] bg-white" alt="" fallbackText={(deal.sponsor_brand_name || deal.channel_name || "?")} />
                       ) : (
                         <div className="w-9 h-9 rounded-full bg-[#f5f2eb] text-lg font-bold text-[#876e5f] flex items-center justify-center">{dealDetail.deal.channel_name[0]}</div>
                       )}
@@ -1462,7 +1484,7 @@ export default function App() {
                               <td className="py-3.5">
                                 <div className="flex items-center gap-2.5">
                                   {sp.logo_url ? (
-                                    <img src={sp.logo_url} className="w-4.5 h-4.5 rounded object-contain border border-slate-100 bg-white" alt="" />
+                                    <SafeImage src={sp.logo_url} className="w-4.5 h-4.5 rounded object-contain border border-slate-100 bg-white" alt="" fallbackText={sp.brand_name || sp.name || "?"} />
                                   ) : (
                                     <div className="w-4.5 h-4.5 rounded bg-slate-100 text-[8px] font-bold text-slate-500 flex items-center justify-center border border-slate-150">{sp.name[0]}</div>
                                   )}
@@ -1509,7 +1531,7 @@ export default function App() {
                               <td className="py-3.5">
                                 <div className="flex items-center gap-2.5">
                                   {ch.avatar_url ? (
-                                    <img src={ch.avatar_url} className="w-5 h-5 rounded-full object-cover border border-[#e8e2d9] bg-white shadow-sm" alt="" />
+                                    <SafeImage src={ch.avatar_url} className="w-5 h-5 rounded-full object-cover border border-[#e8e2d9] bg-white shadow-sm" alt="" fallbackText={ch.name || "?"} />
                                   ) : (
                                     <div className="w-5 h-5 rounded-full bg-slate-100 text-[8px] font-bold text-slate-500 flex items-center justify-center">{ch.name[0]}</div>
                                   )}
