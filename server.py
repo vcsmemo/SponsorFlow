@@ -229,6 +229,8 @@ def get_money_flow():
     sponsors = database.get_sponsors()
     signals = database.get_signals()
     
+    channel_lookup = {c['id']: c for c in channels}
+    
     # Calculate yesterday's stats
     now = datetime.now()
     yesterday_signals = []
