@@ -47,6 +47,31 @@ import database
 # Helpers
 # ---------------------------------------------------------------------------
 
+import urllib.request
+import re
+
+def get_yt_subs(channel_id):
+    url = f"https://www.youtube.com/channel/{channel_id}"
+    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+    try:
+        html = urllib.request.urlopen(req, timeout=5).read().decode('utf-8')
+        match = re.search(r'\"subscriberCountText\":\{\"accessibility\":\{\"accessibilityData\":\{\"label\":\"([^\"]+)\"\}', html)
+        if match:
+            text = match.group(1).replace(',', '')
+            num_match = re.search(r'([0-9\.]+)([KMBkmb万])?', text)
+            if num_match:
+                num = float(num_match.group(1))
+                suffix = num_match.group(2)
+                if suffix in ['M', 'm']: num *= 1000000
+                elif suffix in ['K', 'k']: num *= 1000
+                elif suffix in ['B', 'b']: num *= 1000000000
+                elif suffix == '万': num *= 10000
+                return int(num)
+        return 0
+    except Exception:
+        return 0
+
+
 def load_json_feed(path: Path) -> list:
     """Load and return a JSON array from *path*, or an empty list on error."""
     try:
@@ -64,7 +89,7 @@ def load_json_feed(path: Path) -> list:
         return []
 
 
-def save_signals(signals, source_name: str, source_platform: str):
+def save_signals(signals, source_name: str, source_platform: str, followers=None):
     """Persist a list of SponsorSignal objects via database.save_sponsor_signal."""
     saved = 0
     for sig in signals:
@@ -77,6 +102,7 @@ def save_signals(signals, source_name: str, source_platform: str):
                 ad_copy=sig.ad_copy_summary,
                 detected_at=datetime.now().isoformat(),
                 promo_codes=sig.detected_promo_codes,
+                followers=followers
             )
             saved += 1
         except Exception as exc:
@@ -136,8 +162,9 @@ def process_youtube(feeds: list, *, dry_run: bool = False, delay: float = 2.0):
             continue
 
         try:
+            followers = get_yt_subs(channel_id)
             signals = youtube_collector.process_youtube_channel(channel_id)
-            count = save_signals(signals, source_name=name, source_platform="youtube")
+            count = save_signals(signals, source_name=name, source_platform="youtube", followers=followers)
             total_signals += count
             print(f"   ✓ Saved {count} sponsor signal(s)")
         except Exception as exc:

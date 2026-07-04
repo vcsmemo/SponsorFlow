@@ -455,7 +455,7 @@ def update_channel_claim(channel_id, claimed_bool):
     conn.close()
 
 def save_sponsor_signal(sponsor_name, sponsor_url, source_name, source_platform, ad_copy, detected_at, promo_codes,
-                        views=None, transcript=None, confidence=1.0, sponsor_type=None, estimated_campaign=None, product=None, cta=None):
+                        views=None, transcript=None, confidence=1.0, sponsor_type=None, estimated_campaign=None, product=None, cta=None, followers=None):
     """
     Saves a newly extracted sponsor signal. Automatically creates the sponsor and channel records if they don't exist.
     """
@@ -465,13 +465,16 @@ def save_sponsor_signal(sponsor_name, sponsor_url, source_name, source_platform,
     channel_rows = execute_query(conn, "SELECT id FROM channels WHERE name = ?", (source_name,))
     if channel_rows:
         channel_id = channel_rows[0]['id']
+        if followers is not None:
+            execute_write(conn, "UPDATE channels SET followers = ? WHERE id = ?", (followers, channel_id))
     else:
         import uuid
         channel_id = str(uuid.uuid4())[:8]
         fallback_url = sponsor_url or f"https://{source_name.lower().replace(' ', '')}.com"
         avatar = f"https://api.dicebear.com/7.x/initials/svg?seed={source_name}"
+        initial_followers = followers if followers is not None else 0
         execute_write(conn, "INSERT INTO channels (id, name, platform, raw_url, avatar_url, followers, country) VALUES (?, ?, ?, ?, ?, ?, ?)", 
-                      (channel_id, source_name, source_platform, fallback_url, avatar, 50000, "US"))
+                      (channel_id, source_name, source_platform, fallback_url, avatar, initial_followers, "US"))
         
     # 2. Resolve or create Sponsor ID
     sponsor_rows = execute_query(conn, "SELECT id FROM sponsors WHERE brand_name = ?", (sponsor_name,))
