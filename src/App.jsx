@@ -1158,16 +1158,36 @@ export default function App() {
                           <span className="text-[10px] bg-emerald-50 text-emerald-700 border border-emerald-100 font-bold px-2 py-0.5 rounded">Detected Segment</span>
                         </div>
                         
-                        {/* Simulated player / Video card */}
-                        <div className="w-full aspect-video rounded bg-slate-50 border border-[#e8e2d9] flex flex-col items-center justify-center relative group overflow-hidden shadow-inner">
+                        {/* Simulated player / Video card / Newsletter card */}
+                        <a 
+                          href={dealDetail.deal.source_url || '#'} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className={`w-full ${dealDetail.deal.platform === 'newsletter' ? 'h-48' : 'aspect-video'} rounded bg-slate-50 border border-[#e8e2d9] flex flex-col items-center justify-center relative group overflow-hidden shadow-inner hover:bg-slate-100 transition-colors`}
+                        >
                           <div className="absolute inset-0 bg-gradient-to-t from-slate-900/5 to-transparent z-10"></div>
-                          <Play className="w-12 h-12 text-[#e27b58] fill-[#e27b58] cursor-pointer hover:scale-110 transition-transform drop-shadow z-20" />
-                          <span className="text-xs text-slate-500 mt-2 font-bold z-20">Click to listen to sponsorship segment audio</span>
+                          
+                          {dealDetail.deal.platform === 'newsletter' ? (
+                            <Mail className="w-12 h-12 text-[#e27b58] cursor-pointer group-hover:scale-110 transition-transform drop-shadow z-20" />
+                          ) : (
+                            <Play className="w-12 h-12 text-[#e27b58] fill-[#e27b58] cursor-pointer group-hover:scale-110 transition-transform drop-shadow z-20" />
+                          )}
+                          
+                          <span className="text-xs text-slate-500 mt-2 font-bold z-20">
+                            {dealDetail.deal.platform === 'newsletter' ? 'Click to read newsletter archive' : `Click to ${dealDetail.deal.platform === 'youtube' ? 'watch video' : 'listen to audio'}`}
+                          </span>
+                          
                           <div className="absolute bottom-3 left-3 z-20 flex gap-2">
-                            <span className="text-[10px] bg-white/90 text-slate-700 px-2 py-0.5 rounded font-black border border-[#e8e2d9] shadow-sm">{dealDetail.deal.views.toLocaleString()} views</span>
-                            <span className="text-[10px] bg-white/90 text-slate-755 px-2 py-0.5 rounded font-black border border-[#e8e2d9] shadow-sm capitalize">{dealDetail.deal.platform}</span>
+                            {dealDetail.deal.views > 0 && dealDetail.deal.platform !== 'newsletter' && (
+                              <span className="text-[10px] bg-white/90 text-slate-700 px-2 py-0.5 rounded font-black border border-[#e8e2d9] shadow-sm">
+                                {dealDetail.deal.views.toLocaleString()} views
+                              </span>
+                            )}
+                            <span className="text-[10px] bg-white/90 text-slate-755 px-2 py-0.5 rounded font-black border border-[#e8e2d9] shadow-sm capitalize">
+                              {dealDetail.deal.platform}
+                            </span>
                           </div>
-                        </div>
+                        </a>
 
                         {/* Transcript Transcript */}
                         <div className="space-y-2">
