@@ -74,20 +74,48 @@ def get_yt_subs(channel_id):
 
 
 import os
+import json
 from openai import OpenAI
 import config
 
 def get_followers_via_llm(name, platform):
     try:
+        context_text = ""
+        try:
+            from duckduckgo_search import DDGS
+            import warnings
+            warnings.filterwarnings("ignore", category=RuntimeWarning) # Ignore DDGS rename warning
+            ddgs = DDGS()
+            query = ""
+            if platform == "youtube":
+                query = f'site:socialblade.com/youtube/c "{name}" subscribers OR site:noxinfluencer.com "{name}" subscribers'
+            elif platform == "podcast":
+                query = f'site:listennotes.com/podcasts "{name}" global rank OR site:rephonic.com "{name}" listeners'
+            else:
+                query = f'site:substack.com "{name}" subscribers OR site:beehiiv.com "{name}" subscribers'
+            
+            print(f"      [DDG Search] {query}")
+            results = ddgs.text(query, max_results=3)
+            context_snippets = [res.get('body', '') for res in results]
+            context_text = "\n".join(context_snippets)
+        except ImportError:
+            print("      [DDG Warning] duckduckgo-search not installed, skipping free metrics fetch.")
+        except Exception as ddg_e:
+            print(f"      [DDG Warning] Could not fetch snippets: {ddg_e}")
+
         client = OpenAI(api_key=config.KIMI_API_KEY, base_url=config.KIMI_BASE_URL)
-        prompt = f"What is the approximate current subscriber/follower count for the {platform} '{name}'? Please return ONLY a JSON object with a single key 'followers' containing the integer number. Do not return any other text. If you don't know exactly, provide your best reasonable estimate based on your knowledge."
+        
+        prompt = f"We are looking for the exact subscriber/follower/listener count for the {platform} channel '{name}'.\n"
+        if context_text:
+            prompt += f"Here are some search result snippets from authoritative metrics websites (like SocialBlade, ListenNotes, Substack):\n\n--- Search Context ---\n{context_text}\n---\n\nBased on the context above, extract the most reasonable follower/subscriber count. If it says 'Top 0.5% Global Rank', estimate around 100000. If it says 'Top 1%', estimate around 50000. If it says 'Top 5%', estimate 10000.\n"
+        prompt += "If the context does not contain the answer, guess a reasonable number based on your general knowledge. Please return ONLY a JSON object with a single key 'followers' containing the integer number. Do not return any other text."
+
         response = client.chat.completions.create(
             model=config.KIMI_MODEL,
             messages=[{'role': 'system', 'content': 'You are an analytics tool. Only output JSON.'}, {'role': 'user', 'content': prompt}],
             response_format={'type': 'json_object'},
             temperature=0.1
         )
-        import json
         data = json.loads(response.choices[0].message.content)
         return int(data.get('followers', 0))
     except Exception as e:
@@ -122,7 +150,7 @@ def save_signals(signals, source_name: str, source_platform: str, followers=None
                 source_name=source_name,
                 source_platform=source_platform,
                 ad_copy=sig.ad_copy_summary,
-                detected_at=datetime.now().isoformat(),
+                detected_at=sig.detected_at if getattr(sig, 'detected_at', None) else datetime.now().isoformat(),
                 promo_codes=sig.detected_promo_codes,
                 followers=followers
             )

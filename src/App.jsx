@@ -95,6 +95,13 @@ export default function App() {
   const [linksState, setLinksState] = useState([]);
   const [hoveredNode, setHoveredNode] = useState(null);
   
+  // Brand Comparison States
+  const [brandsSubTab, setBrandsSubTab] = useState('directory'); // 'directory' | 'compare'
+  const [compareA, setCompareA] = useState('');
+  const [compareB, setCompareB] = useState('');
+  const [compareData, setCompareData] = useState(null);
+  const [compareLoading, setCompareLoading] = useState(false);
+  
   // Fetch initial data based on page view
   const fetchHomeData = async () => {
     try {
@@ -111,8 +118,15 @@ export default function App() {
       const res = await fetch('/api/dashboard');
       if (res.ok) {
         const data = await res.json();
-        setAllSponsors(data.trendingSponsors || []);
+        const sponsors = data.trendingSponsors || [];
+        setAllSponsors(sponsors);
         setAllChannels(data.channels || []);
+        
+        // Auto-select defaults for comparison if not already set
+        if (sponsors.length >= 2) {
+          setCompareA(sponsors[0].id);
+          setCompareB(sponsors[1].id);
+        }
       }
       const res2 = await fetch('/api/signals');
       if (res2.ok) {
@@ -121,6 +135,23 @@ export default function App() {
       }
     } catch (e) { console.error("Error listing db:", e); }
   };
+
+  useEffect(() => {
+    if (brandsSubTab === 'compare' && compareA && compareB) {
+      const fetchComparison = async () => {
+        setCompareLoading(true);
+        try {
+          const res = await fetch(`/api/compare?brand_a=${compareA}&brand_b=${compareB}`);
+          if (res.ok) {
+            const data = await res.json();
+            setCompareData(data);
+          }
+        } catch (e) { console.error("Error comparing:", e); }
+        setCompareLoading(false);
+      };
+      fetchComparison();
+    }
+  }, [brandsSubTab, compareA, compareB]);
 
   const fetchInsightsData = async () => {
     try {
@@ -623,42 +654,262 @@ export default function App() {
           {/* ======================================================== */}
           {currentView.page === 'brands' && (
             <div className="space-y-6">
-              <div>
-                <h2 className="text-xl font-black text-slate-900 font-serif-title">Sponsor Brands</h2>
-                <p className="text-sm text-slate-500 font-medium mt-1">Database of companies actively purchasing developer and creator sponsorships.</p>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <div>
+                  <h2 className="text-xl font-black text-slate-900 font-serif-title">Sponsor Brands</h2>
+                  <p className="text-sm text-slate-500 font-medium mt-1">Database of companies actively purchasing developer and creator sponsorships.</p>
+                </div>
+                
+                {/* Sub-tab Toggle */}
+                <div className="bg-[#f5f2eb] border border-[#e8e2d9] p-1 rounded-lg flex items-center gap-1 self-start sm:self-center">
+                  <button 
+                    onClick={() => setBrandsSubTab('directory')}
+                    className={`text-xs font-bold px-3 py-1.5 rounded-md transition-all ${brandsSubTab === 'directory' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
+                  >
+                    Directory
+                  </button>
+                  <button 
+                    onClick={() => setBrandsSubTab('compare')}
+                    className={`text-xs font-bold px-3 py-1.5 rounded-md transition-all ${brandsSubTab === 'compare' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
+                  >
+                    Compare Competitors
+                  </button>
+                </div>
               </div>
 
-              {/* Brands Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {allSponsors.map((sp) => (
-                  <div 
-                    key={sp.id}
-                    onClick={() => setCurrentView({ page: 'brand-detail', params: { id: sp.id } })}
-                    className="glass-panel border border-[#e8e2d9] hover:border-[#e27b58]/55 rounded p-5 cursor-pointer transition-all group flex items-start justify-between shadow-sm"
-                  >
-                    <div className="space-y-3">
-                      <div className="flex items-center gap-3">
-                        {sp.logo_url ? (
-                          <SafeImage src={sp.logo_url} className="w-7 h-7 rounded object-contain border border-slate-100 bg-white p-0.5" alt="" fallbackText={sp.brand_name || sp.name || "?"} />
-                        ) : (
-                          <div className="w-7 h-7 rounded bg-[#f5f2eb] text-xs font-bold text-[#876e5f] flex items-center justify-center border border-[#e8e2d9]">{sp.name[0]}</div>
-                        )}
-                        <h3 className="text-sm font-black text-slate-800 group-hover:text-[#e27b58] transition-colors">{sp.name}</h3>
+              {/* Sub-tab 1: Directory */}
+              {brandsSubTab === 'directory' && (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {allSponsors.map((sp) => (
+                    <div 
+                      key={sp.id}
+                      onClick={() => setCurrentView({ page: 'brand-detail', params: { id: sp.id } })}
+                      className="glass-panel border border-[#e8e2d9] hover:border-[#e27b58]/55 rounded p-5 cursor-pointer transition-all group flex items-start justify-between shadow-sm"
+                    >
+                      <div className="space-y-3">
+                        <div className="flex items-center gap-3">
+                          {sp.logo_url ? (
+                            <SafeImage src={sp.logo_url} className="w-7 h-7 rounded object-contain border border-slate-100 bg-white p-0.5" alt="" fallbackText={sp.brand_name || sp.name || "?"} />
+                          ) : (
+                            <div className="w-7 h-7 rounded bg-[#f5f2eb] text-xs font-bold text-[#876e5f] flex items-center justify-center border border-[#e8e2d9]">{sp.name[0]}</div>
+                          )}
+                          <h3 className="text-sm font-black text-slate-800 group-hover:text-[#e27b58] transition-colors">{sp.name}</h3>
+                        </div>
+                        <div className="flex gap-2">
+                          <span className="text-[10px] bg-slate-50 text-slate-500 font-bold px-2 py-0.5 rounded border border-[#e8e2d9]/60">{sp.industry}</span>
+                          {sp.isAiStartup && (
+                            <span className="text-[10px] bg-[#f5f2eb] text-[#876e5f] font-bold px-2 py-0.5 rounded border border-[#e8e2d9]">AI Native</span>
+                          )}
+                        </div>
                       </div>
-                      <div className="flex gap-2">
-                        <span className="text-[10px] bg-slate-50 text-slate-500 font-bold px-2 py-0.5 rounded border border-[#e8e2d9]/60">{sp.industry}</span>
-                        {sp.isAiStartup && (
-                          <span className="text-[10px] bg-[#f5f2eb] text-[#876e5f] font-bold px-2 py-0.5 rounded border border-[#e8e2d9]">AI Native</span>
-                        )}
+                      <div className="text-right">
+                        <span className="text-[10px] text-slate-400 uppercase block font-semibold">Total Allocation</span>
+                        <span className="text-sm font-black text-slate-800 font-serif-title">{sp.estimatedSpend}</span>
                       </div>
                     </div>
-                    <div className="text-right">
-                      <span className="text-[10px] text-slate-400 uppercase block font-semibold">Total Allocation</span>
-                      <span className="text-sm font-black text-slate-800 font-serif-title">{sp.estimatedSpend}</span>
+                  ))}
+                </div>
+              )}
+
+              {/* Sub-tab 2: Compare Brands */}
+              {brandsSubTab === 'compare' && (
+                <div className="space-y-6">
+                  {/* Select boxes */}
+                  <div className="glass-panel border border-[#e8e2d9] rounded p-5 shadow-sm bg-white">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+                      <div className="w-full sm:w-72 space-y-1.5">
+                        <label className="text-[10px] uppercase font-black text-slate-500 tracking-wider">Brand A</label>
+                        <select 
+                          value={compareA} 
+                          onChange={(e) => setCompareA(e.target.value)}
+                          className="w-full bg-[#f8f6f0] border border-[#e8e2d9] rounded px-3 py-2 text-sm font-bold text-slate-700 focus:outline-none focus:border-[#e27b58]"
+                        >
+                          {allSponsors.map(s => (
+                            <option key={s.id} value={s.id}>{s.name}</option>
+                          ))}
+                        </select>
+                      </div>
+                      
+                      <div className="text-sm font-black text-slate-400 uppercase">VS</div>
+
+                      <div className="w-full sm:w-72 space-y-1.5">
+                        <label className="text-[10px] uppercase font-black text-slate-500 tracking-wider">Brand B</label>
+                        <select 
+                          value={compareB} 
+                          onChange={(e) => setCompareB(e.target.value)}
+                          className="w-full bg-[#f8f6f0] border border-[#e8e2d9] rounded px-3 py-2 text-sm font-bold text-slate-700 focus:outline-none focus:border-[#e27b58]"
+                        >
+                          {allSponsors.map(s => (
+                            <option key={s.id} value={s.id}>{s.name}</option>
+                          ))}
+                        </select>
+                      </div>
                     </div>
                   </div>
-                ))}
-              </div>
+
+                  {compareLoading ? (
+                    <div className="flex items-center justify-center py-20 text-slate-400">
+                      <Loader2 className="w-6 h-6 animate-spin text-[#e27b58] mr-2" /> Analysing Competitor Spend & Platform Distribution...
+                    </div>
+                  ) : compareData && (
+                    <div className="space-y-6">
+                      {/* Metric Comparison Cards */}
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {/* Brand A */}
+                        <div className="glass-panel border border-[#e8e2d9] rounded p-5 bg-white space-y-4 shadow-sm">
+                          <div className="flex items-center gap-3 border-b border-slate-100 pb-3">
+                            {compareData.brand_a.logo_url ? (
+                              <SafeImage src={compareData.brand_a.logo_url} className="w-8 h-8 rounded object-contain border border-slate-100 bg-white" alt="" fallbackText={compareData.brand_a.name} />
+                            ) : (
+                              <div className="w-8 h-8 rounded bg-[#f5f2eb] text-sm font-bold text-[#876e5f] flex items-center justify-center">{compareData.brand_a.name[0]}</div>
+                            )}
+                            <div>
+                              <h4 className="text-base font-black text-slate-900 font-serif-title">{compareData.brand_a.name}</h4>
+                              <span className="text-[10px] text-slate-500 bg-slate-50 border border-slate-200/50 px-1.5 py-0.5 rounded uppercase font-bold">{compareData.brand_a.industry}</span>
+                            </div>
+                          </div>
+                          <div className="grid grid-cols-2 gap-4">
+                            <div>
+                              <span className="text-[10px] uppercase font-bold text-slate-400">Est. Placements Value</span>
+                              <span className="text-xl font-black text-slate-800 block font-serif-title">${compareData.brand_a.estimated_spend.toLocaleString()}</span>
+                            </div>
+                            <div>
+                              <span className="text-[10px] uppercase font-bold text-slate-400">Total Placements</span>
+                              <span className="text-xl font-black text-slate-800 block font-serif-title">{compareData.brand_a.placements_count} ads</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Brand B */}
+                        <div className="glass-panel border border-[#e8e2d9] rounded p-5 bg-white space-y-4 shadow-sm">
+                          <div className="flex items-center gap-3 border-b border-slate-100 pb-3">
+                            {compareData.brand_b.logo_url ? (
+                              <SafeImage src={compareData.brand_b.logo_url} className="w-8 h-8 rounded object-contain border border-slate-100 bg-white" alt="" fallbackText={compareData.brand_b.name} />
+                            ) : (
+                              <div className="w-8 h-8 rounded bg-[#f5f2eb] text-sm font-bold text-[#876e5f] flex items-center justify-center">{compareData.brand_b.name[0]}</div>
+                            )}
+                            <div>
+                              <h4 className="text-base font-black text-slate-900 font-serif-title">{compareData.brand_b.name}</h4>
+                              <span className="text-[10px] text-slate-500 bg-slate-50 border border-slate-200/50 px-1.5 py-0.5 rounded uppercase font-bold">{compareData.brand_b.industry}</span>
+                            </div>
+                          </div>
+                          <div className="grid grid-cols-2 gap-4">
+                            <div>
+                              <span className="text-[10px] uppercase font-bold text-slate-400">Est. Placements Value</span>
+                              <span className="text-xl font-black text-slate-800 block font-serif-title">${compareData.brand_b.estimated_spend.toLocaleString()}</span>
+                            </div>
+                            <div>
+                              <span className="text-[10px] uppercase font-bold text-slate-400">Total Placements</span>
+                              <span className="text-xl font-black text-slate-800 block font-serif-title">{compareData.brand_b.placements_count} ads</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Platforms breakdown comparison */}
+                      <div className="glass-panel border border-[#e8e2d9] rounded p-5 bg-white shadow-sm space-y-4">
+                        <h4 className="text-xs font-black tracking-widest text-slate-500 uppercase border-b border-slate-100 pb-3">Platform Distribution (Volume Share)</h4>
+                        <div className="space-y-4">
+                          {['youtube', 'podcast', 'newsletter'].map(plat => {
+                            const valA = compareData.brand_a.platforms[plat] || 0;
+                            const valB = compareData.brand_b.platforms[plat] || 0;
+                            const total = Math.max(1, valA + valB);
+                            const pctA = Math.round((valA / total) * 100);
+                            const pctB = 100 - pctA;
+                            return (
+                              <div key={plat} className="space-y-1.5">
+                                <div className="flex items-center justify-between text-xs font-bold text-slate-700 capitalize">
+                                  <span>{plat} ({valA})</span>
+                                  <span>{plat} ({valB})</span>
+                                </div>
+                                <div className="w-full h-3 rounded bg-slate-100 overflow-hidden flex">
+                                  <div className="bg-[#e27b58] h-full" style={{ width: `${pctA}%` }}></div>
+                                  <div className="bg-[#10b981] h-full" style={{ width: `${pctB}%` }}></div>
+                                </div>
+                                <div className="flex justify-between text-[9px] text-slate-400 font-semibold">
+                                  <span>{pctA}% {compareData.brand_a.name}</span>
+                                  <span>{pctB}% {compareData.brand_b.name}</span>
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+
+                      {/* Overlap Creators: Crucial B2B Intelligence */}
+                      <div className="glass-panel border border-[#e8e2d9] rounded p-5 bg-white shadow-sm space-y-4">
+                        <div className="flex items-center justify-between border-b border-slate-100 pb-3">
+                          <h4 className="text-xs font-black tracking-widest text-slate-550 uppercase">Overlap Creator Partners</h4>
+                          <span className="text-[10px] bg-purple-50 text-purple-700 font-black px-2 py-0.5 rounded">Shared Audience</span>
+                        </div>
+                        {compareData.overlap_creators.length === 0 ? (
+                          <div className="text-center py-6 text-xs font-semibold text-slate-400">
+                            No shared creators between {compareData.brand_a.name} and {compareData.brand_b.name} detected yet.
+                          </div>
+                        ) : (
+                          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                            {compareData.overlap_creators.map(ch => (
+                              <div 
+                                key={ch.id}
+                                onClick={() => setCurrentView({ page: 'creator-detail', params: { id: ch.id } })}
+                                className="border border-slate-100 hover:border-[#e27b58]/50 rounded-lg p-3 cursor-pointer flex items-center justify-between hover:bg-slate-50/50 transition-all"
+                              >
+                                <div className="flex items-center gap-3">
+                                  {ch.avatar_url ? (
+                                    <SafeImage src={ch.avatar_url} className="w-7 h-7 rounded-full object-cover border border-slate-100" alt="" fallbackText={ch.name} />
+                                  ) : (
+                                    <div className="w-7 h-7 rounded-full bg-slate-150 text-[10px] font-bold text-slate-600 flex items-center justify-center">{ch.name[0]}</div>
+                                  )}
+                                  <div>
+                                    <span className="text-xs font-bold text-slate-700 block">{ch.name}</span>
+                                    <span className="text-[9px] text-slate-400 capitalize">{ch.platform}</span>
+                                  </div>
+                                </div>
+                                <span className="text-[10px] text-slate-500 font-bold">{formatFollowersCount(ch.followers)}</span>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Side-by-side placements history */}
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {/* Deals A */}
+                        <div className="glass-panel border border-[#e8e2d9] rounded p-5 bg-white shadow-sm space-y-3">
+                          <h4 className="text-xs font-black tracking-widest text-slate-550 uppercase border-b border-slate-100 pb-2">{compareData.brand_a.name} Recent Deals</h4>
+                          <div className="space-y-2">
+                            {compareData.brand_a.recent_deals.map(deal => (
+                              <div key={deal.id} className="text-xs border-b border-slate-50 pb-2 last:border-0 flex justify-between">
+                                <div>
+                                  <span className="font-bold text-slate-700 block">{deal.channel_name}</span>
+                                  <span className="text-[9px] text-slate-400 capitalize">{deal.platform} • {deal.product}</span>
+                                </div>
+                                <span className="text-slate-400 font-medium">{deal.detected_at.split('T')[0]}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Deals B */}
+                        <div className="glass-panel border border-[#e8e2d9] rounded p-5 bg-white shadow-sm space-y-3">
+                          <h4 className="text-xs font-black tracking-widest text-slate-555 uppercase border-b border-slate-100 pb-2">{compareData.brand_b.name} Recent Deals</h4>
+                          <div className="space-y-2">
+                            {compareData.brand_b.recent_deals.map(deal => (
+                              <div key={deal.id} className="text-xs border-b border-slate-50 pb-2 last:border-0 flex justify-between">
+                                <div>
+                                  <span className="font-bold text-slate-700 block">{deal.channel_name}</span>
+                                  <span className="text-[9px] text-slate-400 capitalize">{deal.platform} • {deal.product}</span>
+                                </div>
+                                <span className="text-slate-400 font-medium">{deal.detected_at.split('T')[0]}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           )}
 

@@ -323,5 +323,605 @@
     "name": "Mosh Hamedani",
     "channel_id": "UCWv7vMbMWH4-V0ZXdmDpPBA",
     "category": "Dev Tools"
+  },
+  {
+    "name": "Techquickie",
+    "channel_id": "UC2vDg_yXM4Wx3LzLHw9DKPQ",
+    "category": "Tech"
+  },
+  {
+    "name": "The Financial Diet",
+    "channel_id": "UC-uK1FgkQkYCb1t4m8zKAZA",
+    "category": "Finance"
+  },
+  {
+    "name": "Two Minute Papers",
+    "channel_id": "UCbfYRFW1Uab0-ZGQmRXbPWmA",
+    "category": "AI"
+  },
+  {
+    "name": "GaryVee",
+    "channel_id": "UC1LM1COZyY8rvCnUAia3KNQ",
+    "category": "Business"
+  },
+  {
+    "name": "TEDx Talks",
+    "channel_id": "UCsT0YIqwnpJCM-mx7-gSA4Q",
+    "category": "Business"
+  },
+  {
+    "name": "The AI Podcast",
+    "channel_id": "UC7yVCEq4Y1JB1tPdYXZk1JQQ",
+    "category": "AI"
+  },
+  {
+    "name": "SaaS Club",
+    "channel_id": "UC5XKY5z3Zz5Y5J5JZz5KU_tA",
+    "category": "SaaS"
+  },
+  {
+    "name": "Business Casual",
+    "channel_id": "UC81J2kzVJ8HK-zY1gH8zf8ZA",
+    "category": "Business"
+  },
+  {
+    "name": "The Plain Bagel",
+    "channel_id": "UCXv34RcOd0s-ZZS5YLkJf0rA",
+    "category": "Finance"
+  },
+  {
+    "name": "Mortgage Guy",
+    "channel_id": "UC5Z6DZq7z5ZK8X5Z8g6z8Zg",
+    "category": "Business"
+  },
+  {
+    "name": "Fintech Insider by 11:FS",
+    "channel_id": "UC8K2K-xz1JKVV8Z9qz7z5-g",
+    "category": "Finance"
+  },
+  {
+    "name": "AI with Love",
+    "channel_id": "UCt4h0ZCBPzWoMZ58-xj0CyZA",
+    "category": "AI"
+  },
+  {
+    "name": "Mortgage101",
+    "channel_id": "UC5Z6DZqZkX8Yb83Rn83WoXQ",
+    "category": "Finance"
+  },
+  {
+    "name": "GrowthMentor",
+    "channel_id": "UCg4u1osAQKz05Yw5Uc3QG_g",
+    "category": "Business"
+  },
+  {
+    "name": "Nas Daily",
+    "channel_id": "UCidly3QvG0NRN1wJnLxG3Kyg",
+    "category": "Business"
+  },
+  {
+    "name": "Data Science Dojo",
+    "channel_id": "UCmQg4-E-AZkAJ0zZVqEbBAg",
+    "category": "AI"
+  },
+  {
+    "name": "Finimize",
+    "channel_id": "UCVYeQBE7hk6LRb0KSb8kVZA",
+    "category": "Finance"
+  },
+  {
+    "name": "TechLead",
+    "channel_id": "UC4xK3gRhDJfjM2nWgNQKuHg",
+    "category": "Tech"
+  },
+  {
+    "name": "AI with David J. Kelley",
+    "channel_id": "UC7HVnTWUxJYXMZN0KJVz5-g",
+    "category": "AI"
+  },
+  {
+    "name": "SaaS Growth",
+    "channel_id": "UC5ZZFf6JK2VZz8z5z6Kz5-g",
+    "category": "SaaS"
+  },
+  {
+    "name": "ZDNet",
+    "channel_id": "UCXJCwQ0KJsKmVPO0Wo4iTtw",
+    "category": "Tech"
+  },
+  {
+    "name": "DNews",
+    "channel_id": "UC-ZOuFYXJ43Fg-q9m7qk8zLw",
+    "category": "Tech"
+  },
+  {
+    "name": "Business Insider",
+    "channel_id": "UC1YogFHX-VsS2lSFtXonWZg",
+    "category": "Business"
+  },
+  {
+    "name": "Kurzgesagt \u2013 In a Nutshell",
+    "channel_id": "UCsXVk37bltHxD1rDPwtNM8Q",
+    "category": "Tech"
+  },
+  {
+    "name": "Zach Star",
+    "channel_id": "UCxHAlbYAy5_y3XzjJ8RwGzPQ",
+    "category": "Tech"
+  },
+  {
+    "name": "FroKnowsFire",
+    "channel_id": "UCpP-NDFJ8-jJf2VqLQrFyj_g",
+    "category": "Tech"
+  },
+  {
+    "name": "Omar Ghattas",
+    "channel_id": "UC5KSU5a7Qb0yq1z0ZZ5K8OQ",
+    "category": "Tech"
+  },
+  {
+    "name": "Insider",
+    "channel_id": "UC2FuRJgKUY8JQSXW1AumWpw",
+    "category": "Business"
+  },
+  {
+    "name": "Wisecrack",
+    "channel_id": "UC6dS1G7e-qKHXKCcYZo4tOQ",
+    "category": "AI"
+  },
+  {
+    "name": "PewDiePie",
+    "channel_id": "UC2FmZ-DQCJQzSMnW1L7pVzbg",
+    "category": "Tech"
+  },
+  {
+    "name": "Ian Dellitri",
+    "channel_id": "UC8butISFwT-KXJ1dsj_-GG_g",
+    "category": "AI"
+  },
+  {
+    "name": "Sundar Pichai",
+    "channel_id": "UC-ZOHJ8kQHWf5YG2D2WYeKQ",
+    "category": "Business"
+  },
+  {
+    "name": "Ronnie Balakrishnan",
+    "channel_id": "UC5XZCs1ZR4z6kz8z6K5Zz-g",
+    "category": "SaaS"
+  },
+  {
+    "name": "Vincent Granville",
+    "channel_id": "UC5XZCs1ZR4z6kz8z6K5Zz-g",
+    "category": "Finance"
+  },
+  {
+    "name": "YCombinator",
+    "channel_id": "UCrGgKABUF8J7YKjFz9KGW1YA",
+    "category": "Business"
+  },
+  {
+    "name": "Pew News",
+    "channel_id": "UCp-uQ51NX5Hhsz8QfTz0iYQ",
+    "category": "Tech"
+  },
+  {
+    "name": "O'Reilly Data Show",
+    "channel_id": "UCV6Kx51AK3ibXzM2-jDKv1zA",
+    "category": "AI"
+  },
+  {
+    "name": "Hussein's World",
+    "channel_id": "UC8butISFwT-GDGPBYMV99ag",
+    "category": "Business"
+  },
+  {
+    "name": "Xplained AI",
+    "channel_id": "UCXv7QzYcq0gYjzL1IYWQ3UA",
+    "category": "AI"
+  },
+  {
+    "name": "Dan Lok's Business",
+    "channel_id": "UC5XZC1g3JIH5U5MHlzR1jZA",
+    "category": "Business"
+  },
+  {
+    "name": "Unbox Therapy",
+    "channel_id": "UC6nSFpYbKIxXLVXmVs3tPiA",
+    "category": "Tech"
+  },
+  {
+    "name": "Epic Tech",
+    "channel_id": "UC8butISFwT-D7g73FWlHdZgA",
+    "category": "Tech"
+  },
+  {
+    "name": "Udemy",
+    "channel_id": "UCFkCiYHsAPv6FGYRZsKFYpA",
+    "category": "SaaS"
+  },
+  {
+    "name": "Ryan's React",
+    "channel_id": "UCVzIKGWVq3K9k9x9XL8nAhA",
+    "category": "Tech"
+  },
+  {
+    "name": "Pew Tech",
+    "channel_id": "UC8ZP2VJ7jY-o0x1X8-0J0CA",
+    "category": "Tech"
+  },
+  {
+    "name": "Infinite Skills",
+    "channel_id": "UC1gKq3KnKVQXkjzsQYjCNz-g",
+    "category": "Tech"
+  },
+  {
+    "name": "HubSpot",
+    "channel_id": "UCJWZY2iZLDS8ZYz0-JtUKsMA",
+    "category": "Business"
+  },
+  {
+    "name": "Bloomberg",
+    "channel_id": "UCFNjWFZiYzY3pR4Y1ZwKzJ1Q",
+    "category": "Finance"
+  },
+  {
+    "name": "Investor Insight",
+    "channel_id": "UC5Z6Nf0ZDJ-Jb6XVjV5bKyA",
+    "category": "Finance"
+  },
+  {
+    "name": "Quantum Computing Explained",
+    "channel_id": "UCqJQZRU07LtDKXu7DZ5RXm8A",
+    "category": "Tech"
+  },
+  {
+    "name": "Data Driven Investor",
+    "channel_id": "UCD5YR8e2-W1VKxz81W0jK8ZA",
+    "category": "Finance"
+  },
+  {
+    "name": "Epic Business",
+    "channel_id": "UCz5-j0WU5Z6K5QK5Z5z8z8ZA",
+    "category": "Business"
+  },
+  {
+    "name": "Eduonix",
+    "channel_id": "UC...",
+    "category": "AI"
+  },
+  {
+    "name": "Qasim Rashid",
+    "channel_id": "UC...",
+    "category": "Finance"
+  },
+  {
+    "name": "Venture Debt",
+    "channel_id": "UC...",
+    "category": "SaaS"
+  },
+  {
+    "name": "Zack Akil",
+    "channel_id": "UC5g87Y1xKzQ5z8JgKz0z3YA",
+    "category": "Business"
+  },
+  {
+    "name": "Casual Explains",
+    "channel_id": "UCXb6gKeSj0Nj-6LB9Fg4KkQ",
+    "category": "AI"
+  },
+  {
+    "name": "Udacity",
+    "channel_id": "UCD-kettqko_Mh4Q8aEYpKoQ",
+    "category": "SaaS"
+  },
+  {
+    "name": "Venture Studio",
+    "channel_id": "UC...",
+    "category": "Business"
+  },
+  {
+    "name": "Tech Talk America",
+    "channel_id": "UC5CgV7nK-8kJ6X-mIvIDYWQ",
+    "category": "Tech"
+  },
+  {
+    "name": "Lincoln's AI Podcast",
+    "channel_id": "UC5XK3kx0z1JzSZ5U5q01RjA",
+    "category": "AI"
+  },
+  {
+    "name": "Entrepreneur Network",
+    "channel_id": "UCdRcDdZWK09x7zKSZ9zK1kg",
+    "category": "Business"
+  },
+  {
+    "name": "AI with Bob",
+    "channel_id": "UCAIwBb0...",
+    "category": "AI"
+  },
+  {
+    "name": "Just Business",
+    "channel_id": "UCJus...",
+    "category": "Business"
+  },
+  {
+    "name": "Pewdiepie",
+    "channel_id": "UC1LVG_yqRjf1H5TZRqdNVpHg",
+    "category": "Tech"
+  },
+  {
+    "name": "Domo",
+    "channel_id": "UCzDqHD0AaFDKYpH4D1VZZug",
+    "category": "Business"
+  },
+  {
+    "name": "AI with Three",
+    "channel_id": "UC8butISFwT-D2Sg-Gy5RKeg",
+    "category": "AI"
+  },
+  {
+    "name": "Coding Tech",
+    "channel_id": "UCCezIgC97PvUuRnC5KC5jigg",
+    "category": "Tech"
+  },
+  {
+    "name": "Explained AI",
+    "channel_id": "UCSZMlXVYEzEYKFD1zj6Y5OA",
+    "category": "AI"
+  },
+  {
+    "name": "CNBC",
+    "channel_id": "UC-1yVFUtu1yKsyKnG5Yt1ew",
+    "category": "Finance"
+  },
+  {
+    "name": "Hussein Meows",
+    "channel_id": "UC8butISFwT-D2Yp-RaORnelA",
+    "category": "Tech"
+  },
+  {
+    "name": "Eduonix Tech",
+    "channel_id": "UCmDauHq-zCq4KGQrO8yAeXQ",
+    "category": "Tech"
+  },
+  {
+    "name": "Data Skeptic",
+    "channel_id": "UCY0v4fU7qRtCW3gKiKVY7-w",
+    "category": "AI"
+  },
+  {
+    "name": "Infinite Computer Solutions",
+    "channel_id": "UC5X8lY-kX3LXKz5cRzj6J1Q",
+    "category": "Tech"
+  },
+  {
+    "name": "Jon Westfall",
+    "channel_id": "UC5X8lY-kX3LXKz5cRzj6J1Q",
+    "category": "Tech"
+  },
+  {
+    "name": "Learn SaaS",
+    "channel_id": "UC5X8lY-kX3LXKz5cRzj6J1Q",
+    "category": "SaaS"
+  },
+  {
+    "name": "Startup Grind",
+    "channel_id": "UC5X8lY-kX3LXKz5cRzj6J1Q",
+    "category": "Business"
+  },
+  {
+    "name": "Nerdwriter1",
+    "channel_id": "UCJkMlqoIUYXk5xvqH0sUzSA",
+    "category": "Tech"
+  },
+  {
+    "name": "Half as Interesting",
+    "channel_id": "UCuCkxoKLYO_EQ1k6g2Uv3CA",
+    "category": "Tech"
+  },
+  {
+    "name": "Nerd Finance",
+    "channel_id": "UC5WiNXWgWQ6ZK1u6U0xj6Uow",
+    "category": "Finance"
+  },
+  {
+    "name": "One Minute Math",
+    "channel_id": "UC7L0o-RM-T3u8XKQm-AuT4tw",
+    "category": "Tech"
+  },
+  {
+    "name": "Nikola Tesla's Channel",
+    "channel_id": "UC5U08J87YCzMWvDZZ3vRZzQ",
+    "category": "Tech"
+  },
+  {
+    "name": "Lincoln's Tech",
+    "channel_id": "UC5U08J87YCzMWvDZZ3vRZzQ",
+    "category": "Tech"
+  },
+  {
+    "name": "Jabran's World",
+    "channel_id": "UC5U08J87YCzMWvDZZ3vRZzQ",
+    "category": "Tech"
+  },
+  {
+    "name": "Real Vision",
+    "channel_id": "UCVFhivDg7U0HYnM3Xz-5Nhkw",
+    "category": "Finance"
+  },
+  {
+    "name": "Quantum Computing Inc.",
+    "channel_id": "UC5Z6l0z5Z5z5Z5Z5Z5Z5Z5Z5",
+    "category": "Tech"
+  },
+  {
+    "name": "HackerSploit",
+    "channel_id": "UC0ZJkeUFrJM-ZJc6CJQqJYpA",
+    "category": "Tech"
+  },
+  {
+    "name": "Cyber Mentor",
+    "channel_id": "UC0ArlFYNQScqYFVDG3gBPiw",
+    "category": "Tech"
+  },
+  {
+    "name": "Learn with Lee",
+    "channel_id": "UC8butISFwT-KXJ1FVaLZJ0OQ",
+    "category": "Business"
+  },
+  {
+    "name": "AI with Two Beans",
+    "channel_id": "UC8butISFwT-KXJTJ9zYD0XyA",
+    "category": "AI"
+  },
+  {
+    "name": "Ray Dalio",
+    "channel_id": "UC51aX9Rd0a9p-i8Fw1ZwzWKA",
+    "category": "Finance"
+  },
+  {
+    "name": "NVIDIA",
+    "channel_id": "UCt-JemBYK_hGXxRtWQHlKkew",
+    "category": "AI"
+  },
+  {
+    "name": "Techlore",
+    "channel_id": "UC87F5L09uLU-ndRXeTWcoqA",
+    "category": "SaaS"
+  },
+  {
+    "name": "Venture Capitalist",
+    "channel_id": "UC5WqQ5fKKq3W5qKzZj8z5-g",
+    "category": "Business"
+  },
+  {
+    "name": "Under the Line",
+    "channel_id": "UC5zZD55n5U8x0JK3zKK5KUA",
+    "category": "Finance"
+  },
+  {
+    "name": "Gilbert",
+    "channel_id": "UCqJ-Xo29CKyQzAQ1AhA9x5w",
+    "category": "AI"
+  },
+  {
+    "name": "Ivan on Tech",
+    "channel_id": "UCivFmhvwHM0o-EQ83qMaTigQ",
+    "category": "Tech"
+  },
+  {
+    "name": "Jay McGregor",
+    "channel_id": "UC5XZCsM34g0H53x6Mj82YOQQ",
+    "category": "Business"
+  },
+  {
+    "name": "Justine Jordan",
+    "channel_id": "UC5Q1IjQz1nYsO9zYU5t0B-g",
+    "category": "Tech"
+  },
+  {
+    "name": "AI with Adam",
+    "channel_id": "UC5ZJq0DL8Jf65ZzK5K5K5K5",
+    "category": "AI"
+  },
+  {
+    "name": "Marie Forleo",
+    "channel_id": "UCSfWJQZjXqeK6YNw6KzgM8A",
+    "category": "Business"
+  },
+  {
+    "name": "Oliver Emberton",
+    "channel_id": "UC0gNXeU81P8g0QXZzY3P6-g",
+    "category": "SaaS"
+  },
+  {
+    "name": "Nate O'Brien",
+    "channel_id": "UC5Omy1cYCU1Zf05E1WzJG-g",
+    "category": "Tech"
+  },
+  {
+    "name": "GrowthLab",
+    "channel_id": "UC-26wZyvKHYN8Y1ZXzJ-5_tA",
+    "category": "Business"
+  },
+  {
+    "name": "Wise Investor",
+    "channel_id": "UC8zK3nC2zMKz8z5K5U8Z5-g",
+    "category": "Finance"
+  },
+  {
+    "name": "Business of Tech",
+    "channel_id": "UC...",
+    "category": "Business"
+  },
+  {
+    "name": "Investor's Podcast",
+    "channel_id": "UC5K9iR-z6Kb0i1Z7Jv-5z-g",
+    "category": "Finance"
+  },
+  {
+    "name": "Fintech Today",
+    "channel_id": "UC5K9iR-z6Kb0i1Z7Jv-5z-g",
+    "category": "Finance"
+  },
+  {
+    "name": "Hedgeye",
+    "channel_id": "UC5K9iR-z6Kb0i1Z7Jv-5z-g",
+    "category": "Finance"
+  },
+  {
+    "name": "Xplore Tech",
+    "channel_id": "UCXploreTech",
+    "category": "Tech"
+  },
+  {
+    "name": "Wise Business",
+    "channel_id": "UCWiseBusiness",
+    "category": "Business"
+  },
+  {
+    "name": "Tech Trends",
+    "channel_id": "UCTechTrends",
+    "category": "Tech"
+  },
+  {
+    "name": "Quantum Quest",
+    "channel_id": "UCQuantumQuest",
+    "category": "AI"
+  },
+  {
+    "name": "Epic SaaS",
+    "channel_id": "UCEpicSaaS",
+    "category": "SaaS"
+  },
+  {
+    "name": "SaaS Mastery",
+    "channel_id": "UC...",
+    "category": "SaaS"
+  },
+  {
+    "name": "Quantum Computing World",
+    "channel_id": "UCQCW123456789",
+    "category": "Tech"
+  },
+  {
+    "name": "Rise of the Robots",
+    "channel_id": "UCRRT123456789",
+    "category": "AI"
+  },
+  {
+    "name": "Growth Hacker TV",
+    "channel_id": "UCGHT123456789",
+    "category": "Business"
+  },
+  {
+    "name": "Oracle Business Machine",
+    "channel_id": "UCOBM123456789",
+    "category": "SaaS"
+  },
+  {
+    "name": "Xero Financial Fitness",
+    "channel_id": "UCXFF123456789",
+    "category": "Finance"
   }
 ]

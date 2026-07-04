@@ -80,6 +80,12 @@ def extract_sponsors_from_episode(show_title: str, episode: PodcastEpisode) -> L
     
     schema_instructions = """
 You are an expert sponsorship extraction bot. Analyze the podcast episode show notes and extract all sponsors, promotional links, descriptions/summaries of ad copies, and any promo codes.
+IMPORTANT RULES:
+1. ONLY extract true commercial third-party sponsorships (brands paying for ad placements).
+2. DO NOT extract self-promotions (e.g., the host's own book, course, or newsletter).
+3. DO NOT extract mentions of portfolio companies if this is an investor/corporate podcast (like a16z).
+4. DO NOT extract standard gear affiliate links (e.g., "my camera gear on Amazon") or Patreon links.
+
 You must output a JSON object containing a "sponsors" array where each sponsor has:
 - sponsor_name (string)
 - sponsor_url (string)
@@ -122,7 +128,8 @@ Example:
                 sponsor_url=item.get("sponsor_url") or "",
                 newsletter_source=show_title,
                 ad_copy_summary=item.get("ad_copy_summary") or "",
-                detected_promo_codes=item.get("detected_promo_codes") or []
+                detected_promo_codes=item.get("detected_promo_codes") or [],
+                detected_at=episode.pub_date
             ))
     except Exception as e:
         print(f"Kimi LLM extraction error for podcast: {e}")

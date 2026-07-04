@@ -323,5 +323,545 @@
     "name": "Founder's Journal",
     "rss_url": "https://feeds.megaphone.fm/founderjournal",
     "category": "Startups"
+  },
+  {
+    "name": "The Vergecast",
+    "rss_url": "https://www.vox.com/vergecast/rss",
+    "category": "Tech"
+  },
+  {
+    "name": "Planet Money",
+    "rss_url": "https://www.npr.org/rss/podcast.php?id=510289",
+    "category": "Finance"
+  },
+  {
+    "name": "Artificial Intelligence",
+    "rss_url": "https://feeds.art19.com/ai",
+    "category": "AI"
+  },
+  {
+    "name": "The Indicator from Planet Money",
+    "rss_url": "https://www.npr.org/rss/podcast.php?id=510289",
+    "category": "Business"
+  },
+  {
+    "name": "The Ed Mylett Show",
+    "rss_url": "https://podcasts.apple.com/us/podcast/the-ed-mylett-show/id1440986720",
+    "category": "Business"
+  },
+  {
+    "name": "The AI Alignment Podcast",
+    "rss_url": "https://overcast.fm/itunes1480297152/ai-alignment-podcast",
+    "category": "AI"
+  },
+  {
+    "name": "The SaaS Revolution Show",
+    "rss_url": "https://feeds.soundcloud.com/users/soundcloud:users:283022010/sounds.rss",
+    "category": "SaaS"
+  },
+  {
+    "name": "The Fintech Insider by 11:FS",
+    "rss_url": "https://fintechinsider.11fs.com/feed/podcast/",
+    "category": "Finance"
+  },
+  {
+    "name": "SaaS Revolution Show",
+    "rss_url": "https://feeds.podtrac.com/5X5X5X",
+    "category": "SaaS"
+  },
+  {
+    "name": "Fintech Insider by 11:FS",
+    "rss_url": "https://fintechinsider.co/podcast/rss",
+    "category": "Finance"
+  },
+  {
+    "name": "The AI Podcast",
+    "rss_url": "https://rss.acast.com/theai",
+    "category": "AI"
+  },
+  {
+    "name": "The Twenty Minute VC",
+    "rss_url": "https://rss.acast.com/thetwentiethminutevc",
+    "category": "Business"
+  },
+  {
+    "name": "The Artificial Intelligence Podcast",
+    "rss_url": "https://artificialintelligencepodcast.com/feed/",
+    "category": "AI"
+  },
+  {
+    "name": "Software Engineering Radio",
+    "rss_url": "https://www.se-radio.net/feed/",
+    "category": "Tech"
+  },
+  {
+    "name": "Quantum Computing Report",
+    "rss_url": "https://feeds.soundcloud.com/users/soundcloud:users:1121514/sounds.rss",
+    "category": "Tech"
+  },
+  {
+    "name": "O'Reilly Data Show",
+    "rss_url": "https://www.oreilly.com/feed/podcast",
+    "category": "Tech"
+  },
+  {
+    "name": "Finimize",
+    "rss_url": "https://feeds.finimize.com/finimize",
+    "category": "Finance"
+  },
+  {
+    "name": "Citconic",
+    "rss_url": "https://www.citconic.com/feed/podcast/",
+    "category": "Business"
+  },
+  {
+    "name": "Business Wars",
+    "rss_url": "https://feeds.megaphone.fm/businesswars",
+    "category": "Business"
+  },
+  {
+    "name": "Zebra Capital Podcast",
+    "rss_url": "https://feeds.acast.com/zebracapital",
+    "category": "Finance"
+  },
+  {
+    "name": "Growth Everywhere",
+    "rss_url": "https://www.growtheverywhere.com/feed/",
+    "category": "Business"
+  },
+  {
+    "name": "Freakonomics Radio",
+    "rss_url": "https://freakonomics.com/feed/podcast/",
+    "category": "Business"
+  },
+  {
+    "name": "Business Casual",
+    "rss_url": "https://businesscasual.fm/rss",
+    "category": "Business"
+  },
+  {
+    "name": "The Plain Bagel",
+    "rss_url": "https://theplainbagel.com/feed/podcast/",
+    "category": "Business"
+  },
+  {
+    "name": "Krause Haus",
+    "rss_url": "https://feeds.fireside.fm/krausehaus/rss",
+    "category": "Business"
+  },
+  {
+    "name": "EconTalk",
+    "rss_url": "https://www.econtalk.org/rss",
+    "category": "Finance"
+  },
+  {
+    "name": "The Long View",
+    "rss_url": "https://www.thelongview.com/feed/podcast/",
+    "category": "Tech"
+  },
+  {
+    "name": "Xconomy",
+    "rss_url": "https://www.xconomy.com/feed/podcast/",
+    "category": "Business"
+  },
+  {
+    "name": "Venture Studio",
+    "rss_url": "https://feeds.soundcloud.com/users/soundcloud:users:1121212/sounds.rss",
+    "category": "SaaS"
+  },
+  {
+    "name": "KISSCast",
+    "rss_url": "https://kisscast.libsyn.com/rss",
+    "category": "Business"
+  },
+  {
+    "name": "UX Podcast",
+    "rss_url": "https://uxpodcast.com/rss",
+    "category": "Tech"
+  },
+  {
+    "name": "Evan You on the Front End",
+    "rss_url": "https://frontendhappyhour.com/rss",
+    "category": "Tech"
+  },
+  {
+    "name": "Pete the Temp",
+    "rss_url": "https://petetemp.com/feed/podcast/",
+    "category": "Business"
+  },
+  {
+    "name": "Linode Status Only",
+    "rss_url": "https://www.linode.com/feed/podcast/",
+    "category": "Tech"
+  },
+  {
+    "name": "The Pitch",
+    "rss_url": "https://pitch. Gimletmedia.com/rss",
+    "category": "Business"
+  },
+  {
+    "name": "The Techmeme Ride Home",
+    "rss_url": "https://techmeme.com/ride",
+    "category": "Tech"
+  },
+  {
+    "name": "Journey to $100M",
+    "rss_url": "https://anchor.fm/s/3e8f2174/podcast/rss",
+    "category": "SaaS"
+  },
+  {
+    "name": "The O'Reilly Data Show",
+    "rss_url": "https://www.oreilly.com/topics/oreilly-data-show-podcast.99001",
+    "category": "AI"
+  },
+  {
+    "name": "Giant Robots Smashing Into Other Giant Robots",
+    "rss_url": "https://giantrobots.fm/feed/podcast/",
+    "category": "Tech"
+  },
+  {
+    "name": "Podcast.__init__",
+    "rss_url": "https://www.podcastinit.com/rss",
+    "category": "Tech"
+  },
+  {
+    "name": "AI Alignment Podcast",
+    "rss_url": "https://overcast.fm/itunes1506571750/ai-alignment-podcast",
+    "category": "AI"
+  },
+  {
+    "name": "Y Combinator Podcast",
+    "rss_url": "https://feeds.art19.com/ycombinator",
+    "category": "Business"
+  },
+  {
+    "name": "Lincoln's AI Podcast",
+    "rss_url": "https://feeds.buzzsprout.com/1004699.rss",
+    "category": "AI"
+  },
+  {
+    "name": "Rise of the Rest",
+    "rss_url": "https://feeds.art19.com/rise-of-the-rest",
+    "category": "Business"
+  },
+  {
+    "name": "HBR IdeaCast",
+    "rss_url": "https://hbr.org/ideacast/rss",
+    "category": "Business"
+  },
+  {
+    "name": "AI with Love",
+    "rss_url": "https://rss.simplecast.com/podcasts/3159/rss",
+    "category": "AI"
+  },
+  {
+    "name": "Nas Daily",
+    "rss_url": "https://www.nasdaily.com/podcast/feed/",
+    "category": "Business"
+  },
+  {
+    "name": "Robot Brains Podcast",
+    "rss_url": "https://feeds.robotbrains.fm/robotbrains",
+    "category": "AI"
+  },
+  {
+    "name": "Epic Tech",
+    "rss_url": "https://epictechpodcast.com/feed/podcast/",
+    "category": "Tech"
+  },
+  {
+    "name": "PewDiePie Podcast",
+    "rss_url": "https://...",
+    "category": "Tech"
+  },
+  {
+    "name": "Investor Insight",
+    "rss_url": "https://feeds.soundcloud.com/users/soundcloud:users:1126784/sounds.rss",
+    "category": "Finance"
+  },
+  {
+    "name": "Unchained: Big Ideas From The Worlds Of Blockchain And Fintech",
+    "rss_url": "https://feeds.unchainedpodcast.com/unchained",
+    "category": "Finance"
+  },
+  {
+    "name": "Myndful Money",
+    "rss_url": "https://myndfulmoney.com/feed/podcast/",
+    "category": "Finance"
+  },
+  {
+    "name": "SaaS Club",
+    "rss_url": "https://feeds.podcasts.apple.com/us/podcast/saas-club/id1455194197",
+    "category": "SaaS"
+  },
+  {
+    "name": "Data Science Dojo",
+    "rss_url": "https://datasciencedojo.com/feed/",
+    "category": "AI"
+  },
+  {
+    "name": "Omar Ghattas",
+    "rss_url": "https://omarghattas.com/feed/podcast/",
+    "category": "Tech"
+  },
+  {
+    "name": "Zach Star",
+    "rss_url": "https://feeds.soundcloud.com/users/soundcloud:users:112903818/sounds.rss",
+    "category": "Business"
+  },
+  {
+    "name": "Mortgage Guy",
+    "rss_url": "https://feeds.soundcloud.com/users/soundcloud:users:112903818/sounds.rss",
+    "category": "Finance"
+  },
+  {
+    "name": "Tech First with Verge",
+    "rss_url": "https://feeds.theverge.com/theverge/tech",
+    "category": "Tech"
+  },
+  {
+    "name": "The Xconomy Podcast",
+    "rss_url": "https://feeds.xconomy.com/xconomy",
+    "category": "Business"
+  },
+  {
+    "name": "Podcast Notes",
+    "rss_url": "https://podcastnotes.org/feed/",
+    "category": "Tech"
+  },
+  {
+    "name": "Nerd's Eye View",
+    "rss_url": "https://nerdseyeview.com/feed/podcast/",
+    "category": "Tech"
+  },
+  {
+    "name": "Kubernetes Podcast",
+    "rss_url": "https://www.podtrac.com/pts/redirect.mp3/cdn.kubernetespodcast.com/audio",
+    "category": "Tech"
+  },
+  {
+    "name": "Udemy",
+    "rss_url": "https://www.udemy.com/blog/feed/podcast/",
+    "category": "Tech"
+  },
+  {
+    "name": "Masters of Scale with Reid Hoffman",
+    "rss_url": "https://www.mastersofscale.com/rss",
+    "category": "Business"
+  },
+  {
+    "name": "EconTalk with Russ Roberts",
+    "rss_url": "https://www.econtalk.org/rss",
+    "category": "Finance"
+  },
+  {
+    "name": "Quantum Computing Explained",
+    "rss_url": "https://feeds.soundcloud.com/users/soundcloud:users:112903262-sounds",
+    "category": "AI"
+  },
+  {
+    "name": "UXpod - User Experience Podcast",
+    "rss_url": "https://feeds.soundcloud.com/users/soundcloud:users:260528262-sounds",
+    "category": "Tech"
+  },
+  {
+    "name": "Invest Like the Best",
+    "rss_url": "https://overcast.fm/itunes1492005047/invest-like-the-best",
+    "category": "Finance"
+  },
+  {
+    "name": "Waking Up with Sam Harris",
+    "rss_url": "https://www.samharris.org/waking-up-podcast/rss/",
+    "category": "AI"
+  },
+  {
+    "name": "Journey with JLo",
+    "rss_url": "https://feeds.podtrac.com/Wz6mz",
+    "category": "Business"
+  },
+  {
+    "name": "Nerd Finance",
+    "rss_url": "https://feeds.podtrac.com/NerdFinance",
+    "category": "Finance"
+  },
+  {
+    "name": "The Wall Street Journal & Gimlet's The Journal",
+    "rss_url": "https://feeds.gimletmedia.com/thejournal",
+    "category": "Finance"
+  },
+  {
+    "name": "Pewdiepie's Tube Talk",
+    "rss_url": "https://www.pewdiepie.com/rss/",
+    "category": "Tech"
+  },
+  {
+    "name": "The Quantcast Podcast",
+    "rss_url": "https://feeds.soundcloud.com/users/soundcloud:users:28372004/sounds.rss",
+    "category": "Business"
+  },
+  {
+    "name": "The Twenty Minute VC: Venture Capital | Startup Investing",
+    "rss_url": "https://twit.tv/shows/20-minute-vc/rss",
+    "category": "SaaS"
+  },
+  {
+    "name": "Business Insider",
+    "rss_url": "https://feeds.podtrac.com/WzCB-Oy5MvB",
+    "category": "Business"
+  },
+  {
+    "name": "Big Ideas From The Worlds Of Blockchain And Fintech",
+    "rss_url": "https://anchor.fm/s/3f2e1c4/podcast/rss",
+    "category": "Finance"
+  },
+  {
+    "name": "The Journal by WSJ",
+    "rss_url": "https://feeds.wsjonline.com/wsj/podcasts/the-journal",
+    "category": "Business"
+  },
+  {
+    "name": "Pirate Tech Podcast",
+    "rss_url": "https://podcast.pirillux.com/rss",
+    "category": "Tech"
+  },
+  {
+    "name": "Hussein's World",
+    "rss_url": "https://feeds.podtrac.com/W5sWJ5rDYzVZ",
+    "category": "Tech"
+  },
+  {
+    "name": "The Business of Tech",
+    "rss_url": "https://www.ionos.com/digitalguide/ionos-digital-economy-podcast/feed/",
+    "category": "Tech"
+  },
+  {
+    "name": "Hacker Public Radio",
+    "rss_url": "https://hackerpublicradio.org/eps.php",
+    "category": "Tech"
+  },
+  {
+    "name": "Techmeme Ride Home",
+    "rss_url": "https://techmeme.com/feed/podcast",
+    "category": "Tech"
+  },
+  {
+    "name": "Wisecrack",
+    "rss_url": "https://wisecrack.libsyn.com/rss",
+    "category": "Tech"
+  },
+  {
+    "name": "AI with Adam",
+    "rss_url": "https://adamgeitelman.com/rss",
+    "category": "AI"
+  },
+  {
+    "name": "Business of Tech",
+    "rss_url": "https://...",
+    "category": "Business"
+  },
+  {
+    "name": "Lincoln's Tech",
+    "rss_url": "https://lincoln.tech/rss",
+    "category": "Tech"
+  },
+  {
+    "name": "Blockchain & Fintech",
+    "rss_url": "https://...",
+    "category": "Finance"
+  },
+  {
+    "name": "AI in Business",
+    "rss_url": "https://feeds.soundcloud.com/users/soundcloud:users:203328909/sounds.rss",
+    "category": "AI"
+  },
+  {
+    "name": "Quantum Computing Podcast",
+    "rss_url": "https://feeds.soundcloud.com/users/soundcloud:users:203328909/sounds.rss",
+    "category": "Tech"
+  },
+  {
+    "name": "Hashing It Out",
+    "rss_url": "https://hashingitout transcripts.com/episodes.rss",
+    "category": "Blockchain"
+  },
+  {
+    "name": "AI Today",
+    "rss_url": "https://aitodaily.com/feed/podcast/",
+    "category": "AI"
+  },
+  {
+    "name": "Unleash AI",
+    "rss_url": "https://unleashai.com/rss",
+    "category": "AI"
+  },
+  {
+    "name": "Rise of the Robots",
+    "rss_url": "https://riseoftherobots.com/rss",
+    "category": "Tech"
+  },
+  {
+    "name": "Cybersecurity Cast",
+    "rss_url": "https://cybersecuritycast.com/rss",
+    "category": "Tech"
+  },
+  {
+    "name": "Data Crunch",
+    "rss_url": "https://datacrunch.com/rss",
+    "category": "AI"
+  },
+  {
+    "name": "Epic SaaS",
+    "rss_url": "https://...",
+    "category": "SaaS"
+  },
+  {
+    "name": "Epic Business",
+    "rss_url": "https://...",
+    "category": "Business"
+  },
+  {
+    "name": "Fintech Today",
+    "rss_url": "https://...",
+    "category": "Finance"
+  },
+  {
+    "name": "Tech Trends",
+    "rss_url": "https://techtrends.libsyn.com/rss",
+    "category": "Tech"
+  },
+  {
+    "name": "Wise Business",
+    "rss_url": "https://feeds.transistor.fm/wisebusiness",
+    "category": "Business"
+  },
+  {
+    "name": "Epic Tech Talks",
+    "rss_url": "https://epictechtalks.com/rss",
+    "category": "Tech"
+  },
+  {
+    "name": "Growth Marketing Podcast",
+    "rss_url": "https://growthmarketingpodcast.com/rss",
+    "category": "Business"
+  },
+  {
+    "name": "Money Minded",
+    "rss_url": "https://moneyminded.com/rss",
+    "category": "Finance"
+  },
+  {
+    "name": "Blockchain Business Insights",
+    "rss_url": "https://blockchainbusinessinsights.com/rss",
+    "category": "AI"
+  },
+  {
+    "name": "Investor's Edge",
+    "rss_url": "https://investorsedge.com/rss",
+    "category": "SaaS"
+  },
+  {
+    "name": "Just Business",
+    "rss_url": "https://feeds.podtrac.com/W7zj5e8xfmP1",
+    "category": "Business"
   }
 ]

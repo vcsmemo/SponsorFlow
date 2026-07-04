@@ -13,6 +13,7 @@ class YouTubeVideo(BaseModel):
     video_id: str
     title: str
     channel_title: str
+    published_at: Optional[str] = None
 
 def fetch_channel_videos(channel_id: str) -> List[YouTubeVideo]:
     """
@@ -42,6 +43,7 @@ def fetch_channel_videos(channel_id: str) -> List[YouTubeVideo]:
         for entry in root.findall("atom:entry", ns):
             video_id_el = entry.find("atom:id", ns)
             title_el = entry.find("atom:title", ns)
+            published_el = entry.find("atom:published", ns)
             
             if video_id_el is not None and title_el is not None:
                 # atom:id is in format yt:video:VIDEO_ID
@@ -50,7 +52,8 @@ def fetch_channel_videos(channel_id: str) -> List[YouTubeVideo]:
                 videos.append(YouTubeVideo(
                     video_id=video_id,
                     title=title_el.text,
-                    channel_title=channel_title
+                    channel_title=channel_title,
+                    published_at=published_el.text if published_el is not None else None
                 ))
         return videos
     except Exception as e:
@@ -120,6 +123,11 @@ def extract_sponsor_from_transcript(video: YouTubeVideo, transcript_snippet: str
     schema_instructions = """
 You are an expert sponsorship extraction bot. Analyze the auto-generated captions of a YouTube sponsor segment.
 Extract the sponsoring brand details.
+IMPORTANT RULES:
+1. ONLY extract true commercial third-party sponsorships (brands paying for ad placements).
+2. DO NOT extract self-promotions (e.g., the YouTuber's own merch, course, or patreon).
+3. DO NOT extract standard gear affiliate links or portfolio companies for corporate channels.
+
 You must output a JSON object containing a "sponsors" array with at most 1 item representing the sponsor:
 - sponsor_name (string, company/brand name)
 - sponsor_url (string, promo landing page mentioned, or the main website URL. Use YouTube video descriptions / general site patterns if URL not fully spelled out in text. If not found, guess based on brand name or output blank string)
@@ -161,7 +169,8 @@ Example:
                 sponsor_url=item.get("sponsor_url") or "",
                 newsletter_source=video.channel_title,
                 ad_copy_summary=item.get("ad_copy_summary") or "",
-                detected_promo_codes=item.get("detected_promo_codes") or []
+                detected_promo_codes=item.get("detected_promo_codes") or [],
+                detected_at=video.published_at
             )
             
             # Resolve url redirect

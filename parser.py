@@ -17,6 +17,7 @@ class SponsorSignal(BaseModel):
     newsletter_source: str = Field(description="The sender or title of the newsletter source.")
     ad_copy_summary: str = Field(description="A brief summary of the sponsor's ad copy or pitch from the email.")
     detected_promo_codes: List[str] = Field(default=[], description="List of detected promo codes or discount codes associated with this sponsor.")
+    detected_at: Optional[str] = Field(default=None, description="The actual date/time this sponsor signal was published or broadcasted.")
 
 class SponsorExtractionResult(BaseModel):
     sponsors: List[SponsorSignal] = Field(description="List of all sponsors identified in the newsletter.")
@@ -186,6 +187,12 @@ def extract_sponsors_from_email(email_data: dict) -> List[SponsorSignal]:
     
     schema_instructions = """
 You are an expert sponsorship extraction bot. Analyze the given newsletter text and extract all sponsors, promotional links, descriptions/summaries of ad copies, and any promo codes.
+IMPORTANT RULES:
+1. ONLY extract true commercial third-party sponsorships (brands paying for ad placements).
+2. DO NOT extract self-promotions (e.g., the newsletter author's own book, course, premium tier).
+3. DO NOT extract mentions of portfolio companies if the newsletter belongs to an investor/VC.
+4. DO NOT extract standard gear affiliate links or general software referrals.
+
 You must output a JSON object containing a "sponsors" array where each sponsor has:
 - sponsor_name (string)
 - sponsor_url (string)
