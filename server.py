@@ -60,12 +60,12 @@ DEFAULT_AUDIENCES = {
     "youtube": 100_000,
 }
 
-def estimate_placement_value(channel_name: str, platform: str) -> dict:
+def estimate_placement_value(channel_name: str, platform: str, followers: int = None) -> dict:
     """
     Estimates the dollar value of a single sponsorship placement
     based on CPM rates and estimated audience size.
     """
-    audience = KNOWN_CHANNEL_AUDIENCES.get(channel_name, DEFAULT_AUDIENCES.get(platform, 50_000))
+    audience = followers if followers else KNOWN_CHANNEL_AUDIENCES.get(channel_name, DEFAULT_AUDIENCES.get(platform, 50_000))
     rates = CPM_RATES.get(platform, CPM_RATES["newsletter"])
     
     low = round((audience / 1000) * rates["low"])
@@ -132,9 +132,10 @@ def get_dashboard_data():
         channel = channel_lookup.get(ch_id, {})
         ch_name = channel.get('name', 'Unknown')
         ch_platform = channel.get('platform', 'newsletter')
+        ch_followers = channel.get('followers')
         
         # Estimate value for this placement
-        estimate = estimate_placement_value(ch_name, ch_platform)
+        estimate = estimate_placement_value(ch_name, ch_platform, ch_followers)
         total_budget_mid += estimate["mid"]
         
         # Track by sponsor
@@ -324,7 +325,11 @@ def get_money_flow():
             "detected_at": sig['detected_at'],
             "product": sig.get('product') or sig['sponsor_name'],
             "views": sig.get('views', 50000),
-            "estimated_value": estimate_placement_value(sig['channel_name'], sig['channel_platform'])["display"]
+            "estimated_value": estimate_placement_value(
+                sig['channel_name'], 
+                sig['channel_platform'],
+                channel_lookup.get(sig['channel_id'], {}).get('followers')
+            )["display"]
         })
         
     return {
@@ -460,7 +465,7 @@ def get_sponsor_detail(sponsor_id: str):
     placements = []
     for sig in sponsor_signals:
         ch = channel_lookup.get(sig['channel_id'], {})
-        estimate = estimate_placement_value(ch.get('name', ''), ch.get('platform', 'newsletter'))
+        estimate = estimate_placement_value(ch.get('name', ''), ch.get('platform', 'newsletter'), ch.get('followers'))
         placements.append({
             "id": sig['id'],
             "channel_id": ch.get('id', ''),
@@ -491,8 +496,9 @@ def get_sponsor_detail(sponsor_id: str):
                 
     total_spend = sum(
         estimate_placement_value(
-            channel_lookup.get(sig['channel_id'], {}).get('name', ''),
-            channel_lookup.get(sig['channel_id'], {}).get('platform', 'newsletter')
+            channel_lookup.get(sig['channel_id'], {}).get('name', ''), 
+            channel_lookup.get(sig['channel_id'], {}).get('platform', 'newsletter'),
+            channel_lookup.get(sig['channel_id'], {}).get('followers')
         )["mid"]
         for sig in sponsor_signals
     )
@@ -545,7 +551,7 @@ def get_channel_earnings(channel_id: str):
     brands_worked_with.sort(key=lambda x: x['count'], reverse=True)
     
     frequency = "Weekly" if len(channel_signals) >= 12 else "Monthly" if len(channel_signals) >= 3 else "Occasional"
-    estimate = estimate_placement_value(channel['name'], channel['platform'])
+    estimate = estimate_placement_value(channel['name'], channel['platform'], channel.get('followers'))
     
     history = []
     for sig in channel_signals:
@@ -590,7 +596,10 @@ def get_deal_detail(signal_id: str):
     if not sig:
         raise HTTPException(status_code=404, detail="Deal not found")
         
-    estimate = estimate_placement_value(sig['channel_name'], sig['channel_platform'])
+    # Get channel to find followers
+    channels = database.get_channels()
+    ch_followers = next((c['followers'] for c in channels if c['id'] == sig['channel_id']), None)
+    estimate = estimate_placement_value(sig['channel_name'], sig['channel_platform'], ch_followers)
     
     return {
         "deal": {
