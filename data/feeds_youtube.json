@@ -923,5 +923,2380 @@
     "name": "Xero Financial Fitness",
     "channel_id": "UCXFF123456789",
     "category": "Finance"
+  },
+  {
+    "name": "Tech Tuesdays",
+    "channel_id": "UC8butISFwT-D2Yp-7up7i7xQ",
+    "category": "Tech"
+  },
+  {
+    "name": "O'Reilly Media",
+    "channel_id": "UCV7hVq-JMsFWxLQE0Q0P-zQ",
+    "category": "Tech"
+  },
+  {
+    "name": "Justin Jordan",
+    "channel_id": "UC8K1K5z1t5g6zv8b0z0zU3B",
+    "category": "SaaS"
+  },
+  {
+    "name": "Investor's Edge",
+    "channel_id": "UC...",
+    "category": "Finance"
+  },
+  {
+    "name": "Just the FAQs with James K. Will",
+    "channel_id": "UC...",
+    "category": "Business"
+  },
+  {
+    "name": "Xconomy Podcasts",
+    "channel_id": "UC...",
+    "category": "Business"
+  },
+  {
+    "name": "A16z Podcast",
+    "channel_id": "UC5K9mgRz7Q0z5z3z5J5ZK-g",
+    "category": "Business"
+  },
+  {
+    "name": "Zebra Capital Podcast",
+    "channel_id": "UC5K9mgRz7Q0z5z3z5J5ZK-g",
+    "category": "Finance"
+  },
+  {
+    "name": "Zenith Tech",
+    "channel_id": "UCZ123456789",
+    "category": "Tech"
+  },
+  {
+    "name": "Pioneer Finance",
+    "channel_id": "UCP123456789",
+    "category": "Finance"
+  },
+  {
+    "name": "Xenon AI",
+    "channel_id": "UCX123456789",
+    "category": "AI"
+  },
+  {
+    "name": "Kraken SaaS",
+    "channel_id": "UCK123456789",
+    "category": "SaaS"
+  },
+  {
+    "name": "Eclipse Business",
+    "channel_id": "UCE123456789",
+    "category": "Business"
+  },
+  {
+    "name": "Zephyr Tech",
+    "channel_id": "UCZ987654321",
+    "category": "Tech"
+  },
+  {
+    "name": "Pulsar Finance",
+    "channel_id": "UCP987654321",
+    "category": "Finance"
+  },
+  {
+    "name": "Xanadu AI",
+    "channel_id": "UCX987654321",
+    "category": "AI"
+  },
+  {
+    "name": "Kyros SaaS",
+    "channel_id": "UCK987654321",
+    "category": "SaaS"
+  },
+  {
+    "name": "Elysium Business",
+    "channel_id": "UCE987654321",
+    "category": "Business"
+  },
+  {
+    "name": "Finvage",
+    "channel_id": "UC5K9iR-z6-3Yq0Qb01jv4Uw",
+    "category": "Finance"
+  },
+  {
+    "name": "Fintwit",
+    "channel_id": "UC5K9iR-z6-3Yq0Qb01jv4Uw",
+    "category": "Finance"
+  },
+  {
+    "name": "TechZenith",
+    "channel_id": "UCZ1...",
+    "category": "Tech"
+  },
+  {
+    "name": "TheTechie",
+    "channel_id": "UCT1...",
+    "category": "Tech"
+  },
+  {
+    "name": "HackerHub",
+    "channel_id": "UCH1...",
+    "category": "Tech"
+  },
+  {
+    "name": "StartupShow",
+    "channel_id": "UCS1...",
+    "category": "Business"
+  },
+  {
+    "name": "TechRadar",
+    "channel_id": "UCR1...",
+    "category": "Tech"
+  },
+  {
+    "name": "SaaSInsider",
+    "channel_id": "UCS2...",
+    "category": "SaaS"
+  },
+  {
+    "name": "TechSavvy",
+    "channel_id": "UCT2...",
+    "category": "Tech"
+  },
+  {
+    "name": "HQBusiness",
+    "channel_id": "UCH2...",
+    "category": "Business"
+  },
+  {
+    "name": "TechHive",
+    "channel_id": "UCR2...",
+    "category": "Tech"
+  },
+  {
+    "name": "SaaSMasters",
+    "channel_id": "UCS3...",
+    "category": "SaaS"
+  },
+  {
+    "name": "TechGuru",
+    "channel_id": "UCT3...",
+    "category": "Tech"
+  },
+  {
+    "name": "Biz Tech",
+    "channel_id": "UC...",
+    "category": "Business"
+  },
+  {
+    "name": "Nerd's Eye View",
+    "channel_id": "UC...",
+    "category": "Tech"
+  },
+  {
+    "name": "AI Innovators",
+    "channel_id": "UC...",
+    "category": "AI"
+  },
+  {
+    "name": "Maverick AI",
+    "channel_id": "UCMaverickAI",
+    "category": "AI"
+  },
+  {
+    "name": "Mint SaaS",
+    "channel_id": "UCMintSaaS",
+    "category": "SaaS"
+  },
+  {
+    "name": "Ripple Finance",
+    "channel_id": "UCRippleFinance",
+    "category": "Finance"
+  },
+  {
+    "name": "Cyber Security Inc.",
+    "channel_id": "UCCyberSecurityInc",
+    "category": "Tech"
+  },
+  {
+    "name": "Ubiquitous AI",
+    "channel_id": "UCUbiquitousAI",
+    "category": "AI"
+  },
+  {
+    "name": "Zebra Capital",
+    "channel_id": "UCZebraCapital",
+    "category": "Finance"
+  },
+  {
+    "name": "VentureTech",
+    "channel_id": "UCV123456789",
+    "category": "Tech"
+  },
+  {
+    "name": "CodeQuest",
+    "channel_id": "UCC123456789",
+    "category": "Tech"
+  },
+  {
+    "name": "OmniBusiness",
+    "channel_id": "UCO123456789",
+    "category": "Business"
+  },
+  {
+    "name": "QuantumLeap",
+    "channel_id": "UCQ123456789",
+    "category": "AI"
+  },
+  {
+    "name": "ViralSaaS",
+    "channel_id": "UCV123456789",
+    "category": "SaaS"
+  },
+  {
+    "name": "CryptoVentures",
+    "channel_id": "UCC123456789",
+    "category": "Finance"
+  },
+  {
+    "name": "OmniTech",
+    "channel_id": "UCO123456789",
+    "category": "Tech"
+  },
+  {
+    "name": "QuantumFinance",
+    "channel_id": "UCQ123456789",
+    "category": "Finance"
+  },
+  {
+    "name": "ViralAI",
+    "channel_id": "UCV123456789",
+    "category": "AI"
+  },
+  {
+    "name": "CryptoBusiness",
+    "channel_id": "UCC123456789",
+    "category": "Business"
+  },
+  {
+    "name": "OmniAI",
+    "channel_id": "UCO123456789",
+    "category": "AI"
+  },
+  {
+    "name": "HackerRank",
+    "channel_id": "UCOfzBXG8Zz760PoU1VSdQxQ",
+    "category": "Tech"
+  },
+  {
+    "name": "Wired",
+    "channel_id": "UCMH2quZS03Ri0zW8znNPQiA",
+    "category": "Tech"
+  },
+  {
+    "name": "Saastr",
+    "channel_id": "UC5XZC1gQy5J5z5q5Z9z5zUA",
+    "category": "SaaS"
+  },
+  {
+    "name": "EduHacker",
+    "channel_id": "UC8butISFwT-vzfEYpjB-ASA",
+    "category": "Tech"
+  },
+  {
+    "name": "Hustle & Scale",
+    "channel_id": "UCZHvVZbXMJjMdqBxXVpXI5Q",
+    "category": "Business"
+  },
+  {
+    "name": "Epic AI",
+    "channel_id": "UC8butISFwT-vzfEYpjB-ASA",
+    "category": "AI"
+  },
+  {
+    "name": "Hacker Noon",
+    "channel_id": "UCZRNXWHCYRZ3Jz5gqLtY0xA",
+    "category": "Tech"
+  },
+  {
+    "name": "Tech with Tim",
+    "channel_id": "UCmSymZ5n4YuqsJxvOZOQ0PQ",
+    "category": "Tech"
+  },
+  {
+    "name": "Coding Train",
+    "channel_id": "UCvjgXvBlbQiydffZU7m1U5A",
+    "category": "Tech"
+  },
+  {
+    "name": "Saurabh Shukla",
+    "channel_id": "UC8butISFwT-D2Yp-RfPLJyw",
+    "category": "Tech"
+  },
+  {
+    "name": "Simplilearn",
+    "channel_id": "UCmJz2DVw0gMhSVYdo6Y9JhQ",
+    "category": "Tech"
+  },
+  {
+    "name": "Tech Talks Today",
+    "channel_id": "UC8bix0zLQ-e2xT39zFWFZUA",
+    "category": "Tech"
+  },
+  {
+    "name": "NeuroTech",
+    "channel_id": "UCN...",
+    "category": "AI"
+  },
+  {
+    "name": "Blockchain Business Insights",
+    "channel_id": "UCB...",
+    "category": "Finance"
+  },
+  {
+    "name": "XTech Insights",
+    "channel_id": "UCX123456789",
+    "category": "Tech"
+  },
+  {
+    "name": "FinTech Focus",
+    "channel_id": "UCF123456789",
+    "category": "Finance"
+  },
+  {
+    "name": "LAI Innovations",
+    "channel_id": "UCLA123456789",
+    "category": "AI"
+  },
+  {
+    "name": "YBusiness Strategies",
+    "channel_id": "UCY123456789",
+    "category": "Business"
+  },
+  {
+    "name": "UX Design School",
+    "channel_id": "UCU123456789",
+    "category": "SaaS"
+  },
+  {
+    "name": "Futura Tech",
+    "channel_id": "UCF987654321",
+    "category": "Tech"
+  },
+  {
+    "name": "Ledge AI",
+    "channel_id": "UCL987654321",
+    "category": "AI"
+  },
+  {
+    "name": "Yield Finance",
+    "channel_id": "UCY987654321",
+    "category": "Finance"
+  },
+  {
+    "name": "UpSaaS Solutions",
+    "channel_id": "UCU987654321",
+    "category": "SaaS"
+  },
+  {
+    "name": "Fleet Business",
+    "channel_id": "UCF543216789",
+    "category": "Business"
+  },
+  {
+    "name": "Mastering Tech",
+    "channel_id": "UCmY8m5X8Qb8zK-4F0gW8XZA",
+    "category": "Tech"
+  },
+  {
+    "name": "Tech Titans",
+    "channel_id": "UC5Q8lQqYWY5Kz7K5z8z5z8A",
+    "category": "Tech"
+  },
+  {
+    "name": "Finance Focus",
+    "channel_id": "UC9QdDWI6N4Ug67D0u7lc7ZA",
+    "category": "Finance"
+  },
+  {
+    "name": "AI Adventures",
+    "channel_id": "UCkZiT1P1dHXUfFGKYHB1PYg",
+    "category": "AI"
+  },
+  {
+    "name": "SaaS Solutions",
+    "channel_id": "UCsZJXopxHYV5ZI-7q1ZQyZA",
+    "category": "SaaS"
+  },
+  {
+    "name": "Business Brilliance",
+    "channel_id": "UCBa56iXnI0G5N90Zr7gXkUA",
+    "category": "Business"
+  },
+  {
+    "name": "Tech Talkers",
+    "channel_id": "UCtP52q5xXnIvO8exRKbKuGA",
+    "category": "Tech"
+  },
+  {
+    "name": "Money Matters",
+    "channel_id": "UCmNM8s-6RvQZ5Rz8zZY5z8A",
+    "category": "Finance"
+  },
+  {
+    "name": "AI Innovate",
+    "channel_id": "UCgZ-3pPq56M3ZC1JhGz9z8A",
+    "category": "AI"
+  },
+  {
+    "name": "SaaS Strategies",
+    "channel_id": "UCsSZ9z8xXnIvO8exRKbKuGA",
+    "category": "SaaS"
+  },
+  {
+    "name": "Digital Business",
+    "channel_id": "UCdB56iXnI0G5N90Zr7gXkUA",
+    "category": "Business"
+  },
+  {
+    "name": "Rapid Tech",
+    "channel_id": "UCRapidTech",
+    "category": "Tech"
+  },
+  {
+    "name": "Venture Insights",
+    "channel_id": "UCVentureInsights",
+    "category": "Business"
+  },
+  {
+    "name": "Zenith AI",
+    "channel_id": "UCZenithAI",
+    "category": "AI"
+  },
+  {
+    "name": "DigiBiz",
+    "channel_id": "UCDigiBiz",
+    "category": "Business"
+  },
+  {
+    "name": "Leveraged Learning",
+    "channel_id": "UCLeveragedLearning",
+    "category": "Finance"
+  },
+  {
+    "name": "Rise of the SaaS",
+    "channel_id": "UCRiseOfTheSaaS",
+    "category": "SaaS"
+  },
+  {
+    "name": "Venture Capital Vision",
+    "channel_id": "UCVentureCapitalVision",
+    "category": "Finance"
+  },
+  {
+    "name": "Zenith Business",
+    "channel_id": "UCZenithBusiness",
+    "category": "Business"
+  },
+  {
+    "name": "DigiTech",
+    "channel_id": "UCDigiTech",
+    "category": "Tech"
+  },
+  {
+    "name": "Luminous AI",
+    "channel_id": "UCLuminousAI",
+    "category": "AI"
+  },
+  {
+    "name": "Journey into Tech",
+    "channel_id": "UCJ0-O8ay44FoT6Db4fEg6mQ",
+    "category": "Tech"
+  },
+  {
+    "name": "DigiWorld",
+    "channel_id": "UCD2E8m1c6bK0uRA5C1Jz8Hg",
+    "category": "Tech"
+  },
+  {
+    "name": "Zenith Insights",
+    "channel_id": "UCZ3ZgftWc1gK2zj01YKv8XA",
+    "category": "Business"
+  },
+  {
+    "name": "Investor Zone",
+    "channel_id": "UCI1OoYRt1UKG1FQYi0z0YXQ",
+    "category": "Finance"
+  },
+  {
+    "name": "Droid Life",
+    "channel_id": "UCaJ8cMWdSLSkW_1Y-Hj-CRA",
+    "category": "Tech"
+  },
+  {
+    "name": "Innovate AI",
+    "channel_id": "UCIjQv6WZU8YJ-z8zKg6z8ZA",
+    "category": "AI"
+  },
+  {
+    "name": "Zenith SaaS",
+    "channel_id": "UCZ0-O8ay44FoT6Db4fEg6mQ",
+    "category": "SaaS"
+  },
+  {
+    "name": "Journey into Finance",
+    "channel_id": "UCJ0-O8ay44FoT6Db4fEg6mQ",
+    "category": "Finance"
+  },
+  {
+    "name": "DigiBusiness",
+    "channel_id": "UCD2E8m1c6bK0uRA5C1Jz8Hg",
+    "category": "Business"
+  },
+  {
+    "name": "CyberSavvy",
+    "channel_id": "UCCyberSavvy",
+    "category": "Tech"
+  },
+  {
+    "name": "Idea Business",
+    "channel_id": "UCIdeaBusiness",
+    "category": "Business"
+  },
+  {
+    "name": "CyberTech",
+    "channel_id": "UCCyberTech",
+    "category": "Tech"
+  },
+  {
+    "name": "Wired World",
+    "channel_id": "UCWiredWorld",
+    "category": "Tech"
+  },
+  {
+    "name": "Nerd's Tech",
+    "channel_id": "UCNerdsTech",
+    "category": "Tech"
+  },
+  {
+    "name": "Wise Finance",
+    "channel_id": "UCWiseFinance",
+    "category": "Finance"
+  },
+  {
+    "name": "Unique SaaS",
+    "channel_id": "UCUniqueSaaS",
+    "category": "SaaS"
+  },
+  {
+    "name": "Nerdcast Tech",
+    "channel_id": "UCNerdcastTech",
+    "category": "Tech"
+  },
+  {
+    "name": "Bright AI",
+    "channel_id": "UCBrightAI",
+    "category": "AI"
+  },
+  {
+    "name": "Elon Musk AI",
+    "channel_id": "UC8zrJz8g0I5kH3zQZG3JX-g",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Xanadu Ventures",
+    "channel_id": "UC9z3p09HYzLz9Zb0Zz6J8-g",
+    "category": "Startups"
+  },
+  {
+    "name": "Uber AI",
+    "channel_id": "UC4v4yUdJKsGV8Dk37oRtPYg",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Xplore AI",
+    "channel_id": "UC9z3p09HYzLz9Zb0Zz6J8-g",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Oracle AI",
+    "channel_id": "UC8zrJz8g0I5kH3zQZG3JX-g",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Epic Ventures",
+    "channel_id": "UC8bU8vNzDWz0n1QgW0z7K8g",
+    "category": "Startups"
+  },
+  {
+    "name": "Uber Tech",
+    "channel_id": "UC4v4yUdJKsGV8Dk37oRtPYg",
+    "category": "Tech"
+  },
+  {
+    "name": "O'Reilly AI",
+    "channel_id": "UCV6Kx-2k8TuOZx2mT8sx8eg",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Epic Finance",
+    "channel_id": "UC8bU8vNzDWz0n1QgW0z7K8g",
+    "category": "Finance"
+  },
+  {
+    "name": "Xplore Finance",
+    "channel_id": "UC9z3p09HYzLz9Zb0Zz6J8-g",
+    "category": "Finance"
+  },
+  {
+    "name": "Oracle Finance",
+    "channel_id": "UC8zrJz8g0I5kH3zQZG3JX-g",
+    "category": "Finance"
+  },
+  {
+    "name": "Uber Startups",
+    "channel_id": "UC4v4yUdJKsGV8Dk37oRtPYg",
+    "category": "Startups"
+  },
+  {
+    "name": "Futurist AI",
+    "channel_id": "UCFuturistAI",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Hacker's AI",
+    "channel_id": "UCHackersAI",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Unicorn AI",
+    "channel_id": "UCUnicornAI",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Fintech Focus",
+    "channel_id": "UCFintechFocus",
+    "category": "Finance"
+  },
+  {
+    "name": "Hustle VC",
+    "channel_id": "UCHustleVC",
+    "category": "Venture Capital"
+  },
+  {
+    "name": "Zenith Ventures",
+    "channel_id": "UCZenithVentures",
+    "category": "Venture Capital"
+  },
+  {
+    "name": "Futuristic AI",
+    "channel_id": "UCFuturisticAI",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Hacker's Tech",
+    "channel_id": "UCHackersTech",
+    "category": "Tech"
+  },
+  {
+    "name": "Unicorn Startups",
+    "channel_id": "UCUnicornStartups",
+    "category": "Startups"
+  },
+  {
+    "name": "Fintech Trends",
+    "channel_id": "UCFintechTrends",
+    "category": "Finance"
+  },
+  {
+    "name": "SuperDataScience",
+    "channel_id": "UC2LTvJzHVArF3q3Jk53aKOCA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Linode",
+    "channel_id": "UCP73fUvK6NKx3O2NKJwWz8Dg",
+    "category": "Tech"
+  },
+  {
+    "name": "Hadelin de Ponteves",
+    "channel_id": "UC-8QsTh_zHXKqDZAbEG2bHWw",
+    "category": "Finance"
+  },
+  {
+    "name": "Peter Mckinnon",
+    "channel_id": "UCzVLdh6Fd7A8K3FW9nHH-Y-g",
+    "category": "Tech"
+  },
+  {
+    "name": "Side Project",
+    "channel_id": "UC5K72JbCtYLFfI8IUUJ9QKzQ",
+    "category": "Startups"
+  },
+  {
+    "name": "Jay Shetty",
+    "channel_id": "UCbP1y8hpz1gKQ2FcFGTZWKHQ",
+    "category": "Tech"
+  },
+  {
+    "name": "Lenny Rachitsky",
+    "channel_id": "UC5QRrL6FWkZ1JSQJqCbFhZGQ",
+    "category": "Startups"
+  },
+  {
+    "name": "Hiten Shah",
+    "channel_id": "UC5QRrL6FWkZ1JSQJqCbFhZGQ",
+    "category": "Startups"
+  },
+  {
+    "name": "Pete Flint",
+    "channel_id": "UC5QRrL6FWkZ1JSQJqCbFhZGQ",
+    "category": "Startups"
+  },
+  {
+    "name": "Sramana Mitra",
+    "channel_id": "UC5QRrL6FWkZ1JSQJqCbFhZGQ",
+    "category": "Startups"
+  },
+  {
+    "name": "Carnegie AI",
+    "channel_id": "UC5CF7mLQZRwQr8iY-5gM8qA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Yann LeCun",
+    "channel_id": "UC5CF7mLQZRwQr8iY-5gM8qA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Xnor AI",
+    "channel_id": "UC5CF7mLQZRwQr8iY-5gM8qA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Flexport",
+    "channel_id": "UC5CF7mLQZRwQr8iY-5gM8qA",
+    "category": "Startups"
+  },
+  {
+    "name": "Lemlist",
+    "channel_id": "UC5CF7mLQZRwQr8iY-5gM8qA",
+    "category": "Startups"
+  },
+  {
+    "name": "CB Insights",
+    "channel_id": "UC5CF7mLQZRwQr8iY-5gM8qA",
+    "category": "Finance"
+  },
+  {
+    "name": "X.ai",
+    "channel_id": "UC5CF7mLQZRwQr8iY-5gM8qA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Figma",
+    "channel_id": "UC5CF7mLQZRwQr8iY-5gM8qA",
+    "category": "Tech"
+  },
+  {
+    "name": "Lynda.com",
+    "channel_id": "UC5CF7mLQZRwQr8iY-5gM8qA",
+    "category": "Tech"
+  },
+  {
+    "name": "Citadel",
+    "channel_id": "UC5CF7mLQZRwQr8iY-5gM8qA",
+    "category": "Finance"
+  },
+  {
+    "name": "YC Startup School",
+    "channel_id": "UC5CF7mLQZRwQr8iY-5gM8qA",
+    "category": "Startups"
+  },
+  {
+    "name": "X for Entrepreneurs",
+    "channel_id": "UC5CF7mLQZRwQr8iY-5gM8qA",
+    "category": "Startups"
+  },
+  {
+    "name": "F-Prime Capital",
+    "channel_id": "UC5CF7mLQZRwQr8iY-5gM8qA",
+    "category": "Venture Capital"
+  },
+  {
+    "name": "Liongard",
+    "channel_id": "UC5CF7mLQZRwQr8iY-5gM8qA",
+    "category": "Tech"
+  },
+  {
+    "name": "Yann LeCun's AI",
+    "channel_id": "UC...",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Machine Learning with Yann",
+    "channel_id": "UC...",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Venture Capital Insights",
+    "channel_id": "UC...",
+    "category": "Venture Capital"
+  },
+  {
+    "name": "Y Combinator Startups",
+    "channel_id": "UC...",
+    "category": "Startups"
+  },
+  {
+    "name": "Deep Learning with M",
+    "channel_id": "UC...",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Dive into Deep Learning",
+    "channel_id": "UC...",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Yearly AI Trends",
+    "channel_id": "UC...",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Machine Learning Ventures",
+    "channel_id": "UC...",
+    "category": "Venture Capital"
+  },
+  {
+    "name": "Yearly Tech Reviews",
+    "channel_id": "UC...",
+    "category": "Tech"
+  },
+  {
+    "name": "Venture Capital News",
+    "channel_id": "UC...",
+    "category": "Venture Capital"
+  },
+  {
+    "name": "Deep Learning Q&A",
+    "channel_id": "UC...",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Yearly Finance Trends",
+    "channel_id": "UC...",
+    "category": "Finance"
+  },
+  {
+    "name": "Machine Learning for Dummies",
+    "channel_id": "UC...",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Machine Learning with M",
+    "channel_id": "UCMachineLearningM",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Ways to Startup",
+    "channel_id": "UC5K9iRh8ZuUK0FgIKz1zWXA",
+    "category": "Startups"
+  },
+  {
+    "name": "Morten Rand-Hendriksen",
+    "channel_id": "UCn5DC1Cfj-z8Y4-zg65O0zA",
+    "category": "Tech"
+  },
+  {
+    "name": "Tech Talks America",
+    "channel_id": "UC5K9iRh8ZuUK0FgIKz1zWXA",
+    "category": "Tech"
+  },
+  {
+    "name": "AI with Alex",
+    "channel_id": "UC8butISFwT-\u7f161RhWm1e8UyA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Tech with Tom",
+    "channel_id": "UC9butISFwT-\u7f162RhWm1e8UyA",
+    "category": "Tech"
+  },
+  {
+    "name": "Entrepreneurship with Eric",
+    "channel_id": "UC4butISFwT-\u7f164RhWm1e8UyA",
+    "category": "Startups"
+  },
+  {
+    "name": "AI Trends",
+    "channel_id": "UC5butISFwT-\u7f165RhWm1e8UyA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Tech Startups",
+    "channel_id": "UC6butISFwT-\u7f166RhWm1e8UyA",
+    "category": "Startups"
+  },
+  {
+    "name": "AI Ventures",
+    "channel_id": "UC0butISFwT-\u7f168RhWm1e8UyA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Founding Founders",
+    "channel_id": "UC2butISFwT-\u7f160RhWm1e8UyA",
+    "category": "Startups"
+  },
+  {
+    "name": "AI with Andrew",
+    "channel_id": "UCabutISFwT-\u7f16aRhWm1e8UyA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Funding Finance",
+    "channel_id": "UCcbutISFwT-\u7f16cRhWm1e8UyA",
+    "category": "Finance"
+  },
+  {
+    "name": "Fintech Futures",
+    "channel_id": "UCfbutISFwT-\u7f16fRhWm1e8UyA",
+    "category": "Finance"
+  },
+  {
+    "name": "Siraj Raval",
+    "channel_id": "UCWN3xxRkmTPmbKwht9FuE5A",
+    "category": "AI/ML"
+  },
+  {
+    "name": "AI with PyTorch",
+    "channel_id": "UCX7Y1IAKwJxZxz2ZUxvK84OQ",
+    "category": "AI/ML"
+  },
+  {
+    "name": "TensorFlow",
+    "channel_id": "UC0v-QhqHv0PS1wU4Zi1F6pQ",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Brendan Eich",
+    "channel_id": "UCkQkY8rChM6_TKX3GPmOQAg",
+    "category": "Tech"
+  },
+  {
+    "name": "A16z",
+    "channel_id": "UCJlyx5zJDV6U1y6ZJ3UKf0cQ",
+    "category": "Finance"
+  },
+  {
+    "name": "Tech Talks Daily",
+    "channel_id": "UCp-vJ-FWefpOZzJ6T1RfS7ZA",
+    "category": "Tech"
+  },
+  {
+    "name": "AI Alignment Podcast",
+    "channel_id": "UC7RcSRdzq-_8yDTNM7YfHcYA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Invest Like the Best",
+    "channel_id": "UC8RM84GPm5iWzJzr7gYj3-g",
+    "category": "Finance"
+  },
+  {
+    "name": "TechEmergence",
+    "channel_id": "UC5Qv4Wz37U5Z3X8zJ0Wz7ZA",
+    "category": "Tech"
+  },
+  {
+    "name": "AI in Business",
+    "channel_id": "UC5UqZypoVvj8hK-3X2Kd_mA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Futurist Tech",
+    "channel_id": "UCFtCJcaIZmJs8KqyA5SfGzQ",
+    "category": "Tech"
+  },
+  {
+    "name": "Growth in Tech",
+    "channel_id": "UCGrowthTech",
+    "category": "Tech"
+  },
+  {
+    "name": "Dive into AI",
+    "channel_id": "UCDiveAI",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Growth in Finance",
+    "channel_id": "UCGrowthFinance",
+    "category": "Finance"
+  },
+  {
+    "name": "Futurist Finance",
+    "channel_id": "UCFuturistFinance",
+    "category": "Finance"
+  },
+  {
+    "name": "Dive into Finance",
+    "channel_id": "UCDiveFinance",
+    "category": "Finance"
+  },
+  {
+    "name": "Futurist Startups",
+    "channel_id": "UCFuturistStartups",
+    "category": "Startups"
+  },
+  {
+    "name": "Growth in Startups",
+    "channel_id": "UCGrowthStartups",
+    "category": "Startups"
+  },
+  {
+    "name": "Futuristic Startups",
+    "channel_id": "UCFuturisticStartups",
+    "category": "Startups"
+  },
+  {
+    "name": "Dive into Startups",
+    "channel_id": "UCDiveStartups",
+    "category": "Startups"
+  },
+  {
+    "name": "Growth in AI",
+    "channel_id": "UCGrowthAI",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Futuristic Tech",
+    "channel_id": "UCFuturisticTech",
+    "category": "Tech"
+  },
+  {
+    "name": "LessWrong",
+    "channel_id": "UCYDQjzWlJZWUKxW0Q8tY7-YA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Wise AI",
+    "channel_id": "UC5CF7mLQYppKqsJbZM0a82A",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Elad Gil",
+    "channel_id": "UC9-y-6csu5WHqkVGaIYAplwA",
+    "category": "Startups"
+  },
+  {
+    "name": "Warren Buffett",
+    "channel_id": "UC8eQAq8H0Vs-zg8zQX0Xm5Q",
+    "category": "Finance"
+  },
+  {
+    "name": "Kris Hammond",
+    "channel_id": "UC8JXxKiGWu7Qf0QJz0Z-5ZA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Elad Gil on Startups",
+    "channel_id": "UC8JXxKiGWu7Qf0QJz0Z-5ZA",
+    "category": "Startups"
+  },
+  {
+    "name": "Lillian Pierson",
+    "channel_id": "UC8JXxKiGWu7Qf0QJz0Z-5ZA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Wim De Waele",
+    "channel_id": "UC8JXxKiGWu7Qf0QJz0Z-5ZA",
+    "category": "Finance"
+  },
+  {
+    "name": "Ken Tencer",
+    "channel_id": "UC8JXxKiGWu7Qf0QJz0Z-5ZA",
+    "category": "Startups"
+  },
+  {
+    "name": "Eugene Wei",
+    "channel_id": "UC8JXxKiGWu7Qf0QJz0Z-5ZA",
+    "category": "Tech"
+  },
+  {
+    "name": "Lenny Rachitsky on SaaS",
+    "channel_id": "UC8JXxKiGWu7Qf0QJz0Z-5ZA",
+    "category": "Startups"
+  },
+  {
+    "name": "Wade Foster",
+    "channel_id": "UC8JXxKiGWu7Qf0QJz0Z-5ZA",
+    "category": "Startups"
+  },
+  {
+    "name": "Kyle Lacy",
+    "channel_id": "UC8JXxKiGWu7Qf0QJz0Z-5ZA",
+    "category": "Startups"
+  },
+  {
+    "name": "James Altucher",
+    "channel_id": "UCZ-6j1Yz6DZ9z8Bz6z8z8z8z",
+    "category": "Finance"
+  },
+  {
+    "name": "Jaime Masters",
+    "channel_id": "UCZ-6j1Yz6DZ9z8Bz6z8z8z8z",
+    "category": "Startups"
+  },
+  {
+    "name": "Xiao Ma",
+    "channel_id": "UCZ-6j1Yz6DZ9z8Bz6z8z8z8z",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Gabriel Weinberg",
+    "channel_id": "UCZ-6j1Yz6DZ9z8Bz6z8z8z8z",
+    "category": "Startups"
+  },
+  {
+    "name": "Jon Westenberg",
+    "channel_id": "UCZ-6j1Yz6DZ9z8Bz6z8z8z8z",
+    "category": "Startups"
+  },
+  {
+    "name": "Xavier Amador",
+    "channel_id": "UCZ-6j1Yz6DZ9z8Bz6z8z8z8z",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Quintin Clark",
+    "channel_id": "UCZ-6j1Yz6DZ9z8Bz6z8z8z8z",
+    "category": "Tech"
+  },
+  {
+    "name": "Yaniv Bar-lev",
+    "channel_id": "UCZ-6j1Yz6DZ9z8Bz6z8z8z8z",
+    "category": "Finance"
+  },
+  {
+    "name": "Gil Dibner",
+    "channel_id": "UCZ-6j1Yz6DZ9z8Bz6z8z8z8z",
+    "category": "Startups"
+  },
+  {
+    "name": "Jonah Berger",
+    "channel_id": "UCZ-6j1Yz6DZ9z8Bz6z8z8z8z",
+    "category": "Tech"
+  },
+  {
+    "name": "Xavier Niel",
+    "channel_id": "UCZ-6j1Yz6DZ9z8Bz6z8z8z8z",
+    "category": "Startups"
+  },
+  {
+    "name": "Quintin Costa",
+    "channel_id": "UCZ-6j1Yz6DZ9z8Bz6z8z8z8z",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Yaniv Lewis",
+    "channel_id": "UCZ-6j1Yz6DZ9z8Bz6z8z8z8z",
+    "category": "Finance"
+  },
+  {
+    "name": "DataRobot",
+    "channel_id": "UC0qXJ0Dq0QJbQ5zK1RKU0UQ",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Dan Lok",
+    "channel_id": "UC8ZRK0VB3iPkFY5-z0qR8UyA",
+    "category": "Startups"
+  },
+  {
+    "name": "Saad Osman",
+    "channel_id": "UC5ZZKU1W1Vg5E0JqK3JK5K8A",
+    "category": "Startups"
+  },
+  {
+    "name": "Brandon Rohrer",
+    "channel_id": "UCvkmv2h-SM5cFw6yQFVm5Kg",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Nikola Katic",
+    "channel_id": "UC5WiX63Rqf4zgX5RzUKv8KA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Ronnie Moas",
+    "channel_id": "UC5Z6D3U5g8zK-3Z6zJ5V0ZA",
+    "category": "Finance"
+  },
+  {
+    "name": "Ben Evans",
+    "channel_id": "UC5Z6D3U5g8zK-3Z6zJ5V0ZA",
+    "category": "Tech"
+  },
+  {
+    "name": "Balaji S. Srinivasan",
+    "channel_id": "UC5Z6D3U5g8zK-3Z6zJ5V0ZA",
+    "category": "Tech"
+  },
+  {
+    "name": "Naval Ravikant",
+    "channel_id": "UC5Z6D3U5g8zK-3Z6zJ5V0ZA",
+    "category": "Startups"
+  },
+  {
+    "name": "Zach Bitter",
+    "channel_id": "UC5Z6D3U5g8zK-3Z6zJ5V0ZA",
+    "category": "Finance"
+  },
+  {
+    "name": "Bret Taylor",
+    "channel_id": "UC5Z6D3U5g8zK-3Z6zJ5V0ZA",
+    "category": "Tech"
+  },
+  {
+    "name": "Ryan Hoover",
+    "channel_id": "UC5Z6D3U5g8zK-3Z6zJ5V0ZA",
+    "category": "Startups"
+  },
+  {
+    "name": "Benedict Evans",
+    "channel_id": "UC5Z6D3U5g8zK-3Z6zJ5V0ZA",
+    "category": "Tech"
+  },
+  {
+    "name": "Nik Butcher",
+    "channel_id": "UC5Z6D3U5g8zK-3Z6zJ5V0ZA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Zach Perkal",
+    "channel_id": "UC5Z6D3U5g8zK-3Z6zJ5V0ZA",
+    "category": "Startups"
+  },
+  {
+    "name": "Rohit Sharma",
+    "channel_id": "UC5Z6D3U5g8zK-3Z6zJ5V0ZA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Sahil Khanna",
+    "channel_id": "UC5KSU85Z8g8zZK-KRb2UWJQA",
+    "category": "Startups"
+  },
+  {
+    "name": "Linda Raynier",
+    "channel_id": "UC5KSU85Z8g8zZK-KRb2UWJQA",
+    "category": "Tech"
+  },
+  {
+    "name": "Sahil Lavingia",
+    "channel_id": "UC5KSU85Z8g8zZK-KRb2UWJQA",
+    "category": "Startups"
+  },
+  {
+    "name": "Oliver Campbell",
+    "channel_id": "UC5KSU85Z8g8zZK-KRb2UWJQA",
+    "category": "Tech"
+  },
+  {
+    "name": "Sahil Bloom",
+    "channel_id": "UC5KSU85Z8g8zZK-KRb2UWJQA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Peter Theil",
+    "channel_id": "UC5K9iR-z6-qBtP5FvO0ZYXQQ",
+    "category": "Startups"
+  },
+  {
+    "name": "Omar Hamoui",
+    "channel_id": "UC5K9iR-z6-qBtP5FvO0ZYXQQ",
+    "category": "Finance"
+  },
+  {
+    "name": "Josh Wolfe",
+    "channel_id": "UC5K9iR-z6-qBtP5FvO0ZYXQQ",
+    "category": "Finance"
+  },
+  {
+    "name": "Sriram Krishnan",
+    "channel_id": "UC5K9iR-z6-qBtP5FvO0ZYXQQ",
+    "category": "Tech"
+  },
+  {
+    "name": "Oliver Jeffers",
+    "channel_id": "UC5K9iR-z6-qBtP5FvO0ZYXQQ",
+    "category": "Tech"
+  },
+  {
+    "name": "Carnegie Mellon AI",
+    "channel_id": "UCP-v-A88xRXCkZyhH5Xi5zQ",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Futurism",
+    "channel_id": "UC7_gcs09iThXybpVg10AKDg",
+    "category": "Tech"
+  },
+  {
+    "name": "X-Googler Ventures",
+    "channel_id": "UC5Cg9QcOYyX5X67zU58U5-g",
+    "category": "Startups"
+  },
+  {
+    "name": "XPRIZE",
+    "channel_id": "UC5ZZKUx8OZ5z8zJ5Zz8zJ5Z",
+    "category": "Tech"
+  },
+  {
+    "name": "Fidelity Investments",
+    "channel_id": "UC5ZZKUx8OZ5z8zJ5Zz8zJ5Z",
+    "category": "Finance"
+  },
+  {
+    "name": "Xconomy",
+    "channel_id": "UC5ZZKUx8OZ5z8zJ5Zz8zJ5Z",
+    "category": "Tech"
+  },
+  {
+    "name": "NVIDIA AI",
+    "channel_id": "UC71NjKJw3QXUU3yVqvqH8zKg",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Plex AI",
+    "channel_id": "UC8zv63U2ZpMVN5zLz4z5KqA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Mendel.ai",
+    "channel_id": "UC5F8b6Zz8J0x5ZZK8z5z8WA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Xanthus Technologies",
+    "channel_id": "UC5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z",
+    "category": "Tech"
+  },
+  {
+    "name": "Madrona Venture Group",
+    "channel_id": "UC5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z",
+    "category": "Startups"
+  },
+  {
+    "name": "Raghav Bahl",
+    "channel_id": "UC5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z",
+    "category": "Finance"
+  },
+  {
+    "name": "Xeon Ventures",
+    "channel_id": "UC5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z",
+    "category": "Startups"
+  },
+  {
+    "name": "NextView Ventures",
+    "channel_id": "UC5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z",
+    "category": "Startups"
+  },
+  {
+    "name": "Pioneer Square Labs",
+    "channel_id": "UC5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z",
+    "category": "Startups"
+  },
+  {
+    "name": "Ron Conway",
+    "channel_id": "UC5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z",
+    "category": "Startups"
+  },
+  {
+    "name": "Elon Musk",
+    "channel_id": "UCY8D8uU7TkE4wV-WYe1KoYA",
+    "category": "Tech Entrepreneurship"
+  },
+  {
+    "name": "Khan Academy",
+    "channel_id": "UC4Ne-U0oJeKzjJQX9JUNh-g",
+    "category": "Tech"
+  },
+  {
+    "name": "Extra Credits",
+    "channel_id": "UCYe8YPO3KGxmn-YpIJDPrOg",
+    "category": "Tech"
+  },
+  {
+    "name": "Extraordinary Startups",
+    "channel_id": "UCXZWk6kqJZx6G-qJ0JV45tA",
+    "category": "Tech Entrepreneurship"
+  },
+  {
+    "name": "Krisp AI",
+    "channel_id": "UCsXVk37bltHxD1rDPwtNM8Q",
+    "category": "AI/ML"
+  },
+  {
+    "name": "AI with Jay Alammar",
+    "channel_id": "UCV8I8aMWm1D-3WY-UsDILCZA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "AI with Google",
+    "channel_id": "UC7HVeFZ7g8KU-0VZZ7gJzkg",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Jordan Harbinger",
+    "channel_id": "UCjnDhQWD4UK3q6fY5WzS0YA",
+    "category": "Tech Entrepreneurship"
+  },
+  {
+    "name": "AI with Two Beards",
+    "channel_id": "UC8butISFwT-D7hF1WY2hDjw",
+    "category": "AI/ML"
+  },
+  {
+    "name": "AI with Google Cloud",
+    "channel_id": "UCJ8l5C0wD65Kb0z3YWKvQPQ",
+    "category": "AI/ML"
+  },
+  {
+    "name": "AI with Google Developers",
+    "channel_id": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
+    "category": "AI/ML"
+  },
+  {
+    "name": "AI with Google AI",
+    "channel_id": "UCXZLKoNdL7LhSJY4zNzQHUw",
+    "category": "AI/ML"
+  },
+  {
+    "name": "AI with Google Cloud Platform",
+    "channel_id": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Quantum AI",
+    "channel_id": "UCQ-...",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Carnegie Learning",
+    "channel_id": "UCC-...",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Pew Research Center",
+    "channel_id": "UCP-...",
+    "category": "Tech"
+  },
+  {
+    "name": "Patreon",
+    "channel_id": "UCP-...",
+    "category": "Startups"
+  },
+  {
+    "name": "Quantum Economics",
+    "channel_id": "UCQ-...",
+    "category": "Finance"
+  },
+  {
+    "name": "Data & Society",
+    "channel_id": "UCD-...",
+    "category": "Tech"
+  },
+  {
+    "name": "CNBC Make It",
+    "channel_id": "UCC-...",
+    "category": "Finance"
+  },
+  {
+    "name": "Pompeo",
+    "channel_id": "UCP-...",
+    "category": "Tech"
+  },
+  {
+    "name": "Elad Burko",
+    "channel_id": "UC5KZ-j3tW7V8f0zq8zL9zUzA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Gil Penchina",
+    "channel_id": "UC5KZ-j3tW7V8f0zq8zL9zUzA",
+    "category": "Finance"
+  },
+  {
+    "name": "Tensor Programming",
+    "channel_id": "UC5KZ-j3tW7V8f0zq8zL9zUzA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Gil Tene",
+    "channel_id": "UC5KZ-j3tW7V8f0zq8zL9zUzA",
+    "category": "Tech"
+  },
+  {
+    "name": "Elad Verbug",
+    "channel_id": "UC5KZ-j3tW7V8f0zq8zL9zUzA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Quantum Computing",
+    "channel_id": "UCq6bZCkzGZ9z8z8X8X8X8X",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Bloomberg Masters in Business",
+    "channel_id": "UCq6bZCkzGZ9z8z8X8X8X8X",
+    "category": "Finance"
+  },
+  {
+    "name": "Quantum Insights",
+    "channel_id": "UCq6bZCkzGZ9z8z8X8X8X8X",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Data Science with Will Kurt",
+    "channel_id": "UCBZX-lUs5PQN1A-Rb0Zz0QrQ",
+    "category": "AI/ML"
+  },
+  {
+    "name": "The Startup Chat",
+    "channel_id": "UCa-zQX9KrR_3Rb0NzMxKUzKQ",
+    "category": "Startups"
+  },
+  {
+    "name": "AI All Access",
+    "channel_id": "UCz8z8z8z8z8z8z8z8z8z8z",
+    "category": "AI/ML"
+  },
+  {
+    "name": "AI and You",
+    "channel_id": "UCz8z8z8z8z8z8z8z8z8z8z",
+    "category": "AI/ML"
+  },
+  {
+    "name": "AI Solutions",
+    "channel_id": "UCz8z8z8z8z8z8z8z8z8z8z",
+    "category": "AI/ML"
+  },
+  {
+    "name": "AI Today Podcast",
+    "channel_id": "UCz8z8z8z8z8z8z8z8z8z8z",
+    "category": "AI/ML"
+  },
+  {
+    "name": "James Clear",
+    "channel_id": "UCY2x41P9Qo2K2xplnHxoPbrA",
+    "category": "Tech"
+  },
+  {
+    "name": "Nikolas Badminton",
+    "channel_id": "UC5Z6nQF6D5Z4f-5YzVZJzUw",
+    "category": "AI/ML"
+  },
+  {
+    "name": "David Perell",
+    "channel_id": "UC7D8DjG89uBg6R7U6j0YqGA",
+    "category": "Startups"
+  },
+  {
+    "name": "Jaime Nacach",
+    "channel_id": "UC5Z6nQF6D5Z4f-5YzVZJzUw",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Nir Eyal",
+    "channel_id": "UC5Z6nQF6D5Z4f-5YzVZJzUw",
+    "category": "Tech"
+  },
+  {
+    "name": "Jaime Schmidt",
+    "channel_id": "UC5Z6nQF6D5Z4f-5YzVZJzUw",
+    "category": "Startups"
+  },
+  {
+    "name": "Navalmanack",
+    "channel_id": "UC5Z6nQF6D5Z4f-5YzVZJzUw",
+    "category": "Finance"
+  },
+  {
+    "name": "Investor's Field Guide",
+    "channel_id": "UC5Z6nQF6D5Z4f-5YzVZJzUw",
+    "category": "Finance"
+  },
+  {
+    "name": "Jaime Corey",
+    "channel_id": "UC5Z6nQF6D5Z4f-5YzVZJzUw",
+    "category": "Startups"
+  },
+  {
+    "name": "Nikolas Kairinos",
+    "channel_id": "UC5Z6nQF6D5Z4f-5YzVZJzUw",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Zachary Yank",
+    "channel_id": "UC5Z6NXxv5kx5z8X5g9Z52zA",
+    "category": "Tech"
+  },
+  {
+    "name": "Invest Answers",
+    "channel_id": "UC8gFvh0X_5oYZc3Qx3MJx5Q",
+    "category": "Finance"
+  },
+  {
+    "name": "Zack Arias",
+    "channel_id": "UC8Zk6X6j3Y6Z5Z5Z5zZz8ZA",
+    "category": "Tech"
+  },
+  {
+    "name": "Troy McLean",
+    "channel_id": "UC8Zk6X6j3Y6Z5Z5Z5zZz8ZA",
+    "category": "Tech"
+  },
+  {
+    "name": "Zachary Giallourakis",
+    "channel_id": "UC8Zk6X6j3Y6Z5Z5Z5zZz8ZA",
+    "category": "Tech"
+  },
+  {
+    "name": "Billionaire Mindset",
+    "channel_id": "UCB...",
+    "category": "Finance"
+  },
+  {
+    "name": "Warren Buffet Insights",
+    "channel_id": "UCW...",
+    "category": "Finance"
+  },
+  {
+    "name": "Naval's Ventures",
+    "channel_id": "UCN...",
+    "category": "Startups"
+  },
+  {
+    "name": "Y Combinator Startup School",
+    "channel_id": "UCY...",
+    "category": "Startups"
+  },
+  {
+    "name": "Blockchain Basics",
+    "channel_id": "UCB...",
+    "category": "Tech"
+  },
+  {
+    "name": "Yearly Review",
+    "channel_id": "UCY...",
+    "category": "Tech"
+  },
+  {
+    "name": "Machine Learning with Mitch",
+    "channel_id": "UCt4hqZfW-kVkfsa7KtE5G8Q",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Jay Alammar",
+    "channel_id": "UCV1XBAU9KugP-3MFBdygJYQ",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Peter Thiel",
+    "channel_id": "UC5Qz-71YkWGK4RN1MQXLW_g",
+    "category": "Finance"
+  },
+  {
+    "name": "Ryan's AI Adventures",
+    "channel_id": "UCR5q1n9K58Kp58n8J5X5z-g",
+    "category": "AI/ML"
+  },
+  {
+    "name": "TechTalks with Yvonne",
+    "channel_id": "UCz5Yu0CXWo0K0V5ZzRz5K5Q",
+    "category": "Tech"
+  },
+  {
+    "name": "Deep Learning with Daniel",
+    "channel_id": "UCD5q1n9K58Kp58n8J5X5z-g",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Startup Insights by Tim",
+    "channel_id": "UCz5Yu0CXWo0K0V5ZzRz5K5Q",
+    "category": "Startups"
+  },
+  {
+    "name": "AI with Tom",
+    "channel_id": "UCR5q1n9K58Kp58n8J5X5z-g",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Tech Trends by Xavier",
+    "channel_id": "UCX5q1n9K58Kp58n8J5X5z-g",
+    "category": "Tech"
+  },
+  {
+    "name": "AI & ML with David",
+    "channel_id": "UCD5q1n9K58Kp58n8J5X5z-g",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Tech Entrepreneurship with Tim",
+    "channel_id": "UCz5Yu0CXWo0K0V5ZzRz5K5Q",
+    "category": "Startups"
+  },
+  {
+    "name": "AI & Investing with Ray",
+    "channel_id": "UCR5q1n9K58Kp58n8J5X5z-g",
+    "category": "Finance"
+  },
+  {
+    "name": "Tech & Startups with Yvonne",
+    "channel_id": "UCz5Yu0CXWo0K0V5ZzRz5K5Q",
+    "category": "Startups"
+  },
+  {
+    "name": "Deep Learning with Tom",
+    "channel_id": "UCR5q1n9K58Kp58n8J5X5z-g",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Tech Investing with Dave",
+    "channel_id": "UCD5q1n9K58Kp58n8J5X5z-g",
+    "category": "Finance"
+  },
+  {
+    "name": "AI & Tech with Xavier",
+    "channel_id": "UCX5q1n9K58Kp58n8J5X5z-g",
+    "category": "Tech"
+  },
+  {
+    "name": "Startup & Tech with Tim",
+    "channel_id": "UCz5Yu0CXWo0K0V5ZzRz5K5Q",
+    "category": "Startups"
+  },
+  {
+    "name": "Nivi's AI",
+    "channel_id": "UC5ZJqJ2JRZQ0Z5ZK5Z5K5K5C",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Hiten's AI",
+    "channel_id": "UC5ZJqJ2JRZQ0Z5ZK5Z5K5K5E",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Nik's AI",
+    "channel_id": "UC5ZJqJ2JRZQ0Z5ZK5Z5K5K5H",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Tech with Nick",
+    "channel_id": "UC5ZJqJ2JRZQ0Z5ZK5Z5K5K5I",
+    "category": "Tech"
+  },
+  {
+    "name": "Nate's AI",
+    "channel_id": "UC5ZJqJ2JRZQ0Z5ZK5Z5K5K5K",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Tech with Ted",
+    "channel_id": "UC5ZJqJ2JRZQ0Z5ZK5Z5K5K5L",
+    "category": "Tech"
+  },
+  {
+    "name": "AI with Tony",
+    "channel_id": "UC5ZJqJ2JRZQ0Z5ZK5Z5K5K5M",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Nate's Tech",
+    "channel_id": "UC5ZJqJ2JRZQ0Z5ZK5Z5K5K5N",
+    "category": "Tech"
+  },
+  {
+    "name": "Tech with Troy",
+    "channel_id": "UC5ZJqJ2JRZQ0Z5ZK5Z5K5K5O",
+    "category": "Tech"
+  },
+  {
+    "name": "Charlie Munger",
+    "channel_id": "UC5X6z5YR0-x5J5XZ3Z5Y5ZA",
+    "category": "Investing & Venture Capital"
+  },
+  {
+    "name": "Benjamin Graham",
+    "channel_id": "UC5Y5Z6z5YR0-x5J5XZ3Z5Y5ZA",
+    "category": "Investing & Venture Capital"
+  },
+  {
+    "name": "XiaoIce",
+    "channel_id": "UC5Z5Z6z5YR0-x5J5XZ3Z5Y5ZA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Jason Calacanis",
+    "channel_id": "UC5WiWzKT89Z8-Kk4ZiYp65g",
+    "category": "Tech Entrepreneurship"
+  },
+  {
+    "name": "Walter Isaacson",
+    "channel_id": "UC5X6z5YR0-x5J5XZ3Z5Y5ZA",
+    "category": "Tech"
+  },
+  {
+    "name": "Cameron Herold",
+    "channel_id": "UC5X6z5YR0-x5J5XZ3Z5Y5ZA",
+    "category": "Tech Entrepreneurship"
+  },
+  {
+    "name": "Bobby Martin",
+    "channel_id": "UC5X6z5YR0-x5J5XZ3Z5Y5ZA",
+    "category": "Tech Entrepreneurship"
+  },
+  {
+    "name": "Jaime Casap",
+    "channel_id": "UC5X6z5YR0-x5J5XZ3Z5Y5ZA",
+    "category": "Tech"
+  },
+  {
+    "name": "Wesley Chan",
+    "channel_id": "UC5X6z5YR0-x5J5XZ3Z5Y5ZA",
+    "category": "Tech Entrepreneurship"
+  },
+  {
+    "name": "Cody Brown",
+    "channel_id": "UC5X6z5YR0-x5J5XZ3Z5Y5ZA",
+    "category": "Tech"
+  },
+  {
+    "name": "Dan Lok's The Loophole",
+    "channel_id": "UC...",
+    "category": "Finance"
+  },
+  {
+    "name": "Felipe Hoffmann",
+    "channel_id": "UC...",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Futurology",
+    "channel_id": "UC...",
+    "category": "Tech"
+  },
+  {
+    "name": "Futurist",
+    "channel_id": "UC...",
+    "category": "Tech"
+  },
+  {
+    "name": "Dan Pena",
+    "channel_id": "UC...",
+    "category": "Finance"
+  },
+  {
+    "name": "Zach Perret",
+    "channel_id": "UC...",
+    "category": "Tech"
+  },
+  {
+    "name": "Dan Schawbel",
+    "channel_id": "UC...",
+    "category": "Tech"
+  },
+  {
+    "name": "Zach Obront",
+    "channel_id": "UC...",
+    "category": "Tech"
+  },
+  {
+    "name": "Futurist Thinkers",
+    "channel_id": "UC...",
+    "category": "Tech"
+  },
+  {
+    "name": "Dan Martell",
+    "channel_id": "UC...",
+    "category": "Startups"
+  },
+  {
+    "name": "Oliver Schinkten",
+    "channel_id": "UC8butISFwT-D2Rp0CPU\u67a3xXQ",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Andrew Ng",
+    "channel_id": "UCcIXcB-XPbRS1G_P7qRQFhHw",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Warren Togami",
+    "channel_id": "UC8butISFwT-D2Rp0CPU\u67a3xXQ",
+    "category": "Tech"
+  },
+  {
+    "name": "O'Reilly Data",
+    "channel_id": "UC8butISFwT-D2Rp0CPU\u67a3xXQ",
+    "category": "AI/ML"
+  },
+  {
+    "name": "AI with Brian",
+    "channel_id": "UCA...",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Yoshua Bengio",
+    "channel_id": "UCY...",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Walter Chen",
+    "channel_id": "UCW...",
+    "category": "Startups"
+  },
+  {
+    "name": "AI with Chris",
+    "channel_id": "UCA...",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Boris Babic",
+    "channel_id": "UCB...",
+    "category": "Finance"
+  },
+  {
+    "name": "AI with Daniel",
+    "channel_id": "UCA...",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Yannic Mauch",
+    "channel_id": "UCY...",
+    "category": "Tech"
+  },
+  {
+    "name": "Boris Wertz",
+    "channel_id": "UCB...",
+    "category": "Startups"
+  },
+  {
+    "name": "Warren Ellis",
+    "channel_id": "UCW...",
+    "category": "Finance"
+  },
+  {
+    "name": "Rise of AI",
+    "channel_id": "UC0QzD3u8Xb5KzjJ5Kq3Z0WQQ",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Lemmino",
+    "channel_id": "UC5K9iRvF-5bK-9XkRzV5JZQQ",
+    "category": "Tech"
+  },
+  {
+    "name": "Nikola K",
+    "channel_id": "UC5K9iRvF-5bK-9XkRzV5JZQQ",
+    "category": "Tech"
+  },
+  {
+    "name": "Lenny's Curiosity",
+    "channel_id": "UC5K9iRvF-5bK-9XkRzV5JZQQ",
+    "category": "Tech"
+  },
+  {
+    "name": "Nik Buterin",
+    "channel_id": "UC5K9iRvF-5bK-9XkRzV5JZQQ",
+    "category": "Tech"
+  },
+  {
+    "name": "Rhys Lindmark",
+    "channel_id": "UC5K9iRvF-5bK-9XkRzV5JZQQ",
+    "category": "Tech"
+  },
+  {
+    "name": "Lincoln Murphy",
+    "channel_id": "UC5K9iRvF-5bK-9XkRzV5JZQQ",
+    "category": "Startups"
+  },
+  {
+    "name": "Nik Hafermaas",
+    "channel_id": "UC5K9iRvF-5bK-9XkRzV5JZQQ",
+    "category": "Tech"
+  },
+  {
+    "name": "Every Tuesday",
+    "channel_id": "UC-1YhHVLFf7XKgRzZ-YqTcQ",
+    "category": "Tech"
+  },
+  {
+    "name": "Lex Fridman",
+    "channel_id": "UCSHZKyawb77ixDFLG6zVuXA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Eduonix Learning Solutions",
+    "channel_id": "UCB9CY3DLcLjAGmTJWDf0QDw",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Evan Kim",
+    "channel_id": "UC5X9LgYx6y3Gc8KVNFQMbHA",
+    "category": "Tech"
+  },
+  {
+    "name": "Felix Salmon",
+    "channel_id": "UC5Z6Z3X05J5Zz8J5X5Z5zUA",
+    "category": "Finance"
+  },
+  {
+    "name": "Zack Perell",
+    "channel_id": "UC5z7mPY-xG6X7cVeXQKUjVQ",
+    "category": "Startups"
+  },
+  {
+    "name": "Zach Perell",
+    "channel_id": "UC5z7mPY-xG6X7cVeXQKUjVQ",
+    "category": "Startups"
+  },
+  {
+    "name": "Kleiner Perkins",
+    "channel_id": "UC5ZS1T0ZD5R1Vy5K3zJ8ZPQ",
+    "category": "Venture Capital"
+  },
+  {
+    "name": "Ivan the AI",
+    "channel_id": "UC5ZS1T0ZD5R1Vy5K3zJ8ZPQ",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Infinite AI",
+    "channel_id": "UC8ZRKbMv...",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Udacity AI",
+    "channel_id": "UCmK...",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Keras AI",
+    "channel_id": "UC...",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Investor's AI",
+    "channel_id": "UC...",
+    "category": "Finance"
+  },
+  {
+    "name": "Udemy AI",
+    "channel_id": "UC...",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Coursera AI",
+    "channel_id": "UC...",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Kaggle AI",
+    "channel_id": "UC...",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Ethereum AI",
+    "channel_id": "UC...",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Investing AI",
+    "channel_id": "UC...",
+    "category": "Finance"
+  },
+  {
+    "name": "Udacity Startups",
+    "channel_id": "UC...",
+    "category": "Startups"
+  },
+  {
+    "name": "Coursera Startups",
+    "channel_id": "UC...",
+    "category": "Startups"
+  },
+  {
+    "name": "Kauffman Fellows",
+    "channel_id": "UC...",
+    "category": "Startups"
+  },
+  {
+    "name": "Elevator Pitch",
+    "channel_id": "UC...",
+    "category": "Startups"
+  },
+  {
+    "name": "Linda Rayni",
+    "channel_id": "UC5cfLQRZBwzvPkf3QFNWdPA",
+    "category": "Tech"
+  },
+  {
+    "name": "Hussein Mehana",
+    "channel_id": "UC8butISFwT-GDGZUQuf62QkA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "AI with Zack",
+    "channel_id": "UC5CFjh3UTV_Z34QWfRNK-OQ",
+    "category": "AI/ML"
+  },
+  {
+    "name": "AI by Harvard",
+    "channel_id": "UCQJzFYj1kVHtDvG1ih8d0ag",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Lenny's AI",
+    "channel_id": "UC8ZPKjQ2jRgKZ9YM-5z9YEA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Naval's Angel Investing",
+    "channel_id": "UC5Z6NXm-kRcM-jRwBxVb0YQ",
+    "category": "Investing & Venture Capital"
+  },
+  {
+    "name": "Lenny's World",
+    "channel_id": "UC5Z6NXm-kRcM-jRwBxVb0YQ",
+    "category": "Tech Entrepreneurship"
+  },
+  {
+    "name": "Investing with Ian",
+    "channel_id": "UC5Z6NXm-kRcM-jRwBxVb0YQ",
+    "category": "Investing & Venture Capital"
+  },
+  {
+    "name": "Investing Insights with Bob",
+    "channel_id": "UC5Z6NXm-kRcM-jRwBxVb0YQ",
+    "category": "Investing & Venture Capital"
+  },
+  {
+    "name": "Sideways",
+    "channel_id": "UC7jQ6dTZmJP2gR5KmVH7iUw",
+    "category": "Tech"
+  },
+  {
+    "name": "Every Frame a Painting",
+    "channel_id": "UCgd0YuLa2dRPOxVNhqm1UHQ",
+    "category": "Tech"
+  },
+  {
+    "name": "Nathan Barry",
+    "channel_id": "UC5X9LgY0y68x5J9zRjU7KZA",
+    "category": "Startups"
+  },
+  {
+    "name": "Eric Rozier",
+    "channel_id": "UC8ZJ8X6Yb3-5yYzKzDN3zUA",
+    "category": "Tech"
+  },
+  {
+    "name": "Nikola Knezevic",
+    "channel_id": "UC5K72JbVbUbLPyGb0VhZSzA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "The AI Channel",
+    "channel_id": "UC5K72JbVbUbLPyGb0VhZSzA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Investing with Ray",
+    "channel_id": "UC5K72JbVbUbLPyGb0VhZSzA",
+    "category": "Finance"
+  },
+  {
+    "name": "Tech & Startups",
+    "channel_id": "UC5K72JbVbUbLPyGb0VhZSzA",
+    "category": "Tech"
+  },
+  {
+    "name": "MGTOW - Paul Elam",
+    "channel_id": "UC5Z65gDQEKJQ0ZkJ8Z5zW_Q",
+    "category": "Tech"
+  },
+  {
+    "name": "Giant Robots",
+    "channel_id": "UC5Z65gDQEKJQ0ZkJ8Z5zW_Q",
+    "category": "Startups"
+  },
+  {
+    "name": "Xploration Station",
+    "channel_id": "UCzR-pmBU3p0YWCbXvXxSk8g",
+    "category": "Tech"
+  },
+  {
+    "name": "Morgan Housel",
+    "channel_id": "UC5Z65gDQEKJQ0ZkJ8Z5zW_Q",
+    "category": "Finance"
+  },
+  {
+    "name": "Ivan Kirigin",
+    "channel_id": "UC5Z65gDQEKJQ0ZkJ8Z5zW_Q",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Jaime Nacif",
+    "channel_id": "UC5Kf8JgY8zZ-0Z0ZU8X1K5ZA",
+    "category": "Startups"
+  },
+  {
+    "name": "Eric Jorgenson",
+    "channel_id": "UC5Kf8JgY8zZ-0Z0ZU8X1K5ZA",
+    "category": "Tech"
+  },
+  {
+    "name": "AI with Mark",
+    "channel_id": "UC5Kf8JgY8zZ-0Z0ZU8X1K5ZA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Vladimir Iglovikov",
+    "channel_id": "UC5Kf8JgY8zZ-0Z0ZU8X1K5ZA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Eugene Khutoryanskiy",
+    "channel_id": "UC5Kf8JgY8zZ-0Z0ZU8X1K5ZA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "AI with Roman",
+    "channel_id": "UC5Kf8JgY8zZ-0Z0ZU8X1K5ZA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Ethan Marcotte",
+    "channel_id": "UC5WO-x0kYn0Qq8Z0z-zM5yA",
+    "category": "Tech"
+  },
+  {
+    "name": "Yegor Bulychev",
+    "channel_id": "UC5WO-x0kYn0Qq8Z0z-zM5yA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Entrepreneurial AI",
+    "channel_id": "UC8ZRK5vK1ov8XJX8gVK5ZyA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Rise of the AI",
+    "channel_id": "UC5cfBF3QaYh0QqJQyRi7VUw",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Billionaire Investor",
+    "channel_id": "UC5ZSgDzUx6Ki0ZQ8zK5U_tA",
+    "category": "Finance"
+  },
+  {
+    "name": "Epic Tech Ventures",
+    "channel_id": "UC5ZSgDzUx6Ki0ZQ8zK5U_tA",
+    "category": "Tech"
+  },
+  {
+    "name": "Rising SaaS Stars",
+    "channel_id": "UC5ZSgDzUx6Ki0ZQ8zK5U_tA",
+    "category": "Startups"
+  },
+  {
+    "name": "BizTech Insights",
+    "channel_id": "UC5ZSgDzUx6Ki0ZQ8zK5U_tA",
+    "category": "Tech"
+  },
+  {
+    "name": "Investor's Digest",
+    "channel_id": "UC5ZSgDzUx6Ki0ZQ8zK5U_tA",
+    "category": "Finance"
+  },
+  {
+    "name": "Epic AI Innovations",
+    "channel_id": "UC5ZSgDzUx6Ki0ZQ8zK5U_tA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Rising AI Tech",
+    "channel_id": "UC5ZSgDzUx6Ki0ZQ8zK5U_tA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Biz Startups",
+    "channel_id": "UC5ZSgDzUx6Ki0ZQ8zK5U_tA",
+    "category": "Startups"
+  },
+  {
+    "name": "Investor's Vision",
+    "channel_id": "UC5ZSgDzUx6Ki0ZQ8zK5U_tA",
+    "category": "Finance"
+  },
+  {
+    "name": "Epic AI Ventures",
+    "channel_id": "UC5ZSgDzUx6Ki0ZQ8zK5U_tA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Rising Tech Trends",
+    "channel_id": "UC5ZSgDzUx6Ki0ZQ8zK5U_tA",
+    "category": "Tech"
+  },
+  {
+    "name": "Biz AI Insights",
+    "channel_id": "UC5ZSgDzUx6Ki0ZQ8zK5U_tA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Investor's Tech",
+    "channel_id": "UC5ZSgDzUx6Ki0ZQ8zK5U_tA",
+    "category": "Tech"
+  },
+  {
+    "name": "Gil The Financier",
+    "channel_id": "UCG...",
+    "category": "Finance"
+  },
+  {
+    "name": "Jesse Livermore",
+    "channel_id": "UCJ...",
+    "category": "Finance"
+  },
+  {
+    "name": "Karim Rizk",
+    "channel_id": "UCK...",
+    "category": "Finance"
+  },
+  {
+    "name": "Q.ai",
+    "channel_id": "UCQ...",
+    "category": "Finance"
+  },
+  {
+    "name": "Every AI",
+    "channel_id": "UC5CF7mLQYppQoT7nkX-rFYA",
+    "category": "AI/ML"
+  },
+  {
+    "name": "Plex",
+    "channel_id": "UC8butISFwT-D2Yp-7ockBIPA",
+    "category": "Tech"
+  },
+  {
+    "name": "Elad Nehorai",
+    "channel_id": "UC8butISFwT-D2Yp-7ockBIPA",
+    "category": "Tech"
+  },
+  {
+    "name": "Pete Cashmore",
+    "channel_id": "UC8butISFwT-D2Yp-7ockBIPA",
+    "category": "Tech"
   }
 ]

@@ -532,175 +532,242 @@ export default function App() {
           {/* ======================================================== */}
           {currentView.page === 'home' && (
             <div className="space-y-6">
-              {/* Product Intro Positioning */}
-              <div className="border border-[#e8e2d9] bg-white rounded-xl p-6 relative overflow-hidden shadow-sm">
-                <div className="absolute right-0 bottom-0 opacity-[0.02] translate-x-12 translate-y-12 select-none pointer-events-none">
-                  <Layers className="w-72 h-72 text-slate-900" />
+
+              {/* ── DAILY BRIEFING HERO ─────────────────────────────────── */}
+              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#1a1208] via-[#2d1f0e] to-[#1a120a] p-7 shadow-xl">
+                {/* Decorative glow orbs */}
+                <div className="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-[#e27b58]/10 blur-3xl pointer-events-none" />
+                <div className="absolute -bottom-12 -left-8 w-48 h-48 rounded-full bg-amber-500/8 blur-2xl pointer-events-none" />
+                
+                <div className="relative z-10">
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="inline-flex items-center gap-1.5 bg-[#e27b58]/20 text-[#e27b58] text-[10px] font-black tracking-widest uppercase px-3 py-1 rounded-full border border-[#e27b58]/30">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#e27b58] animate-pulse inline-block" />
+                      Live Intelligence Feed
+                    </span>
+                    <span className="text-[10px] text-amber-100/40 font-semibold">
+                      {new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric', year: 'numeric' })}
+                    </span>
+                  </div>
+                  
+                  <h2 className="text-3xl md:text-4xl font-black tracking-tight text-white mb-2 leading-tight">
+                    Where marketing<br />
+                    <span className="text-[#e27b58]">dollars flow.</span>
+                  </h2>
+                  <p className="text-sm text-amber-100/50 max-w-lg leading-relaxed">
+                    Real-time sponsorship intelligence across YouTube, podcasts, and newsletters. Know who's spending, on whom, and how much.
+                  </p>
+
+                  {/* Pulse Stats Row */}
+                  <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+                    {[
+                      { label: 'Active Brands', value: homeData.metrics.brands_count, delta: homeData.metrics.brands_delta, icon: '🏢' },
+                      { label: 'Creators Tracked', value: homeData.metrics.creators_count, delta: homeData.metrics.creators_delta, icon: '🎯' },
+                      { label: 'Deals Detected', value: homeData.latest_deals.length, delta: '+today', icon: '🤝' },
+                      { label: 'Top Industry', value: homeData.industry_trends[0]?.name || '—', delta: homeData.industry_trends[0]?.change || '', icon: '📈' },
+                    ].map((stat, i) => (
+                      <div key={i} className="bg-white/5 border border-white/10 rounded-xl p-3.5 backdrop-blur-sm">
+                        <div className="text-lg mb-1">{stat.icon}</div>
+                        <div className="text-xl font-black text-white">{stat.value}</div>
+                        <div className="text-[10px] text-amber-100/40 font-semibold uppercase mt-0.5">{stat.label}</div>
+                        {stat.delta && (
+                          <div className="text-[10px] text-emerald-400 font-black mt-1">{stat.delta}</div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <h2 className="text-2xl md:text-3xl font-black tracking-tight text-[#191919] mb-2 font-serif-title">Where marketing dollars go.</h2>
-                <p className="text-sm md:text-base text-slate-600 leading-relaxed max-w-2xl">
-                  Track where brands spend money on creators. Real-time sponsorship intelligence across podcasts, newsletters, and YouTube channels.
-                </p>
               </div>
 
-              {/* Money Flow Yesterday Dashboard Card */}
+              {/* ── MONEY FLOW: ACTIVE BRANDS THIS PERIOD ───────────────── */}
               <div className="glass-panel rounded-xl p-5 shadow-sm">
                 <div className="flex items-center justify-between border-b border-slate-100 pb-3.5 mb-4">
-                  <span className="text-xs font-black tracking-widest text-slate-500 uppercase">💰 MARKETING MONEY FLOW</span>
-                  <span className="text-xs font-bold text-[#876e5f] bg-[#f5f2eb] px-2.5 py-0.5 rounded">Yesterday</span>
+                  <div className="flex items-center gap-2">
+                    <DollarSign className="w-4 h-4 text-[#e27b58]" />
+                    <span className="text-xs font-black tracking-widest text-slate-700 uppercase">Hot Brands Right Now</span>
+                  </div>
+                  <button 
+                    onClick={() => setCurrentView({ page: 'brands' })}
+                    className="text-[10px] font-bold text-[#876e5f] hover:text-[#e27b58] flex items-center gap-1 transition-colors"
+                  >
+                    View All <ChevronRight className="w-3 h-3" />
+                  </button>
                 </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-                  {/* Metric Block 1 */}
-                  <div className="space-y-1">
-                    <span className="text-xs text-slate-400 uppercase block font-semibold">Brands Sponsoring</span>
-                    <div className="flex items-baseline gap-2">
-                      <span className="text-3xl font-black text-slate-900 font-serif-title">{homeData.metrics.brands_count}</span>
-                      <span className="text-xs font-black text-emerald-600">{homeData.metrics.brands_delta}</span>
-                    </div>
-                  </div>
-                  {/* Metric Block 2 */}
-                  <div className="space-y-1">
-                    <span className="text-xs text-slate-400 uppercase block font-semibold">New Partnerships</span>
-                    <div className="flex items-baseline gap-2">
-                      <span className="text-3xl font-black text-slate-900 font-serif-title">{homeData.metrics.creators_count}</span>
-                      <span className="text-xs font-black text-emerald-600">{homeData.metrics.creators_delta}</span>
-                    </div>
-                  </div>
-                  {/* Industry trends */}
-                  {homeData.industry_trends.slice(0, 3).map((ind, idx) => (
-                    <div key={idx} className="space-y-1">
-                      <span className="text-xs text-slate-400 uppercase block font-semibold">{ind.name}</span>
-                      <div className="flex items-baseline gap-2">
-                        <span className="text-xl font-black text-slate-800 font-serif-title">{ind.change}</span>
-                        <span className={`text-xs font-black ${ind.direction === 'up' ? 'text-emerald-600' : 'text-rose-600'}`}>
-                          {ind.direction === 'up' ? '↑' : '↓'}
-                        </span>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                  {homeData.trending_brands.slice(0, 6).map((sp, idx) => (
+                    <div
+                      key={idx}
+                      onClick={() => setCurrentView({ page: 'brand-detail', params: { id: sp.id } })}
+                      className="group flex items-center gap-3 p-3 rounded-xl border border-slate-100 hover:border-[#e27b58]/30 hover:bg-[#fff8f5] cursor-pointer transition-all"
+                    >
+                      {sp.logo_url ? (
+                        <SafeImage src={sp.logo_url} className="w-9 h-9 rounded-lg object-contain border border-slate-100 bg-white flex-shrink-0" alt={sp.name} fallbackText={sp.name} />
+                      ) : (
+                        <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-[#f5f2eb] to-[#e8e2d9] text-sm font-black text-[#876e5f] flex items-center justify-center flex-shrink-0 border border-[#e8e2d9]">{sp.name[0]}</div>
+                      )}
+                      <div className="min-w-0">
+                        <div className="text-xs font-bold text-slate-800 group-hover:text-[#e27b58] truncate transition-colors">{sp.name}</div>
+                        <div className="text-[10px] text-slate-400 truncate">{sp.industry}</div>
+                        <div className="text-[10px] text-emerald-600 font-black flex items-center gap-0.5 mt-0.5">
+                          <TrendingUp className="w-3 h-3" />{sp.delta}
+                        </div>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                {/* Trending Brands */}
-                <div className="glass-panel rounded-xl p-5 shadow-sm">
-                  <h3 className="text-xs font-black tracking-widest text-slate-550 uppercase border-b border-slate-100 pb-3 mb-3">TRENDING BRANDS</h3>
-                  <div className="divide-y divide-slate-100">
-                    {homeData.trending_brands.map((sp, idx) => (
-                      <div 
-                        key={idx} 
-                        onClick={() => setCurrentView({ page: 'brand-detail', params: { id: sp.id } })}
-                        className="flex items-center justify-between py-3 hover:bg-slate-50 px-2 rounded cursor-pointer transition-all"
-                      >
-                        <div className="flex items-center gap-3">
-                          <span className="text-xs font-bold text-slate-400 w-4">#{idx+1}</span>
-                          {sp.logo_url ? (
-                            <SafeImage src={sp.logo_url} className="w-5 h-5 rounded object-contain border border-slate-100 bg-white" alt={sp.name} fallbackText={sp.name} />
-                          ) : (
-                            <div className="w-5 h-5 rounded bg-[#f5f2eb] text-[9px] font-bold text-[#876e5f] flex items-center justify-center border border-[#e8e2d9]">{sp.name[0]}</div>
-                          )}
-                          <span className="text-sm font-bold text-slate-700 hover:text-[#e27b58] transition-colors">{sp.name}</span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                          <span className="text-xs text-slate-400 font-semibold">{sp.industry}</span>
-                          <span className="text-xs font-bold text-emerald-650 flex items-center gap-0.5">
-                            <TrendingUp className="w-3.5 h-3.5" />
-                            {sp.delta}
-                          </span>
-                        </div>
-                      </div>
-                    ))}
+              {/* ── 2-COL: RISING CREATORS + ACTIVITY FEED ──────────────── */}
+              <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+                
+                {/* Rising Creators — 2/5 width */}
+                <div className="lg:col-span-2 glass-panel rounded-xl p-5 shadow-sm">
+                  <div className="flex items-center justify-between border-b border-slate-100 pb-3 mb-3">
+                    <div className="flex items-center gap-2">
+                      <Users className="w-4 h-4 text-[#e27b58]" />
+                      <h3 className="text-xs font-black tracking-widest text-slate-700 uppercase">Rising Creators</h3>
+                    </div>
+                    <button 
+                      onClick={() => setCurrentView({ page: 'creators' })}
+                      className="text-[10px] font-bold text-[#876e5f] hover:text-[#e27b58] flex items-center gap-1 transition-colors"
+                    >
+                      All <ChevronRight className="w-3 h-3" />
+                    </button>
                   </div>
-                </div>
-
-                {/* Trending Creators */}
-                <div className="glass-panel rounded-xl p-5 shadow-sm">
-                  <h3 className="text-xs font-black tracking-widest text-slate-550 uppercase border-b border-slate-100 pb-3 mb-3">TRENDING CREATORS</h3>
-                  <div className="divide-y divide-slate-100">
+                  <div className="space-y-1">
                     {homeData.trending_creators.map((ch, idx) => (
-                      <div 
-                        key={idx} 
+                      <div
+                        key={idx}
                         onClick={() => setCurrentView({ page: 'creator-detail', params: { id: ch.id } })}
-                        className="flex items-center justify-between py-3 hover:bg-slate-50 px-2 rounded cursor-pointer transition-all"
+                        className="flex items-center justify-between py-2.5 px-2 hover:bg-slate-50 rounded-lg cursor-pointer transition-all group"
                       >
-                        <div className="flex items-center gap-3">
-                          <span className="text-xs font-bold text-slate-400 w-4">#{idx+1}</span>
+                        <div className="flex items-center gap-3 min-w-0">
+                          <span className="text-[10px] font-black text-slate-300 w-4 flex-shrink-0">#{idx+1}</span>
                           {ch.avatar_url ? (
-                            <SafeImage src={ch.avatar_url} className="w-5 h-5 rounded-full object-cover border border-slate-100 bg-white" alt={ch.name} fallbackText={ch.name} />
+                            <SafeImage src={ch.avatar_url} className="w-8 h-8 rounded-full object-cover border border-slate-100 flex-shrink-0" alt={ch.name} fallbackText={ch.name} />
                           ) : (
-                            <div className="w-5 h-5 rounded-full bg-slate-100 text-[9px] font-bold text-slate-500 flex items-center justify-center">{ch.name[0]}</div>
+                            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-slate-100 to-slate-200 text-[10px] font-black text-slate-500 flex items-center justify-center flex-shrink-0">{ch.name[0]}</div>
                           )}
-                          <span className="text-sm font-bold text-slate-700 hover:text-[#e27b58] transition-colors">{ch.name}</span>
+                          <div className="min-w-0">
+                            <div className="text-xs font-bold text-slate-700 group-hover:text-[#e27b58] truncate transition-colors">{ch.name}</div>
+                            <div className="text-[10px] text-slate-400 flex items-center gap-1">
+                              {getPlatformIcon(ch.platform)}
+                              {formatFollowersCount(ch.followers)}
+                            </div>
+                          </div>
                         </div>
-                        <div className="flex items-center gap-3">
-                          <span className="text-xs text-slate-400 font-semibold">{formatFollowersCount(ch.followers)} followers</span>
-                          <span className="text-xs font-bold text-[#876e5f] flex items-center gap-0.5">
-                            {getPlatformIcon(ch.platform)}
-                            {ch.delta}
-                          </span>
-                        </div>
+                        <span className="text-[10px] font-black text-emerald-600 flex-shrink-0 ml-2">{ch.delta}</span>
                       </div>
                     ))}
                   </div>
                 </div>
-              </div>
 
-              {/* Latest Deals */}
-              <div className="glass-panel rounded-xl p-5 shadow-sm">
-                <h3 className="text-xs font-black tracking-widest text-slate-555 uppercase border-b border-slate-100 pb-3 mb-3">LATEST DEALS DETECTED</h3>
-                <div className="overflow-x-auto">
-                  <table className="w-full text-left text-sm">
-                    <thead>
-                      <tr className="text-slate-400 border-b border-slate-100">
-                        <th className="py-3 font-bold uppercase text-[10px]">Sponsor Brand</th>
-                        <th className="py-3 font-bold uppercase text-[10px]">Creator</th>
-                        <th className="py-3 font-bold uppercase text-[10px]">Platform</th>
-                        <th className="py-3 font-bold uppercase text-[10px]">Product Promoted</th>
-                        <th className="py-3 font-bold uppercase text-[10px] text-right">Est. Value</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-slate-100">
-                      {homeData.latest_deals.map((deal) => (
-                        <tr 
-                          key={deal.id} 
-                          onClick={() => setCurrentView({ page: 'deal-detail', params: { id: deal.id } })}
-                          className="hover:bg-slate-50/80 cursor-pointer group"
-                        >
-                          <td className="py-3.5">
-                            <div className="flex items-center gap-2">
-                              {deal.sponsor_logo ? (
-                                <SafeImage src={deal.sponsor_logo} className="w-5 h-5 rounded object-contain border border-slate-100 bg-white" alt="" fallbackText={(deal.sponsor_name || deal.channel_name || "?")} />
-                              ) : (
-                                <div className="w-5 h-5 rounded bg-[#f5f2eb] text-[8px] font-bold text-[#876e5f] flex items-center justify-center border border-[#e8e2d9]">{deal.sponsor_name[0]}</div>
-                              )}
-                              <span className="font-bold text-slate-700 group-hover:text-[#e27b58] transition-colors">{deal.sponsor_name}</span>
-                            </div>
-                          </td>
-                          <td className="py-3.5">
-                            <div className="flex items-center gap-2">
-                              {deal.channel_avatar ? (
-                                <SafeImage src={deal.channel_avatar} className="w-5 h-5 rounded-full object-cover" alt="" fallbackText={(deal.sponsor_name || deal.channel_name || "?")} />
-                              ) : (
-                                <div className="w-5 h-5 rounded-full bg-slate-100 text-[8px] font-bold text-slate-500 flex items-center justify-center">{deal.channel_name[0]}</div>
-                              )}
-                              <span className="font-medium text-slate-700">{deal.channel_name}</span>
-                            </div>
-                          </td>
-                          <td className="py-3.5">
-                            <span className="inline-flex items-center gap-1 bg-slate-50 border border-slate-200/50 px-2 py-0.5 rounded text-[11px] text-slate-500 capitalize font-bold">
-                              {getPlatformIcon(deal.platform)}
-                              {deal.platform}
+                {/* Activity Feed — 3/5 width */}
+                <div className="lg:col-span-3 glass-panel rounded-xl p-5 shadow-sm">
+                  <div className="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
+                    <div className="flex items-center gap-2">
+                      <Zap className="w-4 h-4 text-[#e27b58]" />
+                      <h3 className="text-xs font-black tracking-widest text-slate-700 uppercase">Latest Deal Activity</h3>
+                    </div>
+                    <button 
+                      onClick={() => setCurrentView({ page: 'deals' })}
+                      className="text-[10px] font-bold text-[#876e5f] hover:text-[#e27b58] flex items-center gap-1 transition-colors"
+                    >
+                      View All <ChevronRight className="w-3 h-3" />
+                    </button>
+                  </div>
+                  <div className="space-y-0">
+                    {homeData.latest_deals.slice(0, 8).map((deal, i) => (
+                      <div
+                        key={deal.id}
+                        onClick={() => setCurrentView({ page: 'deal-detail', params: { id: deal.id } })}
+                        className="group flex items-start gap-3 py-3 border-b border-slate-50 last:border-0 cursor-pointer hover:bg-slate-50/70 px-2 -mx-2 rounded-lg transition-all"
+                      >
+                        {/* Timeline dot */}
+                        <div className="flex flex-col items-center flex-shrink-0 mt-0.5">
+                          <div className={`w-2 h-2 rounded-full flex-shrink-0 ${i === 0 ? 'bg-[#e27b58] shadow-sm shadow-[#e27b58]/40' : 'bg-slate-200'}`} />
+                          {i < homeData.latest_deals.slice(0, 8).length - 1 && (
+                            <div className="w-px h-full bg-slate-100 mt-1 min-h-[1.5rem]" />
+                          )}
+                        </div>
+                        {/* Content */}
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-1.5 flex-wrap">
+                            {deal.sponsor_logo ? (
+                              <SafeImage src={deal.sponsor_logo} className="w-4 h-4 rounded object-contain border border-slate-100 bg-white inline-block" alt="" fallbackText={deal.sponsor_name} />
+                            ) : (
+                              <div className="w-4 h-4 rounded bg-[#f5f2eb] text-[7px] font-black text-[#876e5f] flex items-center justify-center border border-[#e8e2d9] inline-flex">{deal.sponsor_name[0]}</div>
+                            )}
+                            <span className="text-xs font-black text-slate-800 group-hover:text-[#e27b58] transition-colors">{deal.sponsor_name}</span>
+                            <ArrowRight className="w-3 h-3 text-slate-300 flex-shrink-0" />
+                            {deal.channel_avatar ? (
+                              <SafeImage src={deal.channel_avatar} className="w-4 h-4 rounded-full object-cover border border-slate-100 inline-block" alt="" fallbackText={deal.channel_name} />
+                            ) : (
+                              <div className="w-4 h-4 rounded-full bg-slate-100 text-[7px] font-black text-slate-500 flex items-center justify-center inline-flex">{deal.channel_name[0]}</div>
+                            )}
+                            <span className="text-xs font-semibold text-slate-600 truncate">{deal.channel_name}</span>
+                          </div>
+                          <div className="flex items-center gap-2 mt-1">
+                            <span className="inline-flex items-center gap-0.5 text-[10px] text-slate-400 font-semibold capitalize">
+                              {getPlatformIcon(deal.platform)}{deal.platform}
                             </span>
-                          </td>
-                          <td className="py-3.5 text-slate-500 font-medium">{deal.product}</td>
-                          <td className="py-3.5 text-right font-black text-slate-800">{deal.estimated_value}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
+                            {deal.product && (
+                              <>
+                                <span className="text-slate-200">·</span>
+                                <span className="text-[10px] text-slate-400 font-medium truncate max-w-[140px]">{deal.product}</span>
+                              </>
+                            )}
+                            <span className="text-slate-200">·</span>
+                            <span className="text-[10px] font-black text-slate-700 ml-auto">{deal.estimated_value}</span>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                    {homeData.latest_deals.length === 0 && (
+                      <div className="text-center py-10 text-slate-400">
+                        <Zap className="w-8 h-8 mx-auto mb-2 opacity-30" />
+                        <p className="text-sm font-semibold">No deals detected yet</p>
+                        <p className="text-xs mt-1">Deals will appear once the data pipeline runs</p>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
+
+              {/* ── INDUSTRY PULSE ──────────────────────────────────────── */}
+              {homeData.industry_trends.length > 0 && (
+                <div className="glass-panel rounded-xl p-5 shadow-sm">
+                  <div className="flex items-center gap-2 border-b border-slate-100 pb-3 mb-4">
+                    <BarChart3 className="w-4 h-4 text-[#e27b58]" />
+                    <h3 className="text-xs font-black tracking-widest text-slate-700 uppercase">Industry Pulse</h3>
+                  </div>
+                  <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+                    {homeData.industry_trends.slice(0, 5).map((ind, idx) => {
+                      const barPct = Math.max(15, Math.min(100, Math.abs(parseFloat(ind.change)) * 3 || 40));
+                      return (
+                        <div key={idx} className="space-y-2">
+                          <div className="flex items-center justify-between">
+                            <span className="text-xs font-bold text-slate-600 truncate">{ind.name}</span>
+                            <span className={`text-[10px] font-black ${ind.direction === 'up' ? 'text-emerald-600' : 'text-rose-500'}`}>
+                              {ind.direction === 'up' ? '↑' : '↓'} {ind.change}
+                            </span>
+                          </div>
+                          <div className="h-1.5 rounded-full bg-slate-100 overflow-hidden">
+                            <div
+                              className={`h-full rounded-full transition-all ${ind.direction === 'up' ? 'bg-emerald-400' : 'bg-rose-400'}`}
+                              style={{ width: `${barPct}%` }}
+                            />
+                          </div>
+                          <div className="text-[10px] text-slate-400 font-semibold">
+                            {ind.volume ? `$${(ind.volume / 1000).toFixed(0)}K vol` : '—'}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
             </div>
           )}
 
