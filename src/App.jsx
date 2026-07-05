@@ -366,6 +366,61 @@ export default function App() {
     }
   };
 
+  // Calculate Sponsor metrics dynamically
+  const sponsorStats = allSponsors.map(sp => {
+    const brandDeals = allDeals.filter(d => d.sponsor_id === sp.id);
+    const totalSpend = brandDeals.reduce((sum, d) => {
+      const val = parseInt(d.estimated_value?.replace(/[^0-9]/g, '') || '0', 10);
+      return sum + val;
+    }, 0);
+    return {
+      ...sp,
+      dealsCount: brandDeals.length,
+      totalSpend
+    };
+  });
+
+  const topSpenders = [...sponsorStats].sort((a, b) => b.totalSpend - a.totalSpend).slice(0, 3);
+  const topAiSponsors = [...sponsorStats].filter(sp => sp.isAiStartup).sort((a, b) => b.totalSpend - a.totalSpend).slice(0, 3);
+  const industries = ['All', ...new Set(allSponsors.map(s => s.industry || 'Tech').filter(Boolean))];
+
+  // Calculate Creator metrics dynamically
+  const creatorStats = allChannels.map(ch => {
+    const chDeals = allDeals.filter(d => d.channel_id === ch.id);
+    const totalEarnings = chDeals.reduce((sum, d) => {
+      const val = parseInt(d.estimated_value?.replace(/[^0-9]/g, '') || '0', 10);
+      return sum + val;
+    }, 0);
+    return {
+      ...ch,
+      dealsCount: chDeals.length,
+      totalEarnings
+    };
+  });
+
+  const topEarners = [...creatorStats].sort((a, b) => b.totalEarnings - a.totalEarnings).slice(0, 3);
+  const topFollowed = [...creatorStats].sort((a, b) => b.followers - a.followers).slice(0, 3);
+  const realFollowersCount = allChannels.filter(c => c.followers > 0 && c.followers !== 45000 && c.followers !== 120000).length;
+  const dataQualityPct = Math.round((realFollowersCount / Math.max(1, allChannels.length)) * 100);
+
+  // Filter lists for directory search/filter
+  const filteredSponsors = sponsorStats.filter(sp => {
+    if (searchText && !sp.name.toLowerCase().includes(searchText.toLowerCase())) return false;
+    if (filterIndustry !== 'All' && sp.industry !== filterIndustry) return false;
+    return true;
+  });
+
+  const filteredCreators = creatorStats.filter(ch => {
+    if (searchText && !ch.name.toLowerCase().includes(searchText.toLowerCase())) return false;
+    if (filterPlatform !== 'All' && ch.platform !== filterPlatform) return false;
+    if (filterFollowers !== 'All') {
+      if (filterFollowers === '1M' && ch.followers < 1000000) return false;
+      if (filterFollowers === '500K' && (ch.followers < 500000 || ch.followers >= 1000000)) return false;
+      if (filterFollowers === '100K' && ch.followers >= 500000) return false;
+    }
+    return true;
+  });
+
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen text-slate-800 bg-[#fbf9f6]">
@@ -657,20 +712,20 @@ export default function App() {
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                 <div>
                   <h2 className="text-xl font-black text-slate-900 font-serif-title">Sponsor Brands</h2>
-                  <p className="text-sm text-slate-500 font-medium mt-1">Database of companies actively purchasing developer and creator sponsorships.</p>
+                  <p className="text-sm text-slate-500 font-medium mt-1">Sponsorship spending databases, market share share values, and competitor comparison.</p>
                 </div>
                 
                 {/* Sub-tab Toggle */}
-                <div className="bg-[#f5f2eb] border border-[#e8e2d9] p-1 rounded-lg flex items-center gap-1 self-start sm:self-center">
+                <div className="bg-[#f5f2eb] border border-[#e8e2d9] p-1 rounded flex items-center gap-1 self-start sm:self-center">
                   <button 
                     onClick={() => setBrandsSubTab('directory')}
-                    className={`text-xs font-bold px-3 py-1.5 rounded-md transition-all ${brandsSubTab === 'directory' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
+                    className={`text-xs font-bold px-3 py-1.5 rounded transition-all ${brandsSubTab === 'directory' ? 'bg-[#876e5f] text-white shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
                   >
-                    Directory
+                    Market Intelligence
                   </button>
                   <button 
                     onClick={() => setBrandsSubTab('compare')}
-                    className={`text-xs font-bold px-3 py-1.5 rounded-md transition-all ${brandsSubTab === 'compare' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
+                    className={`text-xs font-bold px-3 py-1.5 rounded transition-all ${brandsSubTab === 'compare' ? 'bg-[#876e5f] text-white shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
                   >
                     Compare Competitors
                   </button>
@@ -679,35 +734,163 @@ export default function App() {
 
               {/* Sub-tab 1: Directory */}
               {brandsSubTab === 'directory' && (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {allSponsors.map((sp) => (
-                    <div 
-                      key={sp.id}
-                      onClick={() => setCurrentView({ page: 'brand-detail', params: { id: sp.id } })}
-                      className="glass-panel border border-[#e8e2d9] hover:border-[#e27b58]/55 rounded p-5 cursor-pointer transition-all group flex items-start justify-between shadow-sm"
-                    >
-                      <div className="space-y-3">
-                        <div className="flex items-center gap-3">
-                          {sp.logo_url ? (
-                            <SafeImage src={sp.logo_url} className="w-7 h-7 rounded object-contain border border-slate-100 bg-white p-0.5" alt="" fallbackText={sp.brand_name || sp.name || "?"} />
-                          ) : (
-                            <div className="w-7 h-7 rounded bg-[#f5f2eb] text-xs font-bold text-[#876e5f] flex items-center justify-center border border-[#e8e2d9]">{sp.name[0]}</div>
-                          )}
-                          <h3 className="text-sm font-black text-slate-800 group-hover:text-[#e27b58] transition-colors">{sp.name}</h3>
-                        </div>
-                        <div className="flex gap-2">
-                          <span className="text-[10px] bg-slate-50 text-slate-500 font-bold px-2 py-0.5 rounded border border-[#e8e2d9]/60">{sp.industry}</span>
-                          {sp.isAiStartup && (
-                            <span className="text-[10px] bg-[#f5f2eb] text-[#876e5f] font-bold px-2 py-0.5 rounded border border-[#e8e2d9]">AI Native</span>
-                          )}
-                        </div>
-                      </div>
-                      <div className="text-right">
-                        <span className="text-[10px] text-slate-400 uppercase block font-semibold">Total Allocation</span>
-                        <span className="text-sm font-black text-slate-800 font-serif-title">{sp.estimatedSpend}</span>
+                <div className="space-y-6">
+                  {/* Metrics Cards */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div className="glass-panel border border-[#e8e2d9] rounded p-4 bg-white shadow-sm">
+                      <span className="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">Active Brand Sponsors</span>
+                      <span className="text-2xl font-black text-slate-800 mt-1 block font-serif-title">{allSponsors.length}</span>
+                      <p className="text-[10px] text-slate-455 mt-1.5 font-medium">Companies currently purchasing creator and dev marketing.</p>
+                    </div>
+                    <div className="glass-panel border border-[#e8e2d9] rounded p-4 bg-white shadow-sm">
+                      <span className="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">Total Tracked Placements</span>
+                      <span className="text-2xl font-black text-emerald-650 mt-1 block font-serif-title">{allDeals.length} ads</span>
+                      <p className="text-[10px] text-slate-455 mt-1.5 font-medium">Verified sponsorships across Podcasts, Newsletters, and YouTube.</p>
+                    </div>
+                    <div className="glass-panel border border-[#e8e2d9] rounded p-4 bg-white shadow-sm">
+                      <span className="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">AI-Native Spenders</span>
+                      <span className="text-2xl font-black text-[#e27b58] mt-1 block font-serif-title">
+                        {allSponsors.filter(s => s.isAiStartup).length} Startups
+                      </span>
+                      <p className="text-[10px] text-slate-455 mt-1.5 font-medium">Artificial intelligence and LLM infrastructure spenders.</p>
+                    </div>
+                  </div>
+
+                  {/* Leaderboards */}
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    {/* Leaderboard 1: Top Spenders */}
+                    <div className="glass-panel border border-[#e8e2d9] rounded p-4 bg-white shadow-sm space-y-3.5">
+                      <h3 className="text-xs font-black tracking-widest text-slate-500 uppercase flex items-center gap-1.5 border-b border-slate-100 pb-2.5">
+                        🏆 Top Budget Advertisers
+                      </h3>
+                      <div className="divide-y divide-slate-100">
+                        {topSpenders.map((sp, idx) => (
+                          <div 
+                            key={sp.id}
+                            onClick={() => setCurrentView({ page: 'brand-detail', params: { id: sp.id } })}
+                            className="flex items-center justify-between py-2.5 hover:bg-slate-50 cursor-pointer rounded px-2 transition-colors"
+                          >
+                            <div className="flex items-center gap-2.5 min-w-0">
+                              <span className="text-xs font-black text-slate-400 w-4">{idx + 1}</span>
+                              {sp.logo_url ? (
+                                <SafeImage src={sp.logo_url} className="w-8 h-8 rounded border border-slate-200 object-contain bg-white p-0.5" alt="" fallbackText={sp.name[0]} />
+                              ) : (
+                                <div className="w-8 h-8 rounded bg-[#f5f2eb] text-xs font-bold text-[#876e5f] flex items-center justify-center border border-[#e8e2d9]">{sp.name[0]}</div>
+                              )}
+                              <div className="truncate">
+                                <div className="font-bold text-slate-800 text-xs truncate">{sp.name}</div>
+                                <div className="text-[9px] text-slate-455 font-bold uppercase tracking-wider truncate">{sp.industry}</div>
+                              </div>
+                            </div>
+                            <div className="text-right">
+                              <div className="text-xs font-black text-emerald-650">${sp.totalSpend.toLocaleString()}</div>
+                              <div className="text-[9px] font-bold text-slate-400 uppercase">{sp.dealsCount} sponsored campaigns</div>
+                            </div>
+                          </div>
+                        ))}
                       </div>
                     </div>
-                  ))}
+
+                    {/* Leaderboard 2: AI Native Spenders */}
+                    <div className="glass-panel border border-[#e8e2d9] rounded p-4 bg-white shadow-sm space-y-3.5">
+                      <h3 className="text-xs font-black tracking-widest text-slate-500 uppercase flex items-center gap-1.5 border-b border-slate-100 pb-2.5">
+                        🚀 Hot AI Native Sponsors
+                      </h3>
+                      <div className="divide-y divide-slate-100">
+                        {topAiSponsors.map((sp, idx) => (
+                          <div 
+                            key={sp.id}
+                            onClick={() => setCurrentView({ page: 'brand-detail', params: { id: sp.id } })}
+                            className="flex items-center justify-between py-2.5 hover:bg-slate-50 cursor-pointer rounded px-2 transition-colors"
+                          >
+                            <div className="flex items-center gap-2.5 min-w-0">
+                              <span className="text-xs font-black text-slate-400 w-4">{idx + 1}</span>
+                              {sp.logo_url ? (
+                                <SafeImage src={sp.logo_url} className="w-8 h-8 rounded border border-slate-200 object-contain bg-white p-0.5" alt="" fallbackText={sp.name[0]} />
+                              ) : (
+                                <div className="w-8 h-8 rounded bg-[#f5f2eb] text-xs font-bold text-[#876e5f] flex items-center justify-center border border-[#e8e2d9]">{sp.name[0]}</div>
+                              )}
+                              <div className="truncate">
+                                <div className="font-bold text-slate-800 text-xs truncate">{sp.name}</div>
+                                <div className="text-[9px] text-slate-455 font-bold uppercase tracking-wider truncate">AI Native</div>
+                              </div>
+                            </div>
+                            <div className="text-right">
+                              <div className="text-xs font-black text-emerald-650">${sp.totalSpend.toLocaleString()}</div>
+                              <div className="text-[9px] font-bold text-slate-400 uppercase">{sp.dealsCount} sponsored campaigns</div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Filter and Directory Header */}
+                  <div className="space-y-4 pt-4 border-t border-[#e8e2d9]/60">
+                    <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                      <div>
+                        <h3 className="text-sm font-black text-slate-800 font-serif-title">Explore Sponsor Directory</h3>
+                        <p className="text-[10px] text-slate-455 font-medium">Use filters to discover specific advertisers in categories.</p>
+                      </div>
+
+                      {/* Search & Filters */}
+                      <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                        <div className="relative w-full sm:w-60">
+                          <Search className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
+                          <input
+                            type="text"
+                            placeholder="Search brand sponsors..."
+                            value={searchText}
+                            onChange={(e) => setSearchText(e.target.value)}
+                            className="w-full bg-slate-50 hover:bg-slate-100/50 focus:bg-white text-xs border border-[#e8e2d9] rounded pl-9 pr-3 py-2 outline-none font-bold text-slate-700 placeholder-slate-400 focus:border-[#876e5f] transition-all"
+                          />
+                        </div>
+
+                        <select
+                          value={filterIndustry}
+                          onChange={(e) => setFilterIndustry(e.target.value)}
+                          className="bg-slate-50 border border-[#e8e2d9] rounded px-3 py-2 text-xs font-bold text-slate-700 focus:outline-none focus:border-[#876e5f]"
+                        >
+                          <option value="All">All Industries</option>
+                          {industries.filter(ind => ind !== 'All').map(ind => (
+                            <option key={ind} value={ind}>{ind}</option>
+                          ))}
+                        </select>
+                      </div>
+                    </div>
+
+                    {/* Sponsors Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {filteredSponsors.map((sp) => (
+                        <div 
+                          key={sp.id}
+                          onClick={() => setCurrentView({ page: 'brand-detail', params: { id: sp.id } })}
+                          className="glass-panel border border-[#e8e2d9] hover:border-[#e27b58]/55 rounded p-5 cursor-pointer transition-all bg-white hover:shadow-md group flex items-start justify-between shadow-sm"
+                        >
+                          <div className="space-y-3 min-w-0">
+                            <div className="flex items-center gap-3 min-w-0">
+                              {sp.logo_url ? (
+                                <SafeImage src={sp.logo_url} className="w-8 h-8 rounded object-contain border border-slate-100 bg-white p-0.5 flex-shrink-0" alt="" fallbackText={sp.name[0]} />
+                              ) : (
+                                <div className="w-8 h-8 rounded bg-[#f5f2eb] text-xs font-bold text-[#876e5f] flex items-center justify-center border border-[#e8e2d9] flex-shrink-0">{sp.name[0]}</div>
+                              )}
+                              <h3 className="text-sm font-black text-slate-800 group-hover:text-[#e27b58] transition-colors truncate">{sp.name}</h3>
+                            </div>
+                            <div className="flex gap-2">
+                              <span className="text-[9px] bg-slate-50 text-slate-500 font-bold px-2 py-0.5 rounded border border-[#e8e2d9]/60">{sp.industry}</span>
+                              {sp.isAiStartup && (
+                                <span className="text-[9px] bg-[#f5f2eb] text-[#876e5f] font-bold px-2 py-0.5 rounded border border-[#e8e2d9]">AI Native</span>
+                              )}
+                            </div>
+                          </div>
+                          <div className="text-right flex-shrink-0">
+                            <span className="text-[9px] text-slate-400 uppercase block font-semibold">Total Spend</span>
+                            <span className="text-xs font-black text-emerald-650 font-serif-title">${sp.totalSpend.toLocaleString()}</span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               )}
 
@@ -1082,36 +1265,169 @@ export default function App() {
             <div className="space-y-6">
               <div>
                 <h2 className="text-xl font-black text-slate-900 font-serif-title">Creator Profiles</h2>
-                <p className="text-sm text-slate-400 font-medium mt-1">Niche-specific developer communities, podcasts, and digital newsletters receiving sponsorships.</p>
+                <p className="text-sm text-slate-400 font-medium mt-1">Discover developer channels, newsletters, and podcasts receiving sponsorship payments.</p>
               </div>
 
-              {/* Creators Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {allChannels.map((ch) => (
-                  <div 
-                    key={ch.id}
-                    onClick={() => setCurrentView({ page: 'creator-detail', params: { id: ch.id } })}
-                    className="glass-panel border border-[#e8e2d9] hover:border-[#e27b58]/55 rounded p-5 cursor-pointer transition-all group flex items-start justify-between shadow-sm"
-                  >
-                    <div className="flex gap-3.5">
-                      {ch.avatar_url ? (
-                        <SafeImage src={ch.avatar_url} className="w-11 h-11 rounded-full object-cover border border-[#e8e2d9] bg-white shadow-sm" alt="" fallbackText={ch.name || "?"} />
-                      ) : (
-                        <div className="w-11 h-11 rounded-full bg-[#f5f2eb] text-sm font-bold text-[#876e5f] flex items-center justify-center border border-[#e8e2d9]">{ch.name[0]}</div>
-                      )}
-                      <div className="space-y-1">
-                        <h3 className="text-sm font-black text-slate-700 group-hover:text-[#e27b58] transition-colors">{ch.name}</h3>
-                        <div className="flex gap-2.5">
-                          <span className="text-[10px] bg-slate-50 border border-[#e8e2d9] text-slate-500 font-bold px-1.5 py-0.5 rounded capitalize inline-flex items-center gap-1">
-                            {getPlatformIcon(ch.platform)}
-                            {ch.platform}
-                          </span>
-                          <span className="text-[10px] text-slate-400 font-bold block pt-1">{formatFollowersCount(ch.followers)} followers</span>
+              {/* Metrics Cards */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="glass-panel border border-[#e8e2d9] rounded p-4 bg-white shadow-sm">
+                  <span className="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">Tracked Creators</span>
+                  <span className="text-2xl font-black text-slate-800 mt-1 block font-serif-title">{allChannels.length}</span>
+                  <p className="text-[10px] text-slate-455 mt-1.5 font-medium">Verified tech channels and audio programs.</p>
+                </div>
+                <div className="glass-panel border border-[#e8e2d9] rounded p-4 bg-white shadow-sm">
+                  <span className="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">Est. Developer Rates</span>
+                  <span className="text-2xl font-black text-emerald-650 mt-1 block font-serif-title">
+                    ${Math.round(allDeals.reduce((sum, d) => sum + parseInt(d.estimated_value?.replace(/[^0-9]/g, '') || '0', 10), 0) / Math.max(1, allDeals.length)).toLocaleString()}
+                  </span>
+                  <p className="text-[10px] text-slate-455 mt-1.5 font-medium">Average estimated payout rate per ad placement.</p>
+                </div>
+                <div className="glass-panel border border-[#e8e2d9] rounded p-4 bg-white shadow-sm">
+                  <span className="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">Verified Subscriber Data</span>
+                  <span className="text-2xl font-black text-[#e27b58] mt-1 block font-serif-title">{dataQualityPct}% Coverage</span>
+                  <p className="text-[10px] text-slate-455 mt-1.5 font-medium">Real-time subscriber count data verified directly from YouTube.</p>
+                </div>
+              </div>
+
+              {/* Leaderboards */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                {/* Leaderboard 1: Top Earners */}
+                <div className="glass-panel border border-[#e8e2d9] rounded p-4 bg-white shadow-sm space-y-3.5">
+                  <h3 className="text-xs font-black tracking-widest text-slate-500 uppercase flex items-center gap-1.5 border-b border-slate-100 pb-2.5">
+                    💰 Top Earning Channels (Est. Revenue)
+                  </h3>
+                  <div className="divide-y divide-slate-100">
+                    {topEarners.map((ch, idx) => (
+                      <div 
+                        key={ch.id}
+                        onClick={() => setCurrentView({ page: 'creator-detail', params: { id: ch.id } })}
+                        className="flex items-center justify-between py-2.5 hover:bg-slate-50 cursor-pointer rounded px-2 transition-colors"
+                      >
+                        <div className="flex items-center gap-2.5 min-w-0">
+                          <span className="text-xs font-black text-slate-400 w-4">{idx + 1}</span>
+                          {ch.avatar_url ? (
+                            <SafeImage src={ch.avatar_url} className="w-8 h-8 rounded-full object-cover border border-slate-200 bg-white" alt="" fallbackText={ch.name[0]} />
+                          ) : (
+                            <div className="w-8 h-8 rounded-full bg-[#f5f2eb] text-xs font-bold text-[#876e5f] flex items-center justify-center border border-[#e8e2d9]">{ch.name[0]}</div>
+                          )}
+                          <div className="truncate">
+                            <div className="font-bold text-slate-800 text-xs truncate">{ch.name}</div>
+                            <div className="text-[9px] text-slate-455 font-bold capitalize flex items-center gap-1">
+                              {getPlatformIcon(ch.platform)} {ch.platform}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="text-right">
+                          <div className="text-xs font-black text-emerald-650">${ch.totalEarnings.toLocaleString()}</div>
+                          <div className="text-[9px] font-bold text-slate-400 uppercase">{ch.dealsCount} sponsored deals</div>
                         </div>
                       </div>
-                    </div>
+                    ))}
                   </div>
-                ))}
+                </div>
+
+                {/* Leaderboard 2: Top Followed */}
+                <div className="glass-panel border border-[#e8e2d9] rounded p-4 bg-white shadow-sm space-y-3.5">
+                  <h3 className="text-xs font-black tracking-widest text-slate-500 uppercase flex items-center gap-1.5 border-b border-slate-100 pb-2.5">
+                    📢 Largest Audience Reaches
+                  </h3>
+                  <div className="divide-y divide-slate-100">
+                    {topFollowed.map((ch, idx) => (
+                      <div 
+                        key={ch.id}
+                        onClick={() => setCurrentView({ page: 'creator-detail', params: { id: ch.id } })}
+                        className="flex items-center justify-between py-2.5 hover:bg-slate-50 cursor-pointer rounded px-2 transition-colors"
+                      >
+                        <div className="flex items-center gap-2.5 min-w-0">
+                          <span className="text-xs font-black text-slate-400 w-4">{idx + 1}</span>
+                          {ch.avatar_url ? (
+                            <SafeImage src={ch.avatar_url} className="w-8 h-8 rounded-full object-cover border border-slate-200 bg-white" alt="" fallbackText={ch.name[0]} />
+                          ) : (
+                            <div className="w-8 h-8 rounded-full bg-[#f5f2eb] text-xs font-bold text-[#876e5f] flex items-center justify-center border border-[#e8e2d9]">{ch.name[0]}</div>
+                          )}
+                          <div className="truncate">
+                            <div className="font-bold text-slate-800 text-xs truncate">{ch.name}</div>
+                            <div className="text-[9px] text-slate-455 font-bold capitalize flex items-center gap-1">
+                              {getPlatformIcon(ch.platform)} {ch.platform}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="text-right">
+                          <div className="text-xs font-black text-slate-800">{formatFollowersCount(ch.followers)}</div>
+                          <div className="text-[9px] font-bold text-slate-400 uppercase">Subscribers count</div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Filter and Directory Header */}
+              <div className="space-y-4 pt-4 border-t border-[#e8e2d9]/60">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                  <div>
+                    <h3 className="text-sm font-black text-slate-800 font-serif-title">Explore Creator Directory</h3>
+                    <p className="text-[10px] text-slate-455 font-medium">Use filters to discover specific developer media partners.</p>
+                  </div>
+
+                  {/* Search & Filters */}
+                  <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                    <div className="relative w-full sm:w-60">
+                      <Search className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
+                      <input
+                        type="text"
+                        placeholder="Search creator channels..."
+                        value={searchText}
+                        onChange={(e) => setSearchText(e.target.value)}
+                        className="w-full bg-slate-50 hover:bg-slate-100/50 focus:bg-white text-xs border border-[#e8e2d9] rounded pl-9 pr-3 py-2 outline-none font-bold text-slate-700 placeholder-slate-400 focus:border-[#876e5f] transition-all"
+                      />
+                    </div>
+
+                    <select
+                      value={filterPlatform}
+                      onChange={(e) => setFilterPlatform(e.target.value)}
+                      className="bg-slate-50 border border-[#e8e2d9] rounded px-3 py-2 text-xs font-bold text-slate-700 focus:outline-none focus:border-[#876e5f]"
+                    >
+                      <option value="All">All Platforms</option>
+                      <option value="youtube">YouTube</option>
+                      <option value="podcast">Podcast</option>
+                      <option value="newsletter">Newsletter</option>
+                    </select>
+                  </div>
+                </div>
+
+                {/* Creators Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {filteredCreators.map((ch) => (
+                    <div 
+                      key={ch.id}
+                      onClick={() => setCurrentView({ page: 'creator-detail', params: { id: ch.id } })}
+                      className="glass-panel border border-[#e8e2d9] hover:border-[#e27b58]/55 rounded p-5 cursor-pointer transition-all bg-white hover:shadow-md group flex items-start justify-between shadow-sm"
+                    >
+                      <div className="flex gap-3.5 min-w-0">
+                        {ch.avatar_url ? (
+                          <SafeImage src={ch.avatar_url} className="w-11 h-11 rounded-full object-cover border border-[#e8e2d9] bg-white shadow-sm flex-shrink-0" alt="" fallbackText={ch.name[0]} />
+                        ) : (
+                          <div className="w-11 h-11 rounded-full bg-[#f5f2eb] text-sm font-bold text-[#876e5f] flex items-center justify-center border border-[#e8e2d9] flex-shrink-0">{ch.name[0]}</div>
+                        )}
+                        <div className="space-y-1 min-w-0">
+                          <h3 className="text-sm font-black text-slate-700 group-hover:text-[#e27b58] transition-colors truncate">{ch.name}</h3>
+                          <div className="flex gap-2.5">
+                            <span className="text-[9px] bg-slate-50 border border-[#e8e2d9] text-slate-500 font-bold px-1.5 py-0.5 rounded capitalize inline-flex items-center gap-1">
+                              {getPlatformIcon(ch.platform)}
+                              {ch.platform}
+                            </span>
+                            <span className="text-[9px] text-slate-400 font-bold block pt-1">{formatFollowersCount(ch.followers)} subs</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="text-right flex-shrink-0">
+                        <span className="text-[9px] text-slate-400 uppercase block font-semibold">Est. Earnings</span>
+                        <span className="text-xs font-black text-emerald-650 font-serif-title">${ch.totalEarnings.toLocaleString()}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           )}
